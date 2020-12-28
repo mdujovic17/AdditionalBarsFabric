@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "additionalbars:jungle_bars"
+    }
+  },
+  "result": {
+    "item": "additionalbars:horizontal_jungle_bars",
+    "count": 3
+  }
+}

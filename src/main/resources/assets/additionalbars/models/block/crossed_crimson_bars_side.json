@@ -1,0 +1,6 @@
+{
+    "parent": "additionalbars:block/parent/bars_side",
+    "textures": {
+        "texture": "additionalbars:block/crossed_crimson_bars"
+    }
+}

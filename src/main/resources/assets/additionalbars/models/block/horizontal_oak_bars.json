@@ -1,0 +1,7 @@
+{
+	"parent": "additionalbars:block/parent/horizontal_bars_bot",
+	"textures": {
+		"glass": "additionalbars:block/oak_bars",
+		"edges": "additionalbars:block/oak_bars"
+	}
+}

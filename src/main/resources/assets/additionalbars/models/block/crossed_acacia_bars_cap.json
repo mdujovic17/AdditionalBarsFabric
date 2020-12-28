@@ -1,0 +1,6 @@
+{
+  "parent": "additionalbars:block/parent/bars_cap",
+  "textures": {
+    "texture": "additionalbars:block/crossed_acacia_bars"
+  }
+}

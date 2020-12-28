@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "additionalbars:crimson_bars"
+    }
+  },
+  "result": {
+    "item": "additionalbars:horizontal_crimson_bars",
+    "count": 3
+  }
+}

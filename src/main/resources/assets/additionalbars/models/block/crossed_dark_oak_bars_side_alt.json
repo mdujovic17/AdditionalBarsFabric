@@ -1,0 +1,6 @@
+{
+    "parent": "additionalbars:block/parent/bars_side_alt",
+    "textures": {
+        "texture": "additionalbars:block/crossed_dark_oak_bars"
+    }
+}

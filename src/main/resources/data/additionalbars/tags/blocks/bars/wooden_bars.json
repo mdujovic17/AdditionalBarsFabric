@@ -1,0 +1,40 @@
+{
+  "replace": false,
+  "values": [
+    "additionalbars:acacia_bars",
+    "additionalbars:birch_bars",
+    "additionalbars:dark_oak_bars",
+    "additionalbars:jungle_bars",
+    "additionalbars:oak_bars",
+    "additionalbars:spruce_bars",
+    "additionalbars:crimson_bars",
+    "additionalbars:warped_bars",
+
+    "additionalbars:crossed_acacia_bars",
+    "additionalbars:crossed_birch_bars",
+    "additionalbars:crossed_dark_oak_bars",
+    "additionalbars:crossed_jungle_bars",
+    "additionalbars:crossed_oak_bars",
+    "additionalbars:crossed_spruce_bars",
+    "additionalbars:crossed_crimson_bars",
+    "additionalbars:crossed_warped_bars",
+
+    "additionalbars:horizontal_acacia_bars",
+    "additionalbars:horizontal_birch_bars",
+    "additionalbars:horizontal_dark_oak_bars",
+    "additionalbars:horizontal_jungle_bars",
+    "additionalbars:horizontal_oak_bars",
+    "additionalbars:horizontal_spruce_bars",
+    "additionalbars:horizontal_crimson_bars",
+    "additionalbars:horizontal_warped_bars",
+
+    "additionalbars:horizontal_crossed_acacia_bars",
+    "additionalbars:horizontal_crossed_birch_bars",
+    "additionalbars:horizontal_crossed_dark_oak_bars",
+    "additionalbars:horizontal_crossed_jungle_bars",
+    "additionalbars:horizontal_crossed_oak_bars",
+    "additionalbars:horizontal_crossed_spruce_bars",
+    "additionalbars:horizontal_crossed_crimson_bars",
+    "additionalbars:horizontal_crossed_warped_bars"
+  ]
+}

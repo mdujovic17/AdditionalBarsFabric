@@ -1,0 +1,7 @@
+{
+	"parent": "additionalbars:block/parent/horizontal_bars_com",
+	"textures": {
+		"glass": "additionalbars:block/spruce_bars",
+		"edges": "additionalbars:block/spruce_bars"
+	}
+}

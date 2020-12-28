@@ -1,0 +1,12 @@
+{
+  "block.additionalbars.gold_bars": "Barrotes de Oro",
+  "block.additionalbars.acacia_bars": "Barrotes de Acacia",
+  "block.additionalbars.birch_bars": "Barrotes de Abedul",
+  "block.additionalbars.dark_oak_bars": "Barrotes de Roble Oscuro",
+  "block.additionalbars.jungle_bars": "Barrotes de Jungla",
+  "block.additionalbars.oak_bars": "Barrotes de Roble",
+  "block.additionalbars.spruce_bars": "Barrotes de Abeto",
+
+  "itemGroup.additionalbars.additional_bars": "Additional Bars",
+  "itemGroup.additionalbars.horizontal_additional_bars": "Additional Bars (Horizontales)"
+}

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "additionalbars:crossed_oak_bars"
+    }
+  },
+  "result": {
+    "item": "additionalbars:horizontal_crossed_oak_bars",
+    "count": 3
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "additionalbars:oak_bars"
+    }
+  },
+  "result": {
+    "item": "additionalbars:horizontal_oak_bars",
+    "count": 3
+  }
+}

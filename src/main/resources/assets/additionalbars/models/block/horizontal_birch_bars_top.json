@@ -1,0 +1,7 @@
+{
+	"parent": "additionalbars:block/parent/horizontal_bars_top",
+	"textures": {
+		"glass": "additionalbars:block/birch_bars",
+		"edges": "additionalbars:block/birch_bars"
+	}
+}

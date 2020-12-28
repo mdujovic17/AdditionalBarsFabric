@@ -1,0 +1,6 @@
+{
+    "parent": "additionalbars:block/parent/bars_cap_alt",
+    "textures": {
+        "texture": "additionalbars:block/gold_bars"
+    }
+}

@@ -1,0 +1,20 @@
+{
+  "block.additionalbars.gold_bars": "金欄杆",
+  "block.additionalbars.acacia_bars": "相思木欄杆",
+  "block.additionalbars.birch_bars": "樺木欄杆",
+  "block.additionalbars.dark_oak_bars": "黑橡木欄杆",
+  "block.additionalbars.jungle_bars": "叢林木欄杆",
+  "block.additionalbars.oak_bars": "橡木欄杆",
+  "block.additionalbars.spruce_bars": "杉木欄杆",
+
+  "block.additionalbars.crossed_iron_bars": "鐵欄杆(交叉)",
+  "block.additionalbars.crossed_gold_bars": "金欄杆(交叉)",
+  "block.additionalbars.crossed_acacia_bars": "相思木欄杆(交叉)",
+  "block.additionalbars.crossed_birch_bars": "樺木欄杆(交叉)",
+  "block.additionalbars.crossed_dark_oak_bars": "黑橡木欄杆(交叉)",
+  "block.additionalbars.crossed_jungle_bars": "叢林木欄杆(交叉)",
+  "block.additionalbars.crossed_oak_bars": "橡木欄杆(交叉)",
+  "block.additionalbars.crossed_spruce_bars": "杉木欄杆(交叉)",
+
+  "itemGroup.additionalbars.additional_bars": "Additional Bars"
+}

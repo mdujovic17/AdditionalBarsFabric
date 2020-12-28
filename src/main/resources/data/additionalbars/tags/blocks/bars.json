@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "#additionalbars:bars/wooden_bars",
+    "#additionalbars:bars/metallic_bars"
+  ]
+}

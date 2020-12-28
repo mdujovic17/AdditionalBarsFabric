@@ -1,0 +1,7 @@
+{
+	"parent": "additionalbars:block/parent/horizontal_bars_bot",
+	"textures": {
+		"glass": "minecraft:block/iron_bars",
+		"edges": "minecraft:block/iron_bars"
+	}
+}

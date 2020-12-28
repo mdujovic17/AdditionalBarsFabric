@@ -1,0 +1,39 @@
+{
+  "block.additionalbars.gold_bars": "Goldgitter",
+  "block.additionalbars.acacia_bars": "Akazienholzgitter",
+  "block.additionalbars.birch_bars": "Birkenholzgitter",
+  "block.additionalbars.dark_oak_bars": "Schhwarzeichenholzgitter",
+  "block.additionalbars.jungle_bars": "Tropenholzgitter",
+  "block.additionalbars.oak_bars": "Eichenholzgitter",
+  "block.additionalbars.spruce_bars": "Fichtenholzgitter",
+
+  "block.additionalbars.crossed_iron_bars": "Geflochtene Eisengitter",
+  "block.additionalbars.crossed_gold_bars": "Geflochtene Goldgitter",
+  "block.additionalbars.crossed_acacia_bars": "Geflochtene Akazienholzgitter",
+  "block.additionalbars.crossed_birch_bars": "Geflochtene Birkenholzgitter",
+  "block.additionalbars.crossed_dark_oak_bars": "Geflochtene Schhwarzeichenholzgitter",
+  "block.additionalbars.crossed_jungle_bars": "Geflochtene Tropenholzgitter",
+  "block.additionalbars.crossed_oak_bars": "Geflochtene Eichenholzgitter",
+  "block.additionalbars.crossed_spruce_bars": "Geflochtene Fichtenholzgitter",
+
+  "block.additionalbars.horizontal_iron_bars": "Waagerechte Eisengitter",
+  "block.additionalbars.horizontal_gold_bars": "Waagerechte Goldgitter",
+  "block.additionalbars.horizontal_acacia_bars": "Waagerechte Akazienholzgitter",
+  "block.additionalbars.horizontal_birch_bars": "Waagerechte Birkenholzgitter",
+  "block.additionalbars.horizontal_dark_oak_bars": "Waagerechte Schhwarzeichenholzgitter",
+  "block.additionalbars.horizontal_jungle_bars": "Waagerechte Tropenholzgitter",
+  "block.additionalbars.horizontal_oak_bars": "Waagerechte Eichenholzgitter",
+  "block.additionalbars.horizontal_spruce_bars": "Waagerechte Fichtenholzgitter",
+
+  "block.additionalbars.horizontal_crossed_iron_bars": "Waagerechte Geflochtene Eisengitter",
+  "block.additionalbars.horizontal_crossed_gold_bars": "Waagerechte Geflochtene Goldgitter",
+  "block.additionalbars.horizontal_crossed_acacia_bars": "Waagerechte Geflochtene Akazienholzgitter",
+  "block.additionalbars.horizontal_crossed_birch_bars": "Waagerechte Geflochtene Birkenholzgitter",
+  "block.additionalbars.horizontal_crossed_dark_oak_bars": "Waagerechte Geflochtene Schhwarzeichenholzgitter",
+  "block.additionalbars.horizontal_crossed_jungle_bars": "Waagerechte Geflochtene Tropenholzgitter",
+  "block.additionalbars.horizontal_crossed_oak_bars": "Waagerechte Geflochtene Eichenholzgitter",
+  "block.additionalbars.horizontal_crossed_spruce_bars": "Waagerechte Geflochtene Fichtenholzgitter",
+
+  "itemGroup.additionalbars.additional_bars": "Zusätzliche Gitter",
+  "itemGroup.additionalbars.horizontal_additional_bars": "Zusätzliche Gitter (Waagerecht)"
+}

@@ -1,0 +1,6 @@
+{
+    "parent": "additionalbars:block/parent/bars_post",
+    "textures": {
+        "texture": "additionalbars:block/spruce_bars"
+    }
+}

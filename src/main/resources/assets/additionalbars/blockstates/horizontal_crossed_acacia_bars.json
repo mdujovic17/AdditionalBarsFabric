@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "additionalbars:block/horizontal_crossed_acacia_bars"
+    },
+    "type=double": {
+      "model": "additionalbars:block/horizontal_crossed_acacia_bars_com"
+    },
+    "type=top": {
+      "model": "additionalbars:block/horizontal_crossed_acacia_bars_top"
+    }
+  }
+}

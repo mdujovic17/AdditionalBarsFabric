@@ -1,0 +1,7 @@
+{
+	"parent": "additionalbars:block/parent/horizontal_bars_top",
+	"textures": {
+		"glass": "additionalbars:block/crossed_jungle_bars",
+		"edges": "additionalbars:block/crossed_jungle_bars"
+	}
+}

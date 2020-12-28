@@ -1,30 +1,35 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "additionalbars",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "Additional Bars",
+  "description": "This mod adds additional bars to the game that go along with Iron Bars!",
   "authors": [
-    "Me!"
+    "CodenameRevy",
+    "ruchom4u (Spanish Translations)",
+    "fantasyair18 (Chinese Traditional (Taiwan) Translations)",
+    "TheDirectorX (Russian Translations)",
+    "BardinTheDwarf (Russian Translations)",
+    "Zijuna (German Translations)",
+    "justmonika (Simple Chinese Translations)",
+    "mindy15963 (Korean Translations)",
+    "WadeMason"
   ],
   "contact": {
     "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "sources": "https://github.com/CodenameRevy/additional-bars-fabric"
   },
 
-  "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "license": "MIT License",
+  "icon": "assets/additionalbars/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.ExampleMod"
+      "com.codenamerevy.additionalbars.AdditionalBars"
     ]
   },
-  "mixins": [
-    "modid.mixins.json"
-  ],
 
   "depends": {
     "fabricloader": ">=0.7.4",

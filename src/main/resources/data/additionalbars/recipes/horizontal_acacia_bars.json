@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "additionalbars:acacia_bars"
+    }
+  },
+  "result": {
+    "item": "additionalbars:horizontal_acacia_bars",
+    "count": 3
+  }
+}

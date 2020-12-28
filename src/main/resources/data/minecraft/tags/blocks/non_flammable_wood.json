@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "additionalbars:crimson_bars",
+    "additionalbars:warped_bars",
+    "additionalbars:crossed_crimson_bars",
+    "additionalbars:crossed_warped_bars",
+    "additionalbars:horizontal_crimson_bars",
+    "additionalbars:horizontal_warped_bars",
+    "additionalbars:horizontal_crossed_crimson_bars",
+    "additionalbars:horizontal_crossed_warped_bars"
+  ]
+}
