@@ -13,10 +13,10 @@ Goal of this mod is to add more options when it comes to bars blocks, because ha
 It features Horizontal Bars for every type of bars!
 <hr>
 
-<p align="center"><img src="https://i.imgur.com/rax0pVs.png" width=77% height=77%></p>
-<p align="center"><img src="https://i.imgur.com/9GmVDs0.png" width=77% height=77%></p>
-<p align="center"><img src="https://i.imgur.com/eA3IOqE.png" width=77% height=77%></p>
-<p align="center"><img src="https://i.imgur.com/Ywxnu2Q.png" width=77% height=77%></p>
+<p align="center"><img src="https://i.imgur.com/rax0pVs.png" width=70% height=70%></p>
+<p align="center"><img src="https://i.imgur.com/9GmVDs0.png" width=70% height=70%></p>
+<p align="center"><img src="https://i.imgur.com/eA3IOqE.png" width=70% height=70%></p>
+<p align="center"><img src="https://i.imgur.com/Ywxnu2Q.png" width=70% height=70%></p>
 
 <hr>
 
