@@ -29,3 +29,9 @@ It features Horizontal Bars for every type of bars!
 
 ## License
     This mod is available under the MIT License
+
+### How to compile
+First clone the repo and then inside that folder run the gradle build task:
+
+    git clone https://github.com/CodenameRevy/additional-bars-fabric.git
+    ./gradlew build
