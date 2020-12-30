@@ -26,6 +26,7 @@ package com.codenamerevy.additionalbars;
 
 import com.codenamerevy.additionalbars.events.ModRegistry;
 import com.codenamerevy.additionalbars.init.ABContent;
+import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.minecraft.item.ItemGroup;
@@ -43,7 +44,7 @@ public class AdditionalBars implements ModInitializer
             new Identifier(MODID, "horizontal_additional_bars"),
             () -> new ItemStack(ABContent.HORIZONTAL_GOLD_BARS));
 
-    public static AdditionalBars INSTANCE;
+    private static AdditionalBars INSTANCE;
 
     @Override
     public void onInitialize()

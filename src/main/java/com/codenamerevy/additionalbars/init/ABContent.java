@@ -37,51 +37,61 @@ import net.minecraft.world.BlockView;
 
 public class ABContent
 {
-    public static final Block GOLD_BARS     = new BarsBlock(FabricBlockSettings.of(Material.METAL).nonOpaque().solidBlock(ABContent::never).blockVision(ABContent::never).suffocates(ABContent::never).requiresTool().breakByTool(FabricToolTags.PICKAXES, 1).hardness(5.0F).resistance(6.0F).sounds(BlockSoundGroup.METAL));
-    public static final Block ACACIA_BARS   = new BarsBlock(FabricBlockSettings.of(Material.WOOD).nonOpaque().solidBlock(ABContent::never).blockVision(ABContent::never).suffocates(ABContent::never).requiresTool().breakByTool(FabricToolTags.AXES, 1).hardness(5.0F).resistance(6.0F).sounds(BlockSoundGroup.WOOD));
-    public static final Block BIRCH_BARS    = new BarsBlock(FabricBlockSettings.of(Material.WOOD).nonOpaque().solidBlock(ABContent::never).blockVision(ABContent::never).suffocates(ABContent::never).requiresTool().breakByTool(FabricToolTags.AXES, 1).hardness(5.0F).resistance(6.0F).sounds(BlockSoundGroup.WOOD));
-    public static final Block DARK_OAK_BARS = new BarsBlock(FabricBlockSettings.of(Material.WOOD).nonOpaque().solidBlock(ABContent::never).blockVision(ABContent::never).suffocates(ABContent::never).requiresTool().breakByTool(FabricToolTags.AXES, 1).hardness(5.0F).resistance(6.0F).sounds(BlockSoundGroup.WOOD));
-    public static final Block JUNGLE_BARS   = new BarsBlock(FabricBlockSettings.of(Material.WOOD).nonOpaque().solidBlock(ABContent::never).blockVision(ABContent::never).suffocates(ABContent::never).requiresTool().breakByTool(FabricToolTags.AXES, 1).hardness(5.0F).resistance(6.0F).sounds(BlockSoundGroup.WOOD));
-    public static final Block SPRUCE_BARS   = new BarsBlock(FabricBlockSettings.of(Material.WOOD).nonOpaque().solidBlock(ABContent::never).blockVision(ABContent::never).suffocates(ABContent::never).requiresTool().breakByTool(FabricToolTags.AXES, 1).hardness(5.0F).resistance(6.0F).sounds(BlockSoundGroup.WOOD));
-    public static final Block OAK_BARS      = new BarsBlock(FabricBlockSettings.of(Material.WOOD).nonOpaque().solidBlock(ABContent::never).blockVision(ABContent::never).suffocates(ABContent::never).requiresTool().breakByTool(FabricToolTags.AXES, 1).hardness(5.0F).resistance(6.0F).sounds(BlockSoundGroup.WOOD));
-    public static final Block CRIMSON_BARS  = new BarsBlock(FabricBlockSettings.of(Material.NETHER_WOOD).nonOpaque().solidBlock(ABContent::never).blockVision(ABContent::never).suffocates(ABContent::never).requiresTool().breakByTool(FabricToolTags.AXES, 1).hardness(5.0F).resistance(6.0F).sounds(BlockSoundGroup.NETHER_STEM));
-    public static final Block WARPED_BARS   = new BarsBlock(FabricBlockSettings.of(Material.NETHER_WOOD).nonOpaque().solidBlock(ABContent::never).blockVision(ABContent::never).suffocates(ABContent::never).requiresTool().breakByTool(FabricToolTags.AXES, 1).hardness(5.0F).resistance(6.0F).sounds(BlockSoundGroup.NETHER_STEM));
-
-    public static final Block CROSSED_IRON_BARS     = new BarsBlock(FabricBlockSettings.of(Material.METAL).nonOpaque().solidBlock(ABContent::never).blockVision(ABContent::never).suffocates(ABContent::never).requiresTool().breakByTool(FabricToolTags.PICKAXES, 1).hardness(5.0F).resistance(6.0F).sounds(BlockSoundGroup.METAL));
-    public static final Block CROSSED_GOLD_BARS     = new BarsBlock(FabricBlockSettings.of(Material.METAL).nonOpaque().solidBlock(ABContent::never).blockVision(ABContent::never).suffocates(ABContent::never).requiresTool().breakByTool(FabricToolTags.PICKAXES, 1).hardness(5.0F).resistance(6.0F).sounds(BlockSoundGroup.METAL));
-    public static final Block CROSSED_ACACIA_BARS   = new BarsBlock(FabricBlockSettings.of(Material.WOOD).nonOpaque().solidBlock(ABContent::never).blockVision(ABContent::never).suffocates(ABContent::never).requiresTool().breakByTool(FabricToolTags.AXES, 1).hardness(5.0F).resistance(6.0F).sounds(BlockSoundGroup.WOOD));
-    public static final Block CROSSED_BIRCH_BARS    = new BarsBlock(FabricBlockSettings.of(Material.WOOD).nonOpaque().solidBlock(ABContent::never).blockVision(ABContent::never).suffocates(ABContent::never).requiresTool().breakByTool(FabricToolTags.AXES, 1).hardness(5.0F).resistance(6.0F).sounds(BlockSoundGroup.WOOD));
-    public static final Block CROSSED_DARK_OAK_BARS = new BarsBlock(FabricBlockSettings.of(Material.WOOD).nonOpaque().solidBlock(ABContent::never).blockVision(ABContent::never).suffocates(ABContent::never).requiresTool().breakByTool(FabricToolTags.AXES, 1).hardness(5.0F).resistance(6.0F).sounds(BlockSoundGroup.WOOD));
-    public static final Block CROSSED_JUNGLE_BARS   = new BarsBlock(FabricBlockSettings.of(Material.WOOD).nonOpaque().solidBlock(ABContent::never).blockVision(ABContent::never).suffocates(ABContent::never).requiresTool().breakByTool(FabricToolTags.AXES, 1).hardness(5.0F).resistance(6.0F).sounds(BlockSoundGroup.WOOD));
-    public static final Block CROSSED_SPRUCE_BARS   = new BarsBlock(FabricBlockSettings.of(Material.WOOD).nonOpaque().solidBlock(ABContent::never).blockVision(ABContent::never).suffocates(ABContent::never).requiresTool().breakByTool(FabricToolTags.AXES, 1).hardness(5.0F).resistance(6.0F).sounds(BlockSoundGroup.WOOD));
-    public static final Block CROSSED_OAK_BARS      = new BarsBlock(FabricBlockSettings.of(Material.WOOD).nonOpaque().solidBlock(ABContent::never).blockVision(ABContent::never).suffocates(ABContent::never).requiresTool().breakByTool(FabricToolTags.AXES, 1).hardness(5.0F).resistance(6.0F).sounds(BlockSoundGroup.WOOD));
-    public static final Block CROSSED_CRIMSON_BARS  = new BarsBlock(FabricBlockSettings.of(Material.NETHER_WOOD).nonOpaque().solidBlock(ABContent::never).blockVision(ABContent::never).suffocates(ABContent::never).requiresTool().breakByTool(FabricToolTags.AXES, 1).hardness(5.0F).resistance(6.0F).sounds(BlockSoundGroup.NETHER_STEM));
-    public static final Block CROSSED_WARPED_BARS   = new BarsBlock(FabricBlockSettings.of(Material.NETHER_WOOD).nonOpaque().solidBlock(ABContent::never).blockVision(ABContent::never).suffocates(ABContent::never).requiresTool().breakByTool(FabricToolTags.AXES, 1).hardness(5.0F).resistance(6.0F).sounds(BlockSoundGroup.NETHER_STEM));
-
-    public static final Block HORIZONTAL_IRON_BARS      = new HorizontalPaneBlock(FabricBlockSettings.of(Material.METAL).nonOpaque().solidBlock(ABContent::never).blockVision(ABContent::never).suffocates(ABContent::never).requiresTool().breakByTool(FabricToolTags.PICKAXES, 1).hardness(5.0F).resistance(6.0F).sounds(BlockSoundGroup.METAL));
-    public static final Block HORIZONTAL_GOLD_BARS      = new HorizontalPaneBlock(FabricBlockSettings.of(Material.METAL).nonOpaque().solidBlock(ABContent::never).blockVision(ABContent::never).suffocates(ABContent::never).requiresTool().breakByTool(FabricToolTags.PICKAXES, 1).hardness(5.0F).resistance(6.0F).sounds(BlockSoundGroup.METAL));
-    public static final Block HORIZONTAL_ACACIA_BARS    = new HorizontalPaneBlock(FabricBlockSettings.of(Material.WOOD).nonOpaque().solidBlock(ABContent::never).blockVision(ABContent::never).suffocates(ABContent::never).requiresTool().breakByTool(FabricToolTags.AXES, 1).hardness(5.0F).resistance(6.0F).sounds(BlockSoundGroup.WOOD));
-    public static final Block HORIZONTAL_BIRCH_BARS     = new HorizontalPaneBlock(FabricBlockSettings.of(Material.WOOD).nonOpaque().solidBlock(ABContent::never).blockVision(ABContent::never).suffocates(ABContent::never).requiresTool().breakByTool(FabricToolTags.AXES, 1).hardness(5.0F).resistance(6.0F).sounds(BlockSoundGroup.WOOD));
-    public static final Block HORIZONTAL_DARK_OAK_BARS  = new HorizontalPaneBlock(FabricBlockSettings.of(Material.WOOD).nonOpaque().solidBlock(ABContent::never).blockVision(ABContent::never).suffocates(ABContent::never).requiresTool().breakByTool(FabricToolTags.AXES, 1).hardness(5.0F).resistance(6.0F).sounds(BlockSoundGroup.WOOD));
-    public static final Block HORIZONTAL_JUNGLE_BARS    = new HorizontalPaneBlock(FabricBlockSettings.of(Material.WOOD).nonOpaque().solidBlock(ABContent::never).blockVision(ABContent::never).suffocates(ABContent::never).requiresTool().breakByTool(FabricToolTags.AXES, 1).hardness(5.0F).resistance(6.0F).sounds(BlockSoundGroup.WOOD));
-    public static final Block HORIZONTAL_OAK_BARS       = new HorizontalPaneBlock(FabricBlockSettings.of(Material.WOOD).nonOpaque().solidBlock(ABContent::never).blockVision(ABContent::never).suffocates(ABContent::never).requiresTool().breakByTool(FabricToolTags.AXES, 1).hardness(5.0F).resistance(6.0F).sounds(BlockSoundGroup.WOOD));
-    public static final Block HORIZONTAL_SPRUCE_BARS    = new HorizontalPaneBlock(FabricBlockSettings.of(Material.WOOD).nonOpaque().solidBlock(ABContent::never).blockVision(ABContent::never).suffocates(ABContent::never).requiresTool().breakByTool(FabricToolTags.AXES, 1).hardness(5.0F).resistance(6.0F).sounds(BlockSoundGroup.WOOD));
-    public static final Block HORIZONTAL_CRIMSON_BARS   = new HorizontalPaneBlock(FabricBlockSettings.of(Material.NETHER_WOOD).nonOpaque().solidBlock(ABContent::never).blockVision(ABContent::never).suffocates(ABContent::never).requiresTool().breakByTool(FabricToolTags.AXES, 1).hardness(5.0F).resistance(6.0F).sounds(BlockSoundGroup.NETHER_STEM));
-    public static final Block HORIZONTAL_WARPED_BARS    = new HorizontalPaneBlock(FabricBlockSettings.of(Material.NETHER_WOOD).nonOpaque().solidBlock(ABContent::never).blockVision(ABContent::never).suffocates(ABContent::never).requiresTool().breakByTool(FabricToolTags.AXES, 1).hardness(5.0F).resistance(6.0F).sounds(BlockSoundGroup.NETHER_STEM));
-
-    public static final Block HORIZONTAL_CROSSED_IRON_BARS      = new HorizontalPaneBlock(FabricBlockSettings.of(Material.METAL).nonOpaque().solidBlock(ABContent::never).blockVision(ABContent::never).suffocates(ABContent::never).requiresTool().breakByTool(FabricToolTags.PICKAXES, 1).hardness(5.0F).resistance(6.0F).sounds(BlockSoundGroup.METAL));
-    public static final Block HORIZONTAL_CROSSED_GOLD_BARS      = new HorizontalPaneBlock(FabricBlockSettings.of(Material.METAL).nonOpaque().solidBlock(ABContent::never).blockVision(ABContent::never).suffocates(ABContent::never).requiresTool().breakByTool(FabricToolTags.PICKAXES, 1).hardness(5.0F).resistance(6.0F).sounds(BlockSoundGroup.METAL));
-    public static final Block HORIZONTAL_CROSSED_ACACIA_BARS    = new HorizontalPaneBlock(FabricBlockSettings.of(Material.WOOD).nonOpaque().solidBlock(ABContent::never).blockVision(ABContent::never).suffocates(ABContent::never).requiresTool().breakByTool(FabricToolTags.AXES, 1).hardness(5.0F).resistance(6.0F).sounds(BlockSoundGroup.WOOD));
-    public static final Block HORIZONTAL_CROSSED_BIRCH_BARS     = new HorizontalPaneBlock(FabricBlockSettings.of(Material.WOOD).nonOpaque().solidBlock(ABContent::never).blockVision(ABContent::never).suffocates(ABContent::never).requiresTool().breakByTool(FabricToolTags.AXES, 1).hardness(5.0F).resistance(6.0F).sounds(BlockSoundGroup.WOOD));
-    public static final Block HORIZONTAL_CROSSED_DARK_OAK_BARS  = new HorizontalPaneBlock(FabricBlockSettings.of(Material.WOOD).nonOpaque().solidBlock(ABContent::never).blockVision(ABContent::never).suffocates(ABContent::never).requiresTool().breakByTool(FabricToolTags.AXES, 1).hardness(5.0F).resistance(6.0F).sounds(BlockSoundGroup.WOOD));
-    public static final Block HORIZONTAL_CROSSED_JUNGLE_BARS    = new HorizontalPaneBlock(FabricBlockSettings.of(Material.WOOD).nonOpaque().solidBlock(ABContent::never).blockVision(ABContent::never).suffocates(ABContent::never).requiresTool().breakByTool(FabricToolTags.AXES, 1).hardness(5.0F).resistance(6.0F).sounds(BlockSoundGroup.WOOD));
-    public static final Block HORIZONTAL_CROSSED_OAK_BARS       = new HorizontalPaneBlock(FabricBlockSettings.of(Material.WOOD).nonOpaque().solidBlock(ABContent::never).blockVision(ABContent::never).suffocates(ABContent::never).requiresTool().breakByTool(FabricToolTags.AXES, 1).hardness(5.0F).resistance(6.0F).sounds(BlockSoundGroup.WOOD));
-    public static final Block HORIZONTAL_CROSSED_SPRUCE_BARS    = new HorizontalPaneBlock(FabricBlockSettings.of(Material.WOOD).nonOpaque().solidBlock(ABContent::never).blockVision(ABContent::never).suffocates(ABContent::never).requiresTool().breakByTool(FabricToolTags.AXES, 1).hardness(5.0F).resistance(6.0F).sounds(BlockSoundGroup.WOOD));
-    public static final Block HORIZONTAL_CROSSED_CRIMSON_BARS   = new HorizontalPaneBlock(FabricBlockSettings.of(Material.NETHER_WOOD).nonOpaque().solidBlock(ABContent::never).blockVision(ABContent::never).suffocates(ABContent::never).requiresTool().breakByTool(FabricToolTags.AXES, 1).hardness(5.0F).resistance(6.0F).sounds(BlockSoundGroup.NETHER_STEM));
-    public static final Block HORIZONTAL_CROSSED_WARPED_BARS    = new HorizontalPaneBlock(FabricBlockSettings.of(Material.NETHER_WOOD).nonOpaque().solidBlock(ABContent::never).blockVision(ABContent::never).suffocates(ABContent::never).requiresTool().breakByTool(FabricToolTags.AXES, 1).hardness(5.0F).resistance(6.0F).sounds(BlockSoundGroup.NETHER_STEM));
-
     private static boolean never(BlockState blockState, BlockView blockView, BlockPos blockPos)
     {
         return false;
     }
+
+    private static final FabricBlockSettings METALLIC_BARS_SETTINGS = FabricBlockSettings.of(Material.METAL).breakByTool(FabricToolTags.PICKAXES, 1).breakByHand(false).hardness(5.0F).resistance(6.0F).sounds(BlockSoundGroup.METAL);
+    private static final FabricBlockSettings WOODEN_BARS_SETTINGS = FabricBlockSettings.of(Material.WOOD).breakByTool(FabricToolTags.AXES, 1).breakByHand(true).hardness(3.0F).resistance(4.0F).sounds(BlockSoundGroup.WOOD);
+    private static final FabricBlockSettings NETHER_BARS_SETTINGS = FabricBlockSettings.of(Material.NETHER_WOOD).breakByTool(FabricToolTags.AXES, 1).breakByHand(true).hardness(3.0F).resistance(4.0F).sounds(BlockSoundGroup.NETHER_STEM);
+
+    private static final FabricBlockSettings HORIZONTAL_METALLIC_BARS_SETTINGS = FabricBlockSettings.of(Material.METAL).nonOpaque().solidBlock(ABContent::never).blockVision(ABContent::never).suffocates(ABContent::never).breakByTool(FabricToolTags.PICKAXES, 1).breakByHand(false).hardness(5.0F).resistance(6.0F).sounds(BlockSoundGroup.METAL);
+    private static final FabricBlockSettings HORIZONTAL_WOODEN_BARS_SETTINGS = FabricBlockSettings.of(Material.WOOD).solidBlock(ABContent::never).blockVision(ABContent::never).suffocates(ABContent::never).breakByTool(FabricToolTags.AXES, 1).nonOpaque().breakByHand(true).hardness(3.0F).resistance(4.0F).sounds(BlockSoundGroup.WOOD);
+    private static final FabricBlockSettings HORIZONTAL_NETHER_BARS_SETTINGS = FabricBlockSettings.of(Material.NETHER_WOOD).nonOpaque().solidBlock(ABContent::never).blockVision(ABContent::never).suffocates(ABContent::never).breakByTool(FabricToolTags.AXES, 1).hardness(3.0F).breakByHand(true).resistance(4.0F).sounds(BlockSoundGroup.NETHER_STEM);
+
+    public static final Block GOLD_BARS     = new BarsBlock(METALLIC_BARS_SETTINGS);
+    public static final Block ACACIA_BARS   = new BarsBlock(WOODEN_BARS_SETTINGS);
+    public static final Block BIRCH_BARS    = new BarsBlock(WOODEN_BARS_SETTINGS);
+    public static final Block DARK_OAK_BARS = new BarsBlock(WOODEN_BARS_SETTINGS);
+    public static final Block JUNGLE_BARS   = new BarsBlock(WOODEN_BARS_SETTINGS);
+    public static final Block SPRUCE_BARS   = new BarsBlock(WOODEN_BARS_SETTINGS);
+    public static final Block OAK_BARS      = new BarsBlock(WOODEN_BARS_SETTINGS);
+    public static final Block CRIMSON_BARS  = new BarsBlock(NETHER_BARS_SETTINGS);
+    public static final Block WARPED_BARS   = new BarsBlock(NETHER_BARS_SETTINGS);
+
+    public static final Block CROSSED_IRON_BARS     = new BarsBlock(METALLIC_BARS_SETTINGS);
+    public static final Block CROSSED_GOLD_BARS     = new BarsBlock(METALLIC_BARS_SETTINGS);
+    public static final Block CROSSED_ACACIA_BARS   = new BarsBlock(WOODEN_BARS_SETTINGS);
+    public static final Block CROSSED_BIRCH_BARS    = new BarsBlock(WOODEN_BARS_SETTINGS);
+    public static final Block CROSSED_DARK_OAK_BARS = new BarsBlock(WOODEN_BARS_SETTINGS);
+    public static final Block CROSSED_JUNGLE_BARS   = new BarsBlock(WOODEN_BARS_SETTINGS);
+    public static final Block CROSSED_SPRUCE_BARS   = new BarsBlock(WOODEN_BARS_SETTINGS);
+    public static final Block CROSSED_OAK_BARS      = new BarsBlock(WOODEN_BARS_SETTINGS);
+    public static final Block CROSSED_CRIMSON_BARS  = new BarsBlock(NETHER_BARS_SETTINGS);
+    public static final Block CROSSED_WARPED_BARS   = new BarsBlock(NETHER_BARS_SETTINGS);
+
+    public static final Block HORIZONTAL_IRON_BARS      = new HorizontalPaneBlock(HORIZONTAL_METALLIC_BARS_SETTINGS);
+    public static final Block HORIZONTAL_GOLD_BARS      = new HorizontalPaneBlock(HORIZONTAL_METALLIC_BARS_SETTINGS);
+    public static final Block HORIZONTAL_ACACIA_BARS    = new HorizontalPaneBlock(HORIZONTAL_WOODEN_BARS_SETTINGS);
+    public static final Block HORIZONTAL_BIRCH_BARS     = new HorizontalPaneBlock(HORIZONTAL_WOODEN_BARS_SETTINGS);
+    public static final Block HORIZONTAL_DARK_OAK_BARS  = new HorizontalPaneBlock(HORIZONTAL_WOODEN_BARS_SETTINGS);
+    public static final Block HORIZONTAL_JUNGLE_BARS    = new HorizontalPaneBlock(HORIZONTAL_WOODEN_BARS_SETTINGS);
+    public static final Block HORIZONTAL_OAK_BARS       = new HorizontalPaneBlock(HORIZONTAL_WOODEN_BARS_SETTINGS);
+    public static final Block HORIZONTAL_SPRUCE_BARS    = new HorizontalPaneBlock(HORIZONTAL_WOODEN_BARS_SETTINGS);
+    public static final Block HORIZONTAL_CRIMSON_BARS   = new HorizontalPaneBlock(HORIZONTAL_NETHER_BARS_SETTINGS);
+    public static final Block HORIZONTAL_WARPED_BARS    = new HorizontalPaneBlock(HORIZONTAL_NETHER_BARS_SETTINGS);
+
+    public static final Block HORIZONTAL_CROSSED_IRON_BARS      = new HorizontalPaneBlock(HORIZONTAL_METALLIC_BARS_SETTINGS);
+    public static final Block HORIZONTAL_CROSSED_GOLD_BARS      = new HorizontalPaneBlock(HORIZONTAL_METALLIC_BARS_SETTINGS);
+    public static final Block HORIZONTAL_CROSSED_ACACIA_BARS    = new HorizontalPaneBlock(HORIZONTAL_WOODEN_BARS_SETTINGS);
+    public static final Block HORIZONTAL_CROSSED_BIRCH_BARS     = new HorizontalPaneBlock(HORIZONTAL_WOODEN_BARS_SETTINGS);
+    public static final Block HORIZONTAL_CROSSED_DARK_OAK_BARS  = new HorizontalPaneBlock(HORIZONTAL_WOODEN_BARS_SETTINGS);
+    public static final Block HORIZONTAL_CROSSED_JUNGLE_BARS    = new HorizontalPaneBlock(HORIZONTAL_WOODEN_BARS_SETTINGS);
+    public static final Block HORIZONTAL_CROSSED_OAK_BARS       = new HorizontalPaneBlock(HORIZONTAL_WOODEN_BARS_SETTINGS);
+    public static final Block HORIZONTAL_CROSSED_SPRUCE_BARS    = new HorizontalPaneBlock(HORIZONTAL_WOODEN_BARS_SETTINGS);
+    public static final Block HORIZONTAL_CROSSED_CRIMSON_BARS   = new HorizontalPaneBlock(HORIZONTAL_NETHER_BARS_SETTINGS);
+    public static final Block HORIZONTAL_CROSSED_WARPED_BARS    = new HorizontalPaneBlock(HORIZONTAL_NETHER_BARS_SETTINGS);
+
+
 }

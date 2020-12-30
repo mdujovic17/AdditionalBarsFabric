@@ -39,10 +39,14 @@ public class ModRegistry
     {
         registerBlocks();
         registerItems();
+    }
+
+    public static void clientSetup()
+    {
         registerRenderLayer();
     }
 
-    public static void registerBlocks()
+    private static void registerBlocks()
     {
         Registry.register(Registry.BLOCK, new Identifier(AdditionalBars.MODID, "gold_bars"),     ABContent.GOLD_BARS);
         Registry.register(Registry.BLOCK, new Identifier(AdditionalBars.MODID, "acacia_bars"),   ABContent.ACACIA_BARS);
@@ -87,7 +91,7 @@ public class ModRegistry
         Registry.register(Registry.BLOCK, new Identifier(AdditionalBars.MODID, "horizontal_crossed_crimson_bars"),  ABContent.HORIZONTAL_CROSSED_CRIMSON_BARS);
         Registry.register(Registry.BLOCK, new Identifier(AdditionalBars.MODID, "horizontal_crossed_warped_bars"),   ABContent.HORIZONTAL_CROSSED_WARPED_BARS);
     }
-    public static void registerItems()
+    private static void registerItems()
     {
         Registry.register(Registry.ITEM, new Identifier(AdditionalBars.MODID, "gold_bars"), new BlockItem(ABContent.GOLD_BARS, new Item.Settings().group(AdditionalBars.ADDITIONAL_BARS)));
         Registry.register(Registry.ITEM, new Identifier(AdditionalBars.MODID, "acacia_bars"), new BlockItem(ABContent.ACACIA_BARS, new Item.Settings().group(AdditionalBars.ADDITIONAL_BARS)));
