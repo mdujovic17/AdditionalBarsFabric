@@ -1,7 +1,6 @@
 {
-	"parent": "additionalbars:block/parent/horizontal_bars_com",
+	"parent": "additionalbars:block/parent/td/horizontal/com",
 	"textures": {
-		"glass": "additionalbars:block/crimson_bars",
-		"edges": "additionalbars:block/crimson_bars"
+		"texture": "minecraft:block/crimson_planks"
 	}
 }

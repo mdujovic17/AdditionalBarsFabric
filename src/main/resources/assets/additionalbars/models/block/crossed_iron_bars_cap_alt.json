@@ -1,5 +1,5 @@
 {
-    "parent": "additionalbars:block/parent/bars_cap_alt",
+    "parent": "additionalbars:block/parent/td/crossed/cap_alt",
     "textures": {
         "texture": "additionalbars:block/crossed_iron_bars"
     }

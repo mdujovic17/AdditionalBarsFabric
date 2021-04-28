@@ -48,7 +48,7 @@ public class ModRegistry
 
     private static void registerBlocks()
     {
-        Registry.register(Registry.BLOCK, new Identifier(AdditionalBars.MODID, "test_block"),     ABContent.TEST_BLOCK);
+        //Registry.register(Registry.BLOCK, new Identifier(AdditionalBars.MODID, "test_block"),     ABContent.TEST_BLOCK);
 
         Registry.register(Registry.BLOCK, new Identifier(AdditionalBars.MODID, "gold_bars"),     ABContent.GOLD_BARS);
         Registry.register(Registry.BLOCK, new Identifier(AdditionalBars.MODID, "acacia_bars"),   ABContent.ACACIA_BARS);
@@ -95,7 +95,7 @@ public class ModRegistry
     }
     private static void registerItems()
     {
-        Registry.register(Registry.ITEM, new Identifier(AdditionalBars.MODID, "test_block"), new BlockItem(ABContent.TEST_BLOCK, new Item.Settings().group(AdditionalBars.ADDITIONAL_BARS)));
+        //Registry.register(Registry.ITEM, new Identifier(AdditionalBars.MODID, "test_block"), new BlockItem(ABContent.TEST_BLOCK, new Item.Settings().group(AdditionalBars.ADDITIONAL_BARS)));
         Registry.register(Registry.ITEM, new Identifier(AdditionalBars.MODID, "gold_bars"), new BlockItem(ABContent.GOLD_BARS, new Item.Settings().group(AdditionalBars.ADDITIONAL_BARS)));
         Registry.register(Registry.ITEM, new Identifier(AdditionalBars.MODID, "acacia_bars"), new BlockItem(ABContent.ACACIA_BARS, new Item.Settings().group(AdditionalBars.ADDITIONAL_BARS)));
         Registry.register(Registry.ITEM, new Identifier(AdditionalBars.MODID, "birch_bars"), new BlockItem(ABContent.BIRCH_BARS, new Item.Settings().group(AdditionalBars.ADDITIONAL_BARS)));
@@ -141,7 +141,7 @@ public class ModRegistry
     }
     public static void registerRenderLayer()
     {
-        BlockRenderLayerMap.INSTANCE.putBlock(ABContent.TEST_BLOCK, RenderLayer.getCutout());
+        //BlockRenderLayerMap.INSTANCE.putBlock(ABContent.TEST_BLOCK, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ABContent.GOLD_BARS, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ABContent.ACACIA_BARS, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ABContent.BIRCH_BARS, RenderLayer.getCutout());

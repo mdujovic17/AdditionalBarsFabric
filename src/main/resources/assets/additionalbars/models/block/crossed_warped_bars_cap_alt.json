@@ -1,6 +1,6 @@
 {
-    "parent": "additionalbars:block/parent/bars_cap_alt",
+    "parent": "additionalbars:block/parent/td/cap_alt",
     "textures": {
-        "texture": "additionalbars:block/crossed_warped_bars"
+        "texture": "minecraft:block/warped_planks"
     }
 }

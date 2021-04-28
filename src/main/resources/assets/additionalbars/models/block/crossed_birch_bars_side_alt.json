@@ -1,6 +1,6 @@
 {
-    "parent": "additionalbars:block/parent/bars_side_alt",
+    "parent": "additionalbars:block/parent/td/crossed/crossed_side_alt",
     "textures": {
-        "texture": "additionalbars:block/crossed_birch_bars"
+        "texture": "minecraft:block/birch_planks"
     }
 }

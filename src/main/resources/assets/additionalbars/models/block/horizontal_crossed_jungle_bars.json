@@ -1,7 +1,6 @@
 {
-	"parent": "additionalbars:block/parent/horizontal_bars_bot",
+	"parent": "additionalbars:block/parent/td/horizontal/crossed/bot",
 	"textures": {
-		"glass": "additionalbars:block/crossed_jungle_bars",
-		"edges": "additionalbars:block/crossed_jungle_bars"
+		"texture": "minecraft:block/jungle_planks"
 	}
 }

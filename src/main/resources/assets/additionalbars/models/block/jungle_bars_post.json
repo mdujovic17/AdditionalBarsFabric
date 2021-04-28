@@ -1,6 +1,6 @@
 {
-    "parent": "additionalbars:block/parent/bars_post",
+    "parent": "additionalbars:block/parent/td/post",
     "textures": {
-        "texture": "additionalbars:block/jungle_bars"
+        "texture": "minecraft:block/jungle_planks"
     }
 }

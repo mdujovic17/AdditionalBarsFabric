@@ -1,0 +1,12 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"group": "regular_to_horizontal",
+	"ingredients": [
+    {
+      "item": "additionalbars:gold_bars"
+    }
+  ],
+  "result": {
+    "item": "additionalbars:horizontal_gold_bars"
+  }
+}

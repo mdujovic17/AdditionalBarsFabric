@@ -1,0 +1,6 @@
+{
+    "parent": "additionalbars:block/parent/td/special/side_alt",
+    "textures": {
+        "texture": "minecraft:block/iron_bars"
+    }
+}

@@ -1,0 +1,12 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"group": "horizontal_to_crossed",
+	"ingredients": [
+    {
+      "item": "additionalbars:horizontal_crossed_gold_bars"
+    }
+  ],
+  "result": {
+    "item": "additionalbars:crossed_gold_bars"
+  }
+}

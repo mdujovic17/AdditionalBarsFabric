@@ -1,5 +1,5 @@
 {
-    "parent": "additionalbars:block/parent/bars_cap",
+    "parent": "additionalbars:block/parent/td/special/cap",
     "textures": {
         "texture": "additionalbars:block/gold_bars"
     }

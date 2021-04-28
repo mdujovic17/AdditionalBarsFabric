@@ -1,6 +1,6 @@
 {
-  "parent": "item/generated",
+  "parent": "additionalbars:item/parent/crossed_bars_inventory",
   "textures": {
-    "layer0": "additionalbars:block/crossed_gold_bars"
+    "texture": "additionalbars:block/crossed_gold_bars"
   }
 }

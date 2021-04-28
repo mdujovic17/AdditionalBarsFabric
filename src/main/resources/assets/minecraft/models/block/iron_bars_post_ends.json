@@ -1,0 +1,6 @@
+{
+    "parent": "additionalbars:block/parent/td/special/post_ends",
+    "textures": {
+        "texture": "minecraft:block/iron_bars"
+    }
+}

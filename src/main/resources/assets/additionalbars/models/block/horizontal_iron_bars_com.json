@@ -1,7 +1,6 @@
 {
-	"parent": "additionalbars:block/parent/horizontal_bars_com",
+	"parent": "additionalbars:block/parent/td/horizontal/special/com",
 	"textures": {
-		"glass": "minecraft:block/iron_bars",
-		"edges": "minecraft:block/iron_bars"
+		"texture": "minecraft:block/iron_bars"
 	}
 }

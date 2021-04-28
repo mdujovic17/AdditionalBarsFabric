@@ -1,7 +1,6 @@
 {
-	"parent": "additionalbars:block/parent/horizontal_bars_top",
+	"parent": "additionalbars:block/parent/td/horizontal/crossed/top",
 	"textures": {
-		"glass": "additionalbars:block/crossed_warped_bars",
-		"edges": "additionalbars:block/crossed_warped_bars"
+		"texture": "minecraft:block/warped_planks"
 	}
 }

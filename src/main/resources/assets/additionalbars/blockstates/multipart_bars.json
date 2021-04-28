@@ -1,0 +1,32 @@
+{
+  "multipart": [
+    {   "apply": { "model": "#post_ends" }},
+    {   "when": { "north": false, "east": false, "south": false, "west": false },
+      "apply": { "model": "#post" }
+    },
+    {   "when": { "north": true, "east": false, "south": false, "west": false },
+      "apply": { "model": "#cap" }
+    },
+    {   "when": { "north": false, "east": true, "south": false, "west": false },
+      "apply": { "model": "#cap", "y": 90 }
+    },
+    {   "when": { "north": false, "east": false, "south": true, "west": false },
+      "apply": { "model": "#cap_alt" }
+    },
+    {   "when": { "north": false, "east": false, "south": false, "west": true },
+      "apply": { "model": "#cap_alt", "y": 90 }
+    },
+    {   "when": { "north": true },
+      "apply": { "model": "#side" }
+    },
+    {   "when": { "east": true },
+      "apply": { "model": "#side", "y": 90 }
+    },
+    {   "when": { "south": true },
+      "apply": { "model": "#side_alt" }
+    },
+    {   "when": { "west": true },
+      "apply": { "model": "#side_alt", "y": 90 }
+    }
+  ]
+}

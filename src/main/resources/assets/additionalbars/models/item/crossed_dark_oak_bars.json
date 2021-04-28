@@ -1,6 +1,6 @@
 {
-  "parent": "item/generated",
+  "parent": "additionalbars:item/parent/crossed_bars_inventory",
   "textures": {
-    "layer0": "additionalbars:block/crossed_dark_oak_bars"
+    "texture": "minecraft:block/dark_oak_planks"
   }
 }

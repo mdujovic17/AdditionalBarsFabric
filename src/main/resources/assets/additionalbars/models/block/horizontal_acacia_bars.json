@@ -1,7 +1,6 @@
 {
-	"parent": "additionalbars:block/parent/horizontal_bars_bot",
+	"parent": "additionalbars:block/parent/td/horizontal/bot",
 	"textures": {
-		"glass": "additionalbars:block/acacia_bars",
-		"edges": "additionalbars:block/acacia_bars"
+		"texture": "minecraft:block/acacia_planks"
 	}
 }

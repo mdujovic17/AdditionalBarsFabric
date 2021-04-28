@@ -1,6 +1,6 @@
 {
-  "parent": "item/generated",
+  "parent": "additionalbars:item/parent/bars_inventory",
   "textures": {
-    "layer0": "additionalbars:block/spruce_bars"
+    "texture": "minecraft:block/spruce_planks"
   }
 }

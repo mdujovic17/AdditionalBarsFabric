@@ -1,6 +1,6 @@
 {
-  "parent": "additionalbars:block/parent/bars_cap",
+  "parent": "additionalbars:block/parent/td/cap",
   "textures": {
-    "texture": "additionalbars:block/crimson_bars"
+    "texture": "minecraft:block/crimson_planks"
   }
 }

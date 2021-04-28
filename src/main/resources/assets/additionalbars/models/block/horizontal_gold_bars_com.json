@@ -1,7 +1,6 @@
 {
-	"parent": "additionalbars:block/parent/horizontal_bars_com",
+	"parent": "additionalbars:block/parent/td/horizontal/special/com",
 	"textures": {
-		"glass": "additionalbars:block/gold_bars",
-		"edges": "additionalbars:block/gold_bars"
+		"texture": "additionalbars:block/gold_bars"
 	}
 }

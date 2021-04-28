@@ -1,0 +1,12 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"group": "horizontal_to_regular",
+	"ingredients": [
+    {
+      "item": "additionalbars:horizontal_spruce_bars"
+    }
+  ],
+  "result": {
+    "item": "additionalbars:spruce_bars"
+  }
+}
