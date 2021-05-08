@@ -26,17 +26,10 @@ package com.codenamerevy.additionalbars;
 
 import com.codenamerevy.additionalbars.events.ModRegistry;
 import com.codenamerevy.additionalbars.init.ABContent;
-import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
-import net.fabricmc.fabric.api.resource.IdentifiableResourceReloadListener;
-import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
-import net.fabricmc.fabric.api.resource.ResourcePackActivationType;
-import net.fabricmc.loader.FabricLoader;
-import net.fabricmc.loader.ModContainer;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
-import net.minecraft.resource.ResourceType;
 import net.minecraft.util.Identifier;
 
 public class AdditionalBars implements ModInitializer

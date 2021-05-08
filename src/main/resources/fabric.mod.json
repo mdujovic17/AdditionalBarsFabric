@@ -4,13 +4,13 @@
   "version": "${version}",
 
   "name": "Additional Bars",
-  "description": "This mod adds additional bars to the game that go along with Iron Bars!\\n Credits:\\n ruchom4u (Spanish Translations)\\n fantasyair18 (Chinese Traditional (Taiwan) Translations)\\n TheDirectorX (Russian Translations)\\n BardinTheDwarf (Russian Translations)\\n Zijuna (German Translations)\\n justmonika (Simple Chinese Translations)\\n mindy15963 (Korean Translations)\\n WadeMason",
+  "description": "This mod adds additional bars to the game that go along with Iron Bars!\n Credits:\n ruchom4u (Spanish Translations)\n fantasyair18 (Chinese Traditional (Taiwan) Translations)\n TheDirectorX (Russian Translations)\n BardinTheDwarf (Russian Translations)\n Zijuna (German Translations)\n justmonika (Simple Chinese Translations)\n mindy15963 (Korean Translations)\n WadeMason",
   "authors": [
     "CodenameRevy"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/CodenameRevy/additional-bars-fabric"
+    "homepage": "gamma1772.github.io",
+    "sources": "https://github.com/CodenameRevy/AdditionalBarsFabric"
   },
 
   "license": "MIT License",

@@ -26,9 +26,6 @@ package com.codenamerevy.additionalbars;
 
 import com.codenamerevy.additionalbars.events.ModRegistry;
 import net.fabricmc.api.ClientModInitializer;
-import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
-import net.fabricmc.loader.FabricLoader;
-import net.minecraft.util.Identifier;
 
 public class AdditionalBarsClient implements ClientModInitializer
 {
@@ -38,9 +35,5 @@ public class AdditionalBarsClient implements ClientModInitializer
     {
         INSTANCE = this;
         ModRegistry.clientSetup();
-        FabricLoader.INSTANCE.getModContainer(AdditionalBars.MODID).ifPresent(container -> {
-            ResourceManagerHelper.registerBuiltinResourcePack(new Identifier("additionalbars:classic"), "resourcepacks/classic", container, false);
-            //System.out.println("AB CLASSIC RESOURCE PACK LOADED");
-        });
     }
 }

@@ -27,11 +27,17 @@ package com.codenamerevy.additionalbars.events;
 import com.codenamerevy.additionalbars.AdditionalBars;
 import com.codenamerevy.additionalbars.init.ABContent;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
+import net.fabricmc.fabric.api.resource.ResourcePackActivationType;
+import net.fabricmc.loader.api.FabricLoader;
+import net.fabricmc.loader.api.ModContainer;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
+
+import java.util.Optional;
 
 public class ModRegistry
 {
@@ -43,6 +49,7 @@ public class ModRegistry
 
     public static void clientSetup()
     {
+        registerResourcePacks();
         registerRenderLayer();
     }
 
@@ -184,5 +191,10 @@ public class ModRegistry
         BlockRenderLayerMap.INSTANCE.putBlock(ABContent.HORIZONTAL_CROSSED_OAK_BARS, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ABContent.HORIZONTAL_CROSSED_CRIMSON_BARS, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ABContent.HORIZONTAL_CROSSED_WARPED_BARS, RenderLayer.getCutout());
+    }
+
+    private static void registerResourcePacks() {
+        Optional<ModContainer> CONTAINER = FabricLoader.getInstance().getModContainer(AdditionalBars.MODID);
+        ResourceManagerHelper.registerBuiltinResourcePack(new Identifier("additionalbars:classic"), CONTAINER.get(), ResourcePackActivationType.NORMAL);
     }
 }
