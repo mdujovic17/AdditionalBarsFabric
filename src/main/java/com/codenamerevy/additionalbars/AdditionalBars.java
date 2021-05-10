@@ -37,7 +37,7 @@ public class AdditionalBars implements ModInitializer
     public static final String MODID = "additionalbars";
 
     public static final ItemGroup ADDITIONAL_BARS = FabricItemGroupBuilder.build(
-            new Identifier(MODID, "additionalBars"),
+            new Identifier(MODID, "additionalbars"),
             () -> new ItemStack(ABContent.GOLD_BARS));
     public static final ItemGroup HORIZONTAL_ADDITIONAL_BARS = FabricItemGroupBuilder.build(
             new Identifier(MODID, "horizontaladditionalbars"),
