@@ -90,6 +90,6 @@
   "block.additionalbars.horizontal_crossed_umbran_bars": "수평 십자형 엄브란나무 창",
   "block.additionalbars.horizontal_crossed_hellbark_bars": "수평 십자형 지옥껍질나무 창",
 
-  "itemGroup.additionalbars": "추가 창",
-  "itemGroup.horizontaladditionalbars": "추가 창 (수평)"
+  "itemGroup.additionalbars.additionalbars": "추가 창",
+  "itemGroup.additionalbars.horizontaladditionalbars": "추가 창 (수평)"
 }

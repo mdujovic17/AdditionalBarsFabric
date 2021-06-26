@@ -90,6 +90,6 @@
   "block.additionalbars.horizontal_crossed_umbran_bars": "交叉暗影木栏杆(横向)",
   "block.additionalbars.horizontal_crossed_hellbark_bars": "交叉地狱皮树栏杆(横向)",
 
-  "itemGroup.additionalbars": "栏杆补充",
-  "itemGroup.horizontaladditionalbars": "栏杆补充 (横向)"
+  "itemGroup.additionalbars.additionalbars": "栏杆补充",
+  "itemGroup.additionalbars.horizontaladditionalbars": "栏杆补充 (横向)"
 }
