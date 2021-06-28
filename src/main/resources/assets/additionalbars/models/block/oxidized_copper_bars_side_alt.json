@@ -1,5 +1,5 @@
 {
-    "parent": "additionalbars:block/parent/td/side_alt",
+    "parent": "additionalbars:block/parent/td/special/side_alt",
     "textures": {
         "texture": "minecraft:block/oxidized_copper"
     }

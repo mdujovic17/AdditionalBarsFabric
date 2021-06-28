@@ -1,5 +1,5 @@
 {
-    "parent": "additionalbars:block/parent/td/cap",
+    "parent": "additionalbars:block/parent/td/special/cap",
     "textures": {
         "texture": "minecraft:block/oxidized_copper"
     }

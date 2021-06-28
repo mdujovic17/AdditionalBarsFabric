@@ -1,5 +1,5 @@
 {
-    "parent": "additionalbars:block/parent/td/post_ends",
+    "parent": "additionalbars:block/parent/td/special/post_ends",
     "textures": {
         "texture": "minecraft:block/weathered_copper"
     }

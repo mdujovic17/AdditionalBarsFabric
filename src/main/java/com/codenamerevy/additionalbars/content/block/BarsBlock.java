@@ -28,7 +28,29 @@ import net.minecraft.block.PaneBlock;
 
 public class BarsBlock extends PaneBlock {
 
-    public BarsBlock(Settings settings) {
+    private String pathName;
+    private EnumType type;
+    private String texturePath;
+
+//    public BarsBlock(Settings settings, String pathName, String type) {
+//        super(settings);
+//        this.pathName = pathName;
+//        this.type = type;
+//    }
+    public BarsBlock(Settings settings, String pathName, EnumType type, String texturePath) {
         super(settings);
+        this.pathName = pathName;
+        this.type = type;
+
+        if (!(texturePath.charAt(0) == '/')) {
+            this.texturePath = "minecraft:block/" + texturePath;
+        }
+        else {
+            this.texturePath = "additionalbars:block" + texturePath;
+        }
     }
+
+    public String getPathName() { return pathName; }
+    public EnumType getType() { return type; }
+    public String getTexturePath() { return texturePath; }
 }

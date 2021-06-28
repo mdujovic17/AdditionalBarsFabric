@@ -26,14 +26,20 @@ package com.codenamerevy.additionalbars;
 
 import com.codenamerevy.additionalbars.events.ModRegistry;
 import com.codenamerevy.additionalbars.init.ABContent;
+import com.codenamerevy.additionalbars.util.data.DataGenerator;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
+import net.minecraft.MinecraftVersion;
+import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.MinecraftClientGame;
+import net.minecraft.client.RunArgs;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
 
 public class AdditionalBars implements ModInitializer
 {
+    public boolean generateData = true;
     public static final String MODID = "additionalbars";
 
     public static final ItemGroup ADDITIONAL_BARS = FabricItemGroupBuilder.build(
@@ -43,12 +49,17 @@ public class AdditionalBars implements ModInitializer
             new Identifier(MODID, "horizontaladditionalbars"),
             () -> new ItemStack(ABContent.HORIZONTAL_GOLD_BARS));
 
-    private static AdditionalBars INSTANCE;
+    public static AdditionalBars INSTANCE;
 
     @Override
     public void onInitialize()
     {
         INSTANCE = this;
         ModRegistry.setup();
+
+        if (generateData) {
+            DataGenerator.init();
+            System.exit(999);
+        }
     }
 }

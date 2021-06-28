@@ -1,5 +1,5 @@
 {
-    "parent": "additionalbars:block/parent/td/side",
+    "parent": "additionalbars:block/parent/td/special/side",
     "textures": {
         "texture": "minecraft:block/exposed_copper"
     }
