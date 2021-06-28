@@ -31,6 +31,7 @@ import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
 import net.fabricmc.fabric.api.resource.ResourcePackActivationType;
 import net.fabricmc.loader.api.FabricLoader;
 import net.fabricmc.loader.api.ModContainer;
+import net.minecraft.block.Oxidizable;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -66,6 +67,15 @@ public class ModRegistry
         Registry.register(Registry.BLOCK, new Identifier(AdditionalBars.MODID, "oak_bars"),      ABContent.OAK_BARS);
         Registry.register(Registry.BLOCK, new Identifier(AdditionalBars.MODID, "crimson_bars"),  ABContent.CRIMSON_BARS);
         Registry.register(Registry.BLOCK, new Identifier(AdditionalBars.MODID, "warped_bars"),   ABContent.WARPED_BARS);
+
+        Registry.register(Registry.BLOCK, new Identifier(AdditionalBars.MODID, "copper_bars"),     ABContent.COPPER_BARS);
+        Registry.register(Registry.BLOCK, new Identifier(AdditionalBars.MODID, "exposed_copper_bars"),     ABContent.EXPOSED_COPPER_BARS);
+        Registry.register(Registry.BLOCK, new Identifier(AdditionalBars.MODID, "weathered_copper_bars"),     ABContent.WEATHERED_COPPER_BARS);
+        Registry.register(Registry.BLOCK, new Identifier(AdditionalBars.MODID, "oxidized_copper_bars"),     ABContent.OXIDIZED_COPPER_BARS);
+
+//        Oxidizable.OXIDATION_LEVEL_INCREASES.get().forcePut(ABContent.COPPER_BARS, ABContent.EXPOSED_COPPER_BARS);
+//        Oxidizable.OXIDATION_LEVEL_INCREASES.get().forcePut(ABContent.EXPOSED_COPPER_BARS, ABContent.WEATHERED_COPPER_BARS);
+//        Oxidizable.OXIDATION_LEVEL_INCREASES.get().forcePut(ABContent.WEATHERED_COPPER_BARS, ABContent.OXIDIZED_COPPER_BARS);
 
         Registry.register(Registry.BLOCK, new Identifier(AdditionalBars.MODID, "crossed_iron_bars"),     ABContent.CROSSED_IRON_BARS);
         Registry.register(Registry.BLOCK, new Identifier(AdditionalBars.MODID, "crossed_gold_bars"),     ABContent.CROSSED_GOLD_BARS);
@@ -112,6 +122,11 @@ public class ModRegistry
         Registry.register(Registry.ITEM, new Identifier(AdditionalBars.MODID, "oak_bars"), new BlockItem(ABContent.OAK_BARS, new Item.Settings().group(AdditionalBars.ADDITIONAL_BARS)));
         Registry.register(Registry.ITEM, new Identifier(AdditionalBars.MODID, "crimson_bars"), new BlockItem(ABContent.CRIMSON_BARS, new Item.Settings().group(AdditionalBars.ADDITIONAL_BARS)));
         Registry.register(Registry.ITEM, new Identifier(AdditionalBars.MODID, "warped_bars"), new BlockItem(ABContent.WARPED_BARS, new Item.Settings().group(AdditionalBars.ADDITIONAL_BARS)));
+
+        Registry.register(Registry.ITEM, new Identifier(AdditionalBars.MODID, "copper_bars"), new BlockItem(ABContent.COPPER_BARS, new Item.Settings().group(AdditionalBars.ADDITIONAL_BARS)));
+        Registry.register(Registry.ITEM, new Identifier(AdditionalBars.MODID, "exposed_copper_bars"), new BlockItem(ABContent.EXPOSED_COPPER_BARS, new Item.Settings().group(AdditionalBars.ADDITIONAL_BARS)));
+        Registry.register(Registry.ITEM, new Identifier(AdditionalBars.MODID, "weathered_copper_bars"), new BlockItem(ABContent.WEATHERED_COPPER_BARS, new Item.Settings().group(AdditionalBars.ADDITIONAL_BARS)));
+        Registry.register(Registry.ITEM, new Identifier(AdditionalBars.MODID, "oxidized_copper_bars"), new BlockItem(ABContent.OXIDIZED_COPPER_BARS, new Item.Settings().group(AdditionalBars.ADDITIONAL_BARS)));
 
         Registry.register(Registry.ITEM, new Identifier(AdditionalBars.MODID, "crossed_iron_bars"), new BlockItem(ABContent.CROSSED_IRON_BARS, new Item.Settings().group(AdditionalBars.ADDITIONAL_BARS)));
         Registry.register(Registry.ITEM, new Identifier(AdditionalBars.MODID, "crossed_gold_bars"), new BlockItem(ABContent.CROSSED_GOLD_BARS, new Item.Settings().group(AdditionalBars.ADDITIONAL_BARS)));

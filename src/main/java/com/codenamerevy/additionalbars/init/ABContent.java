@@ -26,11 +26,14 @@ package com.codenamerevy.additionalbars.init;
 
 import com.codenamerevy.additionalbars.content.block.BarsBlock;
 import com.codenamerevy.additionalbars.content.block.HorizontalPaneBlock;
+import com.codenamerevy.additionalbars.content.block.OxidizableBars;
+import com.codenamerevy.additionalbars.content.block.OxidizableBarsBlock;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Material;
+import net.minecraft.block.Oxidizable;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.BlockView;
@@ -68,6 +71,11 @@ public class ABContent
     public static final Block OAK_BARS      = new BarsBlock(WOODEN_BARS_SETTINGS);
     public static final Block CRIMSON_BARS  = new BarsBlock(NETHER_BARS_SETTINGS);
     public static final Block WARPED_BARS   = new BarsBlock(NETHER_BARS_SETTINGS);
+
+    public static final Block COPPER_BARS = new OxidizableBarsBlock(OxidizableBars.OxidizationLevel.UNAFFECTED, METALLIC_BARS_SETTINGS.ticksRandomly());
+    public static final Block EXPOSED_COPPER_BARS = new OxidizableBarsBlock(OxidizableBars.OxidizationLevel.EXPOSED, METALLIC_BARS_SETTINGS.ticksRandomly());
+    public static final Block WEATHERED_COPPER_BARS = new OxidizableBarsBlock(OxidizableBars.OxidizationLevel.WEATHERED, METALLIC_BARS_SETTINGS.ticksRandomly());
+    public static final Block OXIDIZED_COPPER_BARS = new OxidizableBarsBlock(OxidizableBars.OxidizationLevel.OXIDIZED, METALLIC_BARS_SETTINGS.ticksRandomly());
 
     public static final Block CROSSED_IRON_BARS     = new BarsBlock(METALLIC_BARS_SETTINGS);
     public static final Block CROSSED_GOLD_BARS     = new BarsBlock(METALLIC_BARS_SETTINGS);
