@@ -1,7 +1,6 @@
 {
   "multipart": [
-    {   "apply": { "model": "additionalbars:block/oxidized_copper_bars_post_ends" }
-    },
+    {   "apply": { "model": "additionalbars:block/oxidized_copper_bars_post_ends" }},
     {   "when": { "north": false, "east": false, "south": false, "west": false },
       "apply": { "model": "additionalbars:block/oxidized_copper_bars_post" }
     },

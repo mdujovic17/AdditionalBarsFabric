@@ -19,17 +19,27 @@ public class DataGenerator {
         for (BarsBlock block : ModRegistry.bars) {
             for (String s : bars) {
                 switch (block.getType()) {
-                    case WOOD -> generateJSONModel(createBarsModelJSON(block.getPathName(), "classic", block.getTexturePath(), s), block.getPathName(), s);
-                    case METAL -> generateJSONModel(createBarsModelJSON(block.getPathName(), "special", block.getTexturePath(), s), block.getPathName(), s);
-                    case CROSSED_WOOD, CROSSED_METAL -> generateJSONModel(createBarsModelJSON(block.getPathName(), "crossed", block.getTexturePath(), s), block.getPathName(), s);
+                    case WOOD -> {
+                        generateJSONModel(createBarsModelJSON("classic", block.getTexturePath(), s), block.getPathName(), s);
+                        generateJSONItemModel(createBarsItemModelJSON("classic", block.getTexturePath()), block.getPathName());
+                    }
+                    case METAL -> {
+                        generateJSONModel(createBarsModelJSON("special", block.getTexturePath(), s), block.getPathName(), s);
+                        generateJSONItemModel(createBarsItemModelJSON("special", block.getTexturePath()), block.getPathName());
+                    }
+                    case CROSSED_WOOD, CROSSED_METAL -> {
+                        generateJSONModel(createBarsModelJSON("crossed", block.getTexturePath(), s), block.getPathName(), s);
+                        generateJSONItemModel(createBarsItemModelJSON("special", block.getTexturePath()), block.getPathName());
+                    }
                 }
+                generateJSONBlockState(createBarsBlockStateJSON(block.getPathName()), block.getPathName());
             }
         }
     }
 
     private static BufferedWriter bw;
     private static final String[] bars = {"cap", "cap_alt", "post", "post_ends", "side", "side_alt"};
-    public static String createBarsModelJSON(String ID, String type, String texture, String extension) {
+    public static String createBarsModelJSON(String type, String texture, String extension) {
         String barsType = "";
         switch (type) {
             case "classic":
@@ -53,7 +63,66 @@ public class DataGenerator {
                         }""",
         barsType, extension, texture);
     }
-
+    public static String createBarsItemModelJSON(String type, String texture) {
+        String barsType = "";
+        switch (type) {
+            case "classic":
+                barsType = "";
+                break;
+            case "crossed":
+                barsType = "crossed";
+                break;
+            case "special":
+                barsType = "special";
+                break;
+            default:
+                break;
+        }
+        return String.format("""
+                        {
+                        \t"parent": "additionalbars:item/parent/%s_bars_inventory",
+                        \t"textures": {
+                        \t\t"texture": "%s"
+                        \t}
+                        }""",
+                barsType, texture);
+    }
+    public static String createBarsBlockStateJSON(String bars) {
+        return String.format("""
+                {
+                  "multipart": [
+                    {   "apply": { "model": "additionalbars:block/%s_post_ends" }},
+                    {   "when": { "north": false, "east": false, "south": false, "west": false },
+                      "apply": { "model": "additionalbars:block/%s_post" }
+                    },
+                    {   "when": { "north": true, "east": false, "south": false, "west": false },
+                      "apply": { "model": "additionalbars:block/%s_cap" }
+                    },
+                    {   "when": { "north": false, "east": true, "south": false, "west": false },
+                      "apply": { "model": "additionalbars:block/%s_cap", "y": 90 }
+                    },
+                    {   "when": { "north": false, "east": false, "south": true, "west": false },
+                      "apply": { "model": "additionalbars:block/%s_cap_alt" }
+                    },
+                    {   "when": { "north": false, "east": false, "south": false, "west": true },
+                      "apply": { "model": "additionalbars:block/%s_cap_alt", "y": 90 }
+                    },
+                    {   "when": { "north": true },
+                      "apply": { "model": "additionalbars:block/%s_side" }
+                    },
+                    {   "when": { "east": true },
+                      "apply": { "model": "additionalbars:block/%s_side", "y": 90 }
+                    },
+                    {   "when": { "south": true },
+                      "apply": { "model": "additionalbars:block/%s_side_alt" }
+                    },
+                    {   "when": { "west": true },
+                      "apply": { "model": "additionalbars:block/%s_side_alt", "y": 90 }
+                    }
+                  ]
+                }
+                """, bars, bars, bars, bars, bars, bars, bars, bars, bars, bars);
+    }
     public static void generateJSONModel(String content, String id, String extension) {
         File file = new File("..//data//generated//models//block//");
         if (file.mkdir() || file.exists()) {

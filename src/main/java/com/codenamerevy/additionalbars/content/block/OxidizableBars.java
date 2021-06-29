@@ -15,7 +15,20 @@ public interface OxidizableBars extends Degradable<OxidizableBars.OxidizationLev
     Supplier<BiMap<Block, Block>> OXIDATION_LEVEL_INCREASES = Suppliers.memoize(() -> new ImmutableBiMap.Builder<Block, Block>()
             .put(ABContent.COPPER_BARS, ABContent.EXPOSED_COPPER_BARS)
             .put(ABContent.EXPOSED_COPPER_BARS, ABContent.WEATHERED_COPPER_BARS)
-            .put(ABContent.WEATHERED_COPPER_BARS, ABContent.OXIDIZED_COPPER_BARS).build());
+            .put(ABContent.WEATHERED_COPPER_BARS, ABContent.OXIDIZED_COPPER_BARS)
+
+            .put(ABContent.CROSSED_COPPER_BARS, ABContent.CROSSED_EXPOSED_COPPER_BARS)
+            .put(ABContent.CROSSED_EXPOSED_COPPER_BARS, ABContent.CROSSED_WEATHERED_COPPER_BARS)
+            .put(ABContent.CROSSED_WEATHERED_COPPER_BARS, ABContent.CROSSED_OXIDIZED_COPPER_BARS)
+
+            .put(ABContent.HORIZONTAL_COPPER_BARS, ABContent.HORIZONTAL_EXPOSED_COPPER_BARS)
+            .put(ABContent.HORIZONTAL_EXPOSED_COPPER_BARS, ABContent.HORIZONTAL_WEATHERED_COPPER_BARS)
+            .put(ABContent.HORIZONTAL_WEATHERED_COPPER_BARS, ABContent.HORIZONTAL_OXIDIZED_COPPER_BARS)
+
+            .put(ABContent.HORIZONTAL_CROSSED_COPPER_BARS, ABContent.HORIZONTAL_CROSSED_EXPOSED_COPPER_BARS)
+            .put(ABContent.HORIZONTAL_CROSSED_EXPOSED_COPPER_BARS, ABContent.HORIZONTAL_CROSSED_WEATHERED_COPPER_BARS)
+            .put(ABContent.HORIZONTAL_CROSSED_WEATHERED_COPPER_BARS, ABContent.HORIZONTAL_CROSSED_OXIDIZED_COPPER_BARS)
+            .build());
 
     Supplier<BiMap<Block, Block>> OXIDATION_LEVEL_DECREASES = Suppliers.memoize(() -> (OXIDATION_LEVEL_INCREASES.get()).inverse());
 

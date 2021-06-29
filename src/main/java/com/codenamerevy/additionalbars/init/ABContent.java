@@ -83,10 +83,10 @@ public class ABContent
     public static final Block CROSSED_CRIMSON_BARS  = new BarsBlock(NETHER_BARS_SETTINGS, "crossed_crimson_bars", EnumType.CROSSED_WOOD , "crimson_planks");
     public static final Block CROSSED_WARPED_BARS   = new BarsBlock(NETHER_BARS_SETTINGS, "crossed_warped_bars", EnumType.CROSSED_WOOD  , "warped_planks");
 
-    public static final Block CROSSED_COPPER_BARS = new OxidizableBarsBlock(OxidizableBars.OxidizationLevel.UNAFFECTED, METALLIC_BARS_SETTINGS.ticksRandomly(), "crossed_copper_bars", EnumType.CROSSED_METAL, "/copper_bars");
-    public static final Block CROSSED_EXPOSED_COPPER_BARS = new OxidizableBarsBlock(OxidizableBars.OxidizationLevel.EXPOSED, METALLIC_BARS_SETTINGS.ticksRandomly(), "crossed_exposed_copper_bars", EnumType.CROSSED_METAL, "/exposed_copper_bars");
-    public static final Block CROSSED_WEATHERED_COPPER_BARS = new OxidizableBarsBlock(OxidizableBars.OxidizationLevel.WEATHERED, METALLIC_BARS_SETTINGS.ticksRandomly(), "crossed_weathered_copper_bars", EnumType.CROSSED_METAL, "/weathered_copper_bars");
-    public static final Block CROSSED_OXIDIZED_COPPER_BARS = new OxidizableBarsBlock(OxidizableBars.OxidizationLevel.OXIDIZED, METALLIC_BARS_SETTINGS.ticksRandomly(), "crossed_oxidized_copper_bars", EnumType.CROSSED_METAL, "/oxidized_copper_bars");
+    public static final Block CROSSED_COPPER_BARS = new OxidizableBarsBlock(OxidizableBars.OxidizationLevel.UNAFFECTED, METALLIC_BARS_SETTINGS.ticksRandomly(), "crossed_copper_bars", EnumType.CROSSED_METAL, "/crossed_copper_bars");
+    public static final Block CROSSED_EXPOSED_COPPER_BARS = new OxidizableBarsBlock(OxidizableBars.OxidizationLevel.EXPOSED, METALLIC_BARS_SETTINGS.ticksRandomly(), "crossed_exposed_copper_bars", EnumType.CROSSED_METAL, "/crossed_exposed_copper_bars");
+    public static final Block CROSSED_WEATHERED_COPPER_BARS = new OxidizableBarsBlock(OxidizableBars.OxidizationLevel.WEATHERED, METALLIC_BARS_SETTINGS.ticksRandomly(), "crossed_weathered_copper_bars", EnumType.CROSSED_METAL, "/crossed_weathered_copper_bars");
+    public static final Block CROSSED_OXIDIZED_COPPER_BARS = new OxidizableBarsBlock(OxidizableBars.OxidizationLevel.OXIDIZED, METALLIC_BARS_SETTINGS.ticksRandomly(), "crossed_oxidized_copper_bars", EnumType.CROSSED_METAL, "/crossed_oxidized_copper_bars");
 
     public static final Block HORIZONTAL_IRON_BARS      = new HorizontalPaneBlock(HORIZONTAL_METALLIC_BARS_SETTINGS);
     public static final Block HORIZONTAL_GOLD_BARS      = new HorizontalPaneBlock(HORIZONTAL_METALLIC_BARS_SETTINGS);

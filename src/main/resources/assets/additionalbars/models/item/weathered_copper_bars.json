@@ -1,6 +1,6 @@
 {
-  "parent": "additionalbars:item/parent/bars_inventory",
-  "textures": {
-    "texture": "minecraft:block/weathered_copper"
-  }
+	"parent": "additionalbars:item/parent/special_bars_inventory",
+	"textures": {
+		"texture": "additionalbars:block/weathered_copper_bars"
+	}
 }
