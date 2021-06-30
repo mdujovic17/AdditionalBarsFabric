@@ -39,7 +39,7 @@ import net.minecraft.util.Identifier;
 
 public class AdditionalBars implements ModInitializer
 {
-    public boolean generateData = false;
+    //public boolean generateData = false;
     public static final String MODID = "additionalbars";
 
     public static final ItemGroup ADDITIONAL_BARS = FabricItemGroupBuilder.build(
@@ -57,9 +57,9 @@ public class AdditionalBars implements ModInitializer
         INSTANCE = this;
         ModRegistry.setup();
 
-        if (generateData) {
-            DataGenerator.init();
-            System.exit(999);
-        }
+//        if (generateData) {
+//            DataGenerator.init();
+//            System.exit(999);
+//        }
     }
 }

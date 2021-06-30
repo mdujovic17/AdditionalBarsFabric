@@ -17,6 +17,7 @@ import java.io.IOException;
 import static com.codenamerevy.additionalbars.content.block.EnumType.H_CROSSED_METAL;
 import static com.codenamerevy.additionalbars.content.block.EnumType.H_CROSSED_WOOD;
 
+@Deprecated
 public class DataGenerator {
 
     public static void init() {
