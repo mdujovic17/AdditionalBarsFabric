@@ -26,13 +26,8 @@ package com.codenamerevy.additionalbars;
 
 import com.codenamerevy.additionalbars.events.ModRegistry;
 import com.codenamerevy.additionalbars.init.ABContent;
-import com.codenamerevy.additionalbars.util.data.DataGenerator;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
-import net.minecraft.MinecraftVersion;
-import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.MinecraftClientGame;
-import net.minecraft.client.RunArgs;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
