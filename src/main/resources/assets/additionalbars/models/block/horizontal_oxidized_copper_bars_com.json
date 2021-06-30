@@ -1,0 +1,6 @@
+{
+	"parent": "additionalbars:block/parent/td/horizontal/special/com",
+	"textures": {
+		"texture": "additionalbars:block/oxidized_copper_bars"
+	}
+}

@@ -88,36 +88,35 @@ public class ABContent
     public static final Block CROSSED_WEATHERED_COPPER_BARS = new OxidizableBarsBlock(OxidizableBars.OxidizationLevel.WEATHERED, METALLIC_BARS_SETTINGS.ticksRandomly(), "crossed_weathered_copper_bars", EnumType.CROSSED_METAL, "/crossed_weathered_copper_bars");
     public static final Block CROSSED_OXIDIZED_COPPER_BARS = new OxidizableBarsBlock(OxidizableBars.OxidizationLevel.OXIDIZED, METALLIC_BARS_SETTINGS.ticksRandomly(), "crossed_oxidized_copper_bars", EnumType.CROSSED_METAL, "/crossed_oxidized_copper_bars");
 
-    public static final Block HORIZONTAL_IRON_BARS      = new HorizontalPaneBlock(HORIZONTAL_METALLIC_BARS_SETTINGS);
-    public static final Block HORIZONTAL_GOLD_BARS      = new HorizontalPaneBlock(HORIZONTAL_METALLIC_BARS_SETTINGS);
-    public static final Block HORIZONTAL_ACACIA_BARS    = new HorizontalPaneBlock(HORIZONTAL_WOODEN_BARS_SETTINGS);
-    public static final Block HORIZONTAL_BIRCH_BARS     = new HorizontalPaneBlock(HORIZONTAL_WOODEN_BARS_SETTINGS);
-    public static final Block HORIZONTAL_DARK_OAK_BARS  = new HorizontalPaneBlock(HORIZONTAL_WOODEN_BARS_SETTINGS);
-    public static final Block HORIZONTAL_JUNGLE_BARS    = new HorizontalPaneBlock(HORIZONTAL_WOODEN_BARS_SETTINGS);
-    public static final Block HORIZONTAL_OAK_BARS       = new HorizontalPaneBlock(HORIZONTAL_WOODEN_BARS_SETTINGS);
-    public static final Block HORIZONTAL_SPRUCE_BARS    = new HorizontalPaneBlock(HORIZONTAL_WOODEN_BARS_SETTINGS);
-    public static final Block HORIZONTAL_CRIMSON_BARS   = new HorizontalPaneBlock(HORIZONTAL_NETHER_BARS_SETTINGS);
-    public static final Block HORIZONTAL_WARPED_BARS    = new HorizontalPaneBlock(HORIZONTAL_NETHER_BARS_SETTINGS);
+    public static final Block HORIZONTAL_IRON_BARS      = new HorizontalPaneBlock(HORIZONTAL_METALLIC_BARS_SETTINGS, "horizontal_iron_bars", EnumType.H_METAL, "iron_bars");
+    public static final Block HORIZONTAL_GOLD_BARS      = new HorizontalPaneBlock(HORIZONTAL_METALLIC_BARS_SETTINGS, "horizontal_gold_bars", EnumType.H_METAL, "/gold_bars");
+    public static final Block HORIZONTAL_ACACIA_BARS    = new HorizontalPaneBlock(HORIZONTAL_WOODEN_BARS_SETTINGS, "horizontal_acacia_bars", EnumType.H_WOOD, "acaica_planks");
+    public static final Block HORIZONTAL_BIRCH_BARS     = new HorizontalPaneBlock(HORIZONTAL_WOODEN_BARS_SETTINGS, "horizontal_birch_bars", EnumType.H_WOOD, "birch_planks");
+    public static final Block HORIZONTAL_DARK_OAK_BARS  = new HorizontalPaneBlock(HORIZONTAL_WOODEN_BARS_SETTINGS, "horizontal_dark_oak_bars", EnumType.H_WOOD, "dark_oak_planks");
+    public static final Block HORIZONTAL_JUNGLE_BARS    = new HorizontalPaneBlock(HORIZONTAL_WOODEN_BARS_SETTINGS, "horizontal_jungle_bars", EnumType.H_WOOD, "jungle_planks");
+    public static final Block HORIZONTAL_OAK_BARS       = new HorizontalPaneBlock(HORIZONTAL_WOODEN_BARS_SETTINGS, "horizontal_oak_bars", EnumType.H_WOOD, "oak_planks");
+    public static final Block HORIZONTAL_SPRUCE_BARS    = new HorizontalPaneBlock(HORIZONTAL_WOODEN_BARS_SETTINGS, "horizontal_spruce_bars", EnumType.H_WOOD, "spruce_planks");
+    public static final Block HORIZONTAL_CRIMSON_BARS   = new HorizontalPaneBlock(HORIZONTAL_NETHER_BARS_SETTINGS, "horizontal_crimson_bars", EnumType.H_WOOD, "crimson_planks");
+    public static final Block HORIZONTAL_WARPED_BARS    = new HorizontalPaneBlock(HORIZONTAL_NETHER_BARS_SETTINGS, "horizontal_warped_bars", EnumType.H_WOOD, "warped_planks");
 
-    public static final Block HORIZONTAL_COPPER_BARS = new OxidizableHorizontalPaneBlock(OxidizableBars.OxidizationLevel.UNAFFECTED, HORIZONTAL_METALLIC_BARS_SETTINGS.ticksRandomly());
-    public static final Block HORIZONTAL_EXPOSED_COPPER_BARS = new OxidizableHorizontalPaneBlock(OxidizableBars.OxidizationLevel.EXPOSED, HORIZONTAL_METALLIC_BARS_SETTINGS.ticksRandomly());
-    public static final Block HORIZONTAL_WEATHERED_COPPER_BARS = new OxidizableHorizontalPaneBlock(OxidizableBars.OxidizationLevel.WEATHERED, HORIZONTAL_METALLIC_BARS_SETTINGS.ticksRandomly());
-    public static final Block HORIZONTAL_OXIDIZED_COPPER_BARS = new OxidizableHorizontalPaneBlock(OxidizableBars.OxidizationLevel.OXIDIZED, HORIZONTAL_METALLIC_BARS_SETTINGS.ticksRandomly());
+    public static final Block HORIZONTAL_COPPER_BARS = new OxidizableHorizontalPaneBlock(OxidizableBars.OxidizationLevel.UNAFFECTED, HORIZONTAL_METALLIC_BARS_SETTINGS.ticksRandomly(), "horizontal_copper_bars", EnumType.H_METAL, "/copper_bars");
+    public static final Block HORIZONTAL_EXPOSED_COPPER_BARS = new OxidizableHorizontalPaneBlock(OxidizableBars.OxidizationLevel.EXPOSED, HORIZONTAL_METALLIC_BARS_SETTINGS.ticksRandomly(), "horizontal_exposed_copper_bars", EnumType.H_METAL, "/exposed_copper_bars");
+    public static final Block HORIZONTAL_WEATHERED_COPPER_BARS = new OxidizableHorizontalPaneBlock(OxidizableBars.OxidizationLevel.WEATHERED, HORIZONTAL_METALLIC_BARS_SETTINGS.ticksRandomly(), "horizontal_weathered_copper_bars", EnumType.H_METAL, "/weathered_copper_bars");
+    public static final Block HORIZONTAL_OXIDIZED_COPPER_BARS = new OxidizableHorizontalPaneBlock(OxidizableBars.OxidizationLevel.OXIDIZED, HORIZONTAL_METALLIC_BARS_SETTINGS.ticksRandomly(), "horizontal_oxidized_copper_bars", EnumType.H_METAL, "/oxidized_copper_bars");
 
-    public static final Block HORIZONTAL_CROSSED_IRON_BARS      = new HorizontalPaneBlock(HORIZONTAL_METALLIC_BARS_SETTINGS);
-    public static final Block HORIZONTAL_CROSSED_GOLD_BARS      = new HorizontalPaneBlock(HORIZONTAL_METALLIC_BARS_SETTINGS);
-    public static final Block HORIZONTAL_CROSSED_ACACIA_BARS    = new HorizontalPaneBlock(HORIZONTAL_WOODEN_BARS_SETTINGS);
-    public static final Block HORIZONTAL_CROSSED_BIRCH_BARS     = new HorizontalPaneBlock(HORIZONTAL_WOODEN_BARS_SETTINGS);
-    public static final Block HORIZONTAL_CROSSED_DARK_OAK_BARS  = new HorizontalPaneBlock(HORIZONTAL_WOODEN_BARS_SETTINGS);
-    public static final Block HORIZONTAL_CROSSED_JUNGLE_BARS    = new HorizontalPaneBlock(HORIZONTAL_WOODEN_BARS_SETTINGS);
-    public static final Block HORIZONTAL_CROSSED_OAK_BARS       = new HorizontalPaneBlock(HORIZONTAL_WOODEN_BARS_SETTINGS);
-    public static final Block HORIZONTAL_CROSSED_SPRUCE_BARS    = new HorizontalPaneBlock(HORIZONTAL_WOODEN_BARS_SETTINGS);
-    public static final Block HORIZONTAL_CROSSED_CRIMSON_BARS   = new HorizontalPaneBlock(HORIZONTAL_NETHER_BARS_SETTINGS);
-    public static final Block HORIZONTAL_CROSSED_WARPED_BARS    = new HorizontalPaneBlock(HORIZONTAL_NETHER_BARS_SETTINGS);
+    public static final Block HORIZONTAL_CROSSED_IRON_BARS      = new HorizontalPaneBlock(HORIZONTAL_METALLIC_BARS_SETTINGS, "horizontal_crossed_iron_bars", EnumType.H_METAL, "/crossed_iron_bars");
+    public static final Block HORIZONTAL_CROSSED_GOLD_BARS      = new HorizontalPaneBlock(HORIZONTAL_METALLIC_BARS_SETTINGS, "horizontal_crossed_gold_bars", EnumType.H_METAL, "/crossed_gold_bars");
+    public static final Block HORIZONTAL_CROSSED_ACACIA_BARS    = new HorizontalPaneBlock(HORIZONTAL_WOODEN_BARS_SETTINGS, "horizontal_crossed_acacia_bars", EnumType.H_WOOD, "acacia_planks");
+    public static final Block HORIZONTAL_CROSSED_BIRCH_BARS     = new HorizontalPaneBlock(HORIZONTAL_WOODEN_BARS_SETTINGS, "horizontal_crossed_birch_bars", EnumType.H_WOOD, "birch_planks");
+    public static final Block HORIZONTAL_CROSSED_DARK_OAK_BARS  = new HorizontalPaneBlock(HORIZONTAL_WOODEN_BARS_SETTINGS, "horizontal_crossed_dark_oak_bars", EnumType.H_WOOD, "dark_oak_planks");
+    public static final Block HORIZONTAL_CROSSED_JUNGLE_BARS    = new HorizontalPaneBlock(HORIZONTAL_WOODEN_BARS_SETTINGS, "horizontal_crossed_jungle_bars", EnumType.H_WOOD, "jungle_planks");
+    public static final Block HORIZONTAL_CROSSED_OAK_BARS       = new HorizontalPaneBlock(HORIZONTAL_WOODEN_BARS_SETTINGS, "horizontal_crossed_oak_bars", EnumType.H_WOOD, "oak_planks");
+    public static final Block HORIZONTAL_CROSSED_SPRUCE_BARS    = new HorizontalPaneBlock(HORIZONTAL_WOODEN_BARS_SETTINGS, "horizontal_crossed_spruce_bars", EnumType.H_WOOD, "spruce_planks");
+    public static final Block HORIZONTAL_CROSSED_CRIMSON_BARS   = new HorizontalPaneBlock(HORIZONTAL_NETHER_BARS_SETTINGS, "horizontal_crossed_crimson_bars", EnumType.H_WOOD, "crimson_planks");
+    public static final Block HORIZONTAL_CROSSED_WARPED_BARS    = new HorizontalPaneBlock(HORIZONTAL_NETHER_BARS_SETTINGS, "horizontal_crossed_warped_bars", EnumType.H_WOOD, "warped_planks");
 
-    public static final Block HORIZONTAL_CROSSED_COPPER_BARS = new OxidizableHorizontalPaneBlock(OxidizableBars.OxidizationLevel.UNAFFECTED, HORIZONTAL_METALLIC_BARS_SETTINGS.ticksRandomly());
-    public static final Block HORIZONTAL_CROSSED_EXPOSED_COPPER_BARS = new OxidizableHorizontalPaneBlock(OxidizableBars.OxidizationLevel.EXPOSED, HORIZONTAL_METALLIC_BARS_SETTINGS.ticksRandomly());
-    public static final Block HORIZONTAL_CROSSED_WEATHERED_COPPER_BARS = new OxidizableHorizontalPaneBlock(OxidizableBars.OxidizationLevel.WEATHERED, HORIZONTAL_METALLIC_BARS_SETTINGS.ticksRandomly());
-    public static final Block HORIZONTAL_CROSSED_OXIDIZED_COPPER_BARS = new OxidizableHorizontalPaneBlock(OxidizableBars.OxidizationLevel.OXIDIZED, HORIZONTAL_METALLIC_BARS_SETTINGS.ticksRandomly());
-
+    public static final Block HORIZONTAL_CROSSED_COPPER_BARS = new OxidizableHorizontalPaneBlock(OxidizableBars.OxidizationLevel.UNAFFECTED, HORIZONTAL_METALLIC_BARS_SETTINGS.ticksRandomly(), "horizontal_crossed__copper_bars", EnumType.H_METAL, "/crossed_copper_bars");
+    public static final Block HORIZONTAL_CROSSED_EXPOSED_COPPER_BARS = new OxidizableHorizontalPaneBlock(OxidizableBars.OxidizationLevel.EXPOSED, HORIZONTAL_METALLIC_BARS_SETTINGS.ticksRandomly(), "horizontal_crossed_exposed_copper_bars", EnumType.H_METAL, "/crossed_exposed_copper_bars");
+    public static final Block HORIZONTAL_CROSSED_WEATHERED_COPPER_BARS = new OxidizableHorizontalPaneBlock(OxidizableBars.OxidizationLevel.WEATHERED, HORIZONTAL_METALLIC_BARS_SETTINGS.ticksRandomly(), "horizontal_crossed_weathered_copper_bars", EnumType.H_METAL, "/crossed_weathered_copper_bars");
+    public static final Block HORIZONTAL_CROSSED_OXIDIZED_COPPER_BARS = new OxidizableHorizontalPaneBlock(OxidizableBars.OxidizationLevel.OXIDIZED, HORIZONTAL_METALLIC_BARS_SETTINGS.ticksRandomly(), "horizontal_crossed_oxidized_copper_bars", EnumType.H_METAL, "/crossed_oxidized_copper_bars");
 }

@@ -9,8 +9,13 @@ import java.util.Random;
 public class OxidizableHorizontalPaneBlock extends HorizontalPaneBlock implements OxidizableBars {
     private final OxidizationLevel oxidizationLevel;
 
-    public OxidizableHorizontalPaneBlock(OxidizationLevel oxidizationLevel, Settings settings) {
+    protected OxidizableHorizontalPaneBlock(OxidizationLevel oxidizationLevel, Settings settings) {
         super(settings);
+        this.oxidizationLevel = oxidizationLevel;
+    }
+
+    public OxidizableHorizontalPaneBlock(OxidizationLevel oxidizationLevel, Settings settings, String pathName, EnumType type, String texturePath) {
+        super(settings, pathName, type, texturePath);
         this.oxidizationLevel = oxidizationLevel;
     }
 

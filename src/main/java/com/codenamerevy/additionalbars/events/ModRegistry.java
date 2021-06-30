@@ -40,13 +40,12 @@ import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
-import java.util.ArrayList;
-import java.util.Optional;
+import java.util.*;
 import java.util.logging.Logger;
 
 public class ModRegistry
 {
-    public static ArrayList<BarsBlock> bars;
+    public static ArrayList<Block> bars;
     public static void setup()
     {
         if (AdditionalBars.INSTANCE.generateData) {
@@ -246,34 +245,63 @@ public class ModRegistry
 //        BlockRenderLayerMap.INSTANCE.putBlock(ABContent.HORIZONTAL_CROSSED_WARPED_BARS, RenderLayer.getCutout());
     }
     private static void populateList() {
-        bars.add((BarsBlock) ABContent.GOLD_BARS);
-        bars.add((BarsBlock) ABContent.ACACIA_BARS);
-        bars.add((BarsBlock) ABContent.BIRCH_BARS);
-        bars.add((BarsBlock) ABContent.DARK_OAK_BARS);
-        bars.add((BarsBlock) ABContent.JUNGLE_BARS);
-        bars.add((BarsBlock) ABContent.SPRUCE_BARS);
-        bars.add((BarsBlock) ABContent.OAK_BARS);
-        bars.add((BarsBlock) ABContent.CRIMSON_BARS);
-        bars.add((BarsBlock) ABContent.WARPED_BARS);
-        bars.add((BarsBlock) ABContent.COPPER_BARS);
-        bars.add((BarsBlock) ABContent.EXPOSED_COPPER_BARS);
-        bars.add((BarsBlock) ABContent.WEATHERED_COPPER_BARS);
-        bars.add((BarsBlock) ABContent.OXIDIZED_COPPER_BARS);
+        bars.add(ABContent.GOLD_BARS);
+        bars.add(ABContent.ACACIA_BARS);
+        bars.add(ABContent.BIRCH_BARS);
+        bars.add(ABContent.DARK_OAK_BARS);
+        bars.add(ABContent.JUNGLE_BARS);
+        bars.add(ABContent.SPRUCE_BARS);
+        bars.add(ABContent.OAK_BARS);
+        bars.add(ABContent.CRIMSON_BARS);
+        bars.add(ABContent.WARPED_BARS);
+        bars.add(ABContent.COPPER_BARS);
+        bars.add(ABContent.EXPOSED_COPPER_BARS);
+        bars.add(ABContent.WEATHERED_COPPER_BARS);
+        bars.add(ABContent.OXIDIZED_COPPER_BARS);
 
-        bars.add((BarsBlock) ABContent.CROSSED_IRON_BARS);
-        bars.add((BarsBlock) ABContent.CROSSED_GOLD_BARS);
-        bars.add((BarsBlock) ABContent.CROSSED_ACACIA_BARS);
-        bars.add((BarsBlock) ABContent.CROSSED_BIRCH_BARS);
-        bars.add((BarsBlock) ABContent.CROSSED_DARK_OAK_BARS);
-        bars.add((BarsBlock) ABContent.CROSSED_JUNGLE_BARS);
-        bars.add((BarsBlock) ABContent.CROSSED_SPRUCE_BARS);
-        bars.add((BarsBlock) ABContent.CROSSED_OAK_BARS);
-        bars.add((BarsBlock) ABContent.CROSSED_CRIMSON_BARS);
-        bars.add((BarsBlock) ABContent.CROSSED_WARPED_BARS);
-        bars.add((BarsBlock) ABContent.CROSSED_COPPER_BARS);
-        bars.add((BarsBlock) ABContent.CROSSED_EXPOSED_COPPER_BARS);
-        bars.add((BarsBlock) ABContent.CROSSED_WEATHERED_COPPER_BARS);
-        bars.add((BarsBlock) ABContent.CROSSED_OXIDIZED_COPPER_BARS);
+        bars.add(ABContent.CROSSED_IRON_BARS);
+        bars.add(ABContent.CROSSED_GOLD_BARS);
+        bars.add(ABContent.CROSSED_ACACIA_BARS);
+        bars.add(ABContent.CROSSED_BIRCH_BARS);
+        bars.add(ABContent.CROSSED_DARK_OAK_BARS);
+        bars.add(ABContent.CROSSED_JUNGLE_BARS);
+        bars.add(ABContent.CROSSED_SPRUCE_BARS);
+        bars.add(ABContent.CROSSED_OAK_BARS);
+        bars.add(ABContent.CROSSED_CRIMSON_BARS);
+        bars.add(ABContent.CROSSED_WARPED_BARS);
+        bars.add(ABContent.CROSSED_COPPER_BARS);
+        bars.add(ABContent.CROSSED_EXPOSED_COPPER_BARS);
+        bars.add(ABContent.CROSSED_WEATHERED_COPPER_BARS);
+        bars.add(ABContent.CROSSED_OXIDIZED_COPPER_BARS);
+
+        bars.add(ABContent.HORIZONTAL_GOLD_BARS);
+        bars.add(ABContent.HORIZONTAL_ACACIA_BARS);
+        bars.add(ABContent.HORIZONTAL_BIRCH_BARS);
+        bars.add(ABContent.HORIZONTAL_DARK_OAK_BARS);
+        bars.add(ABContent.HORIZONTAL_JUNGLE_BARS);
+        bars.add(ABContent.HORIZONTAL_SPRUCE_BARS);
+        bars.add(ABContent.HORIZONTAL_OAK_BARS);
+        bars.add(ABContent.HORIZONTAL_CRIMSON_BARS);
+        bars.add(ABContent.HORIZONTAL_WARPED_BARS);
+        bars.add(ABContent.HORIZONTAL_COPPER_BARS);
+        bars.add(ABContent.HORIZONTAL_EXPOSED_COPPER_BARS);
+        bars.add(ABContent.HORIZONTAL_WEATHERED_COPPER_BARS);
+        bars.add(ABContent.HORIZONTAL_OXIDIZED_COPPER_BARS);
+
+        bars.add(ABContent.HORIZONTAL_CROSSED_IRON_BARS);
+        bars.add(ABContent.HORIZONTAL_CROSSED_GOLD_BARS);
+        bars.add(ABContent.HORIZONTAL_CROSSED_ACACIA_BARS);
+        bars.add(ABContent.HORIZONTAL_CROSSED_BIRCH_BARS);
+        bars.add(ABContent.HORIZONTAL_CROSSED_DARK_OAK_BARS);
+        bars.add(ABContent.HORIZONTAL_CROSSED_JUNGLE_BARS);
+        bars.add(ABContent.HORIZONTAL_CROSSED_SPRUCE_BARS);
+        bars.add(ABContent.HORIZONTAL_CROSSED_OAK_BARS);
+        bars.add(ABContent.HORIZONTAL_CROSSED_CRIMSON_BARS);
+        bars.add(ABContent.HORIZONTAL_CROSSED_WARPED_BARS);
+        bars.add(ABContent.HORIZONTAL_CROSSED_COPPER_BARS);
+        bars.add(ABContent.HORIZONTAL_CROSSED_EXPOSED_COPPER_BARS);
+        bars.add(ABContent.HORIZONTAL_CROSSED_WEATHERED_COPPER_BARS);
+        bars.add(ABContent.HORIZONTAL_CROSSED_OXIDIZED_COPPER_BARS);
     }
     private static void registerResourcePacks() {
         Optional<ModContainer> CONTAINER = FabricLoader.getInstance().getModContainer(AdditionalBars.MODID);

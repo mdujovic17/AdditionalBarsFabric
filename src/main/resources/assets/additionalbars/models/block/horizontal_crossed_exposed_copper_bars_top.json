@@ -1,5 +1,5 @@
 {
-	"parent": "additionalbars:item/parent/crossed_bars_inventory",
+	"parent": "additionalbars:block/parent/td/horizontal/crossed/top",
 	"textures": {
 		"texture": "additionalbars:block/crossed_exposed_copper_bars"
 	}

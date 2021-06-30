@@ -1,6 +1,7 @@
 package com.codenamerevy.additionalbars.util.data;
 
 import com.codenamerevy.additionalbars.content.block.BarsBlock;
+import com.codenamerevy.additionalbars.content.block.HorizontalPaneBlock;
 import com.codenamerevy.additionalbars.events.ModRegistry;
 import net.fabricmc.fabric.impl.registry.sync.FabricRegistryInit;
 import net.fabricmc.loader.api.ModContainer;
@@ -13,32 +14,57 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
+import static com.codenamerevy.additionalbars.content.block.EnumType.H_CROSSED_METAL;
+import static com.codenamerevy.additionalbars.content.block.EnumType.H_CROSSED_WOOD;
+
 public class DataGenerator {
 
     public static void init() {
-        for (BarsBlock block : ModRegistry.bars) {
-            for (String s : bars) {
-                switch (block.getType()) {
-                    case WOOD -> {
-                        generateJSONModel(createBarsModelJSON("classic", block.getTexturePath(), s), block.getPathName(), s);
-                        generateJSONItemModel(createBarsItemModelJSON("classic", block.getTexturePath()), block.getPathName());
+        for (Block block : ModRegistry.bars) {
+            if (block instanceof BarsBlock) {
+                BarsBlock b = (BarsBlock) block;
+                for (String s : bars) {
+                    switch (b.getType()) {
+                        case WOOD -> {
+                            generateJSONModel(createBarsModelJSON("classic", b.getTexturePath(), s), b.getPathName(), s);
+                            generateJSONItemModel(createBarsItemModelJSON("classic", b.getTexturePath()), b.getPathName());
+                        }
+                        case METAL -> {
+                            generateJSONModel(createBarsModelJSON("special", b.getTexturePath(), s), b.getPathName(), s);
+                            generateJSONItemModel(createBarsItemModelJSON("special", b.getTexturePath()), b.getPathName());
+                        }
+                        case CROSSED_WOOD, CROSSED_METAL -> {
+                            generateJSONModel(createBarsModelJSON("crossed", b.getTexturePath(), s), b.getPathName(), s);
+                            generateJSONItemModel(createBarsItemModelJSON("special", b.getTexturePath()), b.getPathName());
+                        }
                     }
-                    case METAL -> {
-                        generateJSONModel(createBarsModelJSON("special", block.getTexturePath(), s), block.getPathName(), s);
-                        generateJSONItemModel(createBarsItemModelJSON("special", block.getTexturePath()), block.getPathName());
-                    }
-                    case CROSSED_WOOD, CROSSED_METAL -> {
-                        generateJSONModel(createBarsModelJSON("crossed", block.getTexturePath(), s), block.getPathName(), s);
-                        generateJSONItemModel(createBarsItemModelJSON("special", block.getTexturePath()), block.getPathName());
-                    }
+                    generateJSONBlockState(createBarsBlockStateJSON(b.getPathName()), b.getPathName());
                 }
-                generateJSONBlockState(createBarsBlockStateJSON(block.getPathName()), block.getPathName());
+            }
+            else if (block instanceof HorizontalPaneBlock) {
+                HorizontalPaneBlock b = (HorizontalPaneBlock) block;
+                for (String s : horizontalBars) {
+                    switch(b.getType()) {
+                        case H_WOOD -> {
+                            generateJSONModel(createHorizontalBarsBlockModelJSON("classic", b.getPathName(), s), b.getPathName(), s);
+                        }
+                        case H_METAL -> {
+                            generateJSONModel(createHorizontalBarsBlockModelJSON("special", b.getPathName(), s), b.getPathName(), s);
+                        }
+                        case H_CROSSED_METAL, H_CROSSED_WOOD -> {
+                            generateJSONModel(createHorizontalBarsBlockModelJSON("crossed", b.getPathName(), s), b.getPathName(), s);
+                        }
+                    }
+                    generateJSONItemModel(createHorizontalBarsItemModelJSON(b.getPathName()), b.getPathName());
+                    generateJSONBlockState(createHorizontalBarsBlockStateJSON(b.getPathName()), b.getPathName());
+                }
             }
         }
     }
 
     private static BufferedWriter bw;
     private static final String[] bars = {"cap", "cap_alt", "post", "post_ends", "side", "side_alt"};
+    private static final String[] horizontalBars = {"com", "top", ""};
     public static String createBarsModelJSON(String type, String texture, String extension) {
         String barsType = "";
         switch (type) {
@@ -123,13 +149,57 @@ public class DataGenerator {
                 }
                 """, bars, bars, bars, bars, bars, bars, bars, bars, bars, bars);
     }
+    public static String createHorizontalBarsBlockModelJSON(String type, String texture, String extension) {
+        if (type.equals(""))
+            type = "bot";
+        return String.format("""
+                        {
+                        \t"parent": "additionalbars:block/parent/td/horizontal/%s%s",
+                        \t"textures": {
+                        \t\t"texture": "%s"
+                        \t}
+                        }""",
+                type + "/", extension, texture);
+    }
+    public static String createHorizontalBarsItemModelJSON(String bars) {
+        return String.format("""
+                {
+                  "parent": "additionalbars:block/%s"
+                }
+                """, bars);
+    }
+    public static String createHorizontalBarsBlockStateJSON(String bars) {
+        return String.format("""
+                {
+                  "variants": {
+                    "type=bottom": {
+                      "model": "additionalbars:block/%s"
+                    },
+                    "type=double": {
+                      "model": "additionalbars:block/%s_com"
+                    },
+                    "type=top": {
+                      "model": "additionalbars:block/%s_top"
+                    }
+                  }
+                }
+                """, bars, bars, bars);
+    }
+
     public static void generateJSONModel(String content, String id, String extension) {
         File file = new File("..//data//generated//models//block//");
         if (file.mkdir() || file.exists()) {
             try {
-                bw = new BufferedWriter(new FileWriter(file + "//" + id + "_" + extension + ".json"));
-                bw.write(content);
-                System.out.println("Generated block model" + file.getCanonicalPath() + "//" + id + "_" + extension + ".json");
+                if (!extension.equals("")) {
+                    bw = new BufferedWriter(new FileWriter(file + "//" + id + "_" + extension + ".json"));
+                    bw.write(content);
+                    System.out.println("Generated block model" + file.getCanonicalPath() + "//" + id + "_" + extension + ".json");
+                }
+                else {
+                    bw = new BufferedWriter(new FileWriter(file + "//" + id + ".json"));
+                    bw.write(content);
+                    System.out.println("Generated block model" + file.getCanonicalPath() + "//" + id + ".json");
+                }
                 bw.flush();
                 bw.close();
             } catch (IOException e) {
