@@ -1,0 +1,6 @@
+{
+	"parent": "additionalbars:block/parent/td/horizontal/special/top",
+	"textures": {
+		"texture": "additionalbars:block/exposed_copper_bars"
+	}
+}

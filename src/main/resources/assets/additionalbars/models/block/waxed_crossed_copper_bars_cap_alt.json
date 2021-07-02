@@ -1,0 +1,6 @@
+{
+	"parent": "additionalbars:block/parent/td/crossed/cap_alt",
+	"textures": {
+		"texture": "additionalbars:block/crossed_copper_bars"
+	}
+}

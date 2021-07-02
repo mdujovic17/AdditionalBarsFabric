@@ -1,0 +1,6 @@
+{
+	"parent": "additionalbars:block/parent/td/horizontal/crossed/com",
+	"textures": {
+		"texture": "additionalbars:block/crossed_weathered_copper_bars"
+	}
+}

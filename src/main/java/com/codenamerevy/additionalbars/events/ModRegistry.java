@@ -27,6 +27,8 @@ package com.codenamerevy.additionalbars.events;
 import com.codenamerevy.additionalbars.AdditionalBars;
 import com.codenamerevy.additionalbars.content.block.BarsBlock;
 import com.codenamerevy.additionalbars.init.ABContent;
+import com.shnupbups.oxidizelib.OxidizableFamily;
+import com.shnupbups.oxidizelib.OxidizeLib;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
 import net.fabricmc.fabric.api.resource.ResourcePackActivationType;
@@ -54,6 +56,30 @@ public class ModRegistry
 //        }
         registerBlocks();
         registerItems();
+
+        OxidizeLib.registerOxidizableFamily(new OxidizableFamily.Builder()
+                .unaffected(ABContent.COPPER_BARS, ABContent.WAXED_COPPER_BARS)
+                .exposed(ABContent.EXPOSED_COPPER_BARS, ABContent.WAXED_EXPOSED_COPPER_BARS)
+                .weathered(ABContent.WEATHERED_COPPER_BARS, ABContent.WAXED_WEATHERED_COPPER_BARS)
+                .oxidized(ABContent.OXIDIZED_COPPER_BARS, ABContent.WAXED_OXIDIZED_COPPER_BARS).build());
+
+        OxidizeLib.registerOxidizableFamily(new OxidizableFamily.Builder()
+                .unaffected(ABContent.CROSSED_COPPER_BARS, ABContent.WAXED_CROSSED_COPPER_BARS)
+                .exposed(ABContent.CROSSED_EXPOSED_COPPER_BARS, ABContent.WAXED_CROSSED_EXPOSED_COPPER_BARS)
+                .weathered(ABContent.CROSSED_WEATHERED_COPPER_BARS, ABContent.WAXED_CROSSED_WEATHERED_COPPER_BARS)
+                .oxidized(ABContent.CROSSED_OXIDIZED_COPPER_BARS, ABContent.WAXED_CROSSED_OXIDIZED_COPPER_BARS).build());
+
+        OxidizeLib.registerOxidizableFamily(new OxidizableFamily.Builder()
+                .unaffected(ABContent.HORIZONTAL_COPPER_BARS, ABContent.WAXED_HORIZONTAL_COPPER_BARS)
+                .exposed(ABContent.HORIZONTAL_EXPOSED_COPPER_BARS, ABContent.WAXED_HORIZONTAL_EXPOSED_COPPER_BARS)
+                .weathered(ABContent.HORIZONTAL_WEATHERED_COPPER_BARS, ABContent.WAXED_HORIZONTAL_WEATHERED_COPPER_BARS)
+                .oxidized(ABContent.HORIZONTAL_OXIDIZED_COPPER_BARS, ABContent.WAXED_HORIZONTAL_OXIDIZED_COPPER_BARS).build());
+
+        OxidizeLib.registerOxidizableFamily(new OxidizableFamily.Builder()
+                .unaffected(ABContent.HORIZONTAL_CROSSED_COPPER_BARS, ABContent.WAXED_HORIZONTAL_CROSSED_COPPER_BARS)
+                .exposed(ABContent.HORIZONTAL_CROSSED_EXPOSED_COPPER_BARS, ABContent.WAXED_HORIZONTAL_CROSSED_EXPOSED_COPPER_BARS)
+                .weathered(ABContent.HORIZONTAL_CROSSED_WEATHERED_COPPER_BARS, ABContent.WAXED_HORIZONTAL_CROSSED_WEATHERED_COPPER_BARS)
+                .oxidized(ABContent.HORIZONTAL_CROSSED_OXIDIZED_COPPER_BARS, ABContent.WAXED_HORIZONTAL_CROSSED_OXIDIZED_COPPER_BARS).build());
     }
 
     public static void clientSetup()
@@ -128,6 +154,26 @@ public class ModRegistry
         Registry.register(Registry.BLOCK, new Identifier(AdditionalBars.MODID, "horizontal_crossed_exposed_copper_bars"),     ABContent.HORIZONTAL_CROSSED_EXPOSED_COPPER_BARS);
         Registry.register(Registry.BLOCK, new Identifier(AdditionalBars.MODID, "horizontal_crossed_weathered_copper_bars"),     ABContent.HORIZONTAL_CROSSED_WEATHERED_COPPER_BARS);
         Registry.register(Registry.BLOCK, new Identifier(AdditionalBars.MODID, "horizontal_crossed_oxidized_copper_bars"),     ABContent.HORIZONTAL_CROSSED_OXIDIZED_COPPER_BARS);
+
+        Registry.register(Registry.BLOCK, new Identifier(AdditionalBars.MODID, "waxed_copper_bars"),     ABContent.WAXED_COPPER_BARS);
+        Registry.register(Registry.BLOCK, new Identifier(AdditionalBars.MODID, "waxed_exposed_copper_bars"),     ABContent.WAXED_EXPOSED_COPPER_BARS);
+        Registry.register(Registry.BLOCK, new Identifier(AdditionalBars.MODID, "waxed_weathered_copper_bars"),     ABContent.WAXED_WEATHERED_COPPER_BARS);
+        Registry.register(Registry.BLOCK, new Identifier(AdditionalBars.MODID, "waxed_oxidized_copper_bars"),     ABContent.WAXED_OXIDIZED_COPPER_BARS);
+
+        Registry.register(Registry.BLOCK, new Identifier(AdditionalBars.MODID, "waxed_crossed_copper_bars"),     ABContent.WAXED_CROSSED_COPPER_BARS);
+        Registry.register(Registry.BLOCK, new Identifier(AdditionalBars.MODID, "waxed_crossed_exposed_copper_bars"),     ABContent.WAXED_CROSSED_EXPOSED_COPPER_BARS);
+        Registry.register(Registry.BLOCK, new Identifier(AdditionalBars.MODID, "waxed_crossed_weathered_copper_bars"),     ABContent.WAXED_CROSSED_WEATHERED_COPPER_BARS);
+        Registry.register(Registry.BLOCK, new Identifier(AdditionalBars.MODID, "waxed_crossed_oxidized_copper_bars"),     ABContent.WAXED_CROSSED_OXIDIZED_COPPER_BARS);
+
+        Registry.register(Registry.BLOCK, new Identifier(AdditionalBars.MODID, "waxed_horizontal_copper_bars"),     ABContent.WAXED_HORIZONTAL_COPPER_BARS);
+        Registry.register(Registry.BLOCK, new Identifier(AdditionalBars.MODID, "waxed_horizontal_exposed_copper_bars"),     ABContent.WAXED_HORIZONTAL_EXPOSED_COPPER_BARS);
+        Registry.register(Registry.BLOCK, new Identifier(AdditionalBars.MODID, "waxed_horizontal_weathered_copper_bars"),     ABContent.WAXED_HORIZONTAL_WEATHERED_COPPER_BARS);
+        Registry.register(Registry.BLOCK, new Identifier(AdditionalBars.MODID, "waxed_horizontal_oxidized_copper_bars"),     ABContent.WAXED_HORIZONTAL_OXIDIZED_COPPER_BARS);
+
+        Registry.register(Registry.BLOCK, new Identifier(AdditionalBars.MODID, "waxed_horizontal_crossed_copper_bars"),     ABContent.WAXED_HORIZONTAL_CROSSED_COPPER_BARS);
+        Registry.register(Registry.BLOCK, new Identifier(AdditionalBars.MODID, "waxed_horizontal_crossed_exposed_copper_bars"),     ABContent.WAXED_HORIZONTAL_CROSSED_EXPOSED_COPPER_BARS);
+        Registry.register(Registry.BLOCK, new Identifier(AdditionalBars.MODID, "waxed_horizontal_crossed_weathered_copper_bars"),     ABContent.WAXED_HORIZONTAL_CROSSED_WEATHERED_COPPER_BARS);
+        Registry.register(Registry.BLOCK, new Identifier(AdditionalBars.MODID, "waxed_horizontal_crossed_oxidized_copper_bars"),     ABContent.WAXED_HORIZONTAL_CROSSED_OXIDIZED_COPPER_BARS);
     }
     private static void registerItems()
     {
@@ -196,6 +242,26 @@ public class ModRegistry
         Registry.register(Registry.ITEM, new Identifier(AdditionalBars.MODID, "horizontal_crossed_exposed_copper_bars"), new BlockItem(ABContent.HORIZONTAL_CROSSED_EXPOSED_COPPER_BARS, new Item.Settings().group(AdditionalBars.HORIZONTAL_ADDITIONAL_BARS)));
         Registry.register(Registry.ITEM, new Identifier(AdditionalBars.MODID, "horizontal_crossed_weathered_copper_bars"), new BlockItem(ABContent.HORIZONTAL_CROSSED_WEATHERED_COPPER_BARS, new Item.Settings().group(AdditionalBars.HORIZONTAL_ADDITIONAL_BARS)));
         Registry.register(Registry.ITEM, new Identifier(AdditionalBars.MODID, "horizontal_crossed_oxidized_copper_bars"), new BlockItem(ABContent.HORIZONTAL_CROSSED_OXIDIZED_COPPER_BARS, new Item.Settings().group(AdditionalBars.HORIZONTAL_ADDITIONAL_BARS)));
+
+        Registry.register(Registry.ITEM, new Identifier(AdditionalBars.MODID, "waxed_copper_bars"), new BlockItem(ABContent.WAXED_COPPER_BARS, new Item.Settings().group(AdditionalBars.ADDITIONAL_BARS)));
+        Registry.register(Registry.ITEM, new Identifier(AdditionalBars.MODID, "waxed_exposed_copper_bars"), new BlockItem(ABContent.WAXED_EXPOSED_COPPER_BARS, new Item.Settings().group(AdditionalBars.ADDITIONAL_BARS)));
+        Registry.register(Registry.ITEM, new Identifier(AdditionalBars.MODID, "waxed_weathered_copper_bars"), new BlockItem(ABContent.WAXED_WEATHERED_COPPER_BARS, new Item.Settings().group(AdditionalBars.ADDITIONAL_BARS)));
+        Registry.register(Registry.ITEM, new Identifier(AdditionalBars.MODID, "waxed_oxidized_copper_bars"), new BlockItem(ABContent.WAXED_OXIDIZED_COPPER_BARS, new Item.Settings().group(AdditionalBars.ADDITIONAL_BARS)));
+
+        Registry.register(Registry.ITEM, new Identifier(AdditionalBars.MODID, "waxed_crossed_copper_bars"), new BlockItem(ABContent.WAXED_CROSSED_COPPER_BARS, new Item.Settings().group(AdditionalBars.ADDITIONAL_BARS)));
+        Registry.register(Registry.ITEM, new Identifier(AdditionalBars.MODID, "waxed_crossed_exposed_copper_bars"), new BlockItem(ABContent.WAXED_CROSSED_EXPOSED_COPPER_BARS, new Item.Settings().group(AdditionalBars.ADDITIONAL_BARS)));
+        Registry.register(Registry.ITEM, new Identifier(AdditionalBars.MODID, "waxed_crossed_weathered_copper_bars"), new BlockItem(ABContent.WAXED_CROSSED_WEATHERED_COPPER_BARS, new Item.Settings().group(AdditionalBars.ADDITIONAL_BARS)));
+        Registry.register(Registry.ITEM, new Identifier(AdditionalBars.MODID, "waxed_crossed_oxidized_copper_bars"), new BlockItem(ABContent.WAXED_CROSSED_OXIDIZED_COPPER_BARS, new Item.Settings().group(AdditionalBars.ADDITIONAL_BARS)));
+
+        Registry.register(Registry.ITEM, new Identifier(AdditionalBars.MODID, "waxed_horizontal_copper_bars"), new BlockItem(ABContent.WAXED_HORIZONTAL_COPPER_BARS, new Item.Settings().group(AdditionalBars.HORIZONTAL_ADDITIONAL_BARS)));
+        Registry.register(Registry.ITEM, new Identifier(AdditionalBars.MODID, "waxed_horizontal_exposed_copper_bars"), new BlockItem(ABContent.WAXED_HORIZONTAL_EXPOSED_COPPER_BARS, new Item.Settings().group(AdditionalBars.HORIZONTAL_ADDITIONAL_BARS)));
+        Registry.register(Registry.ITEM, new Identifier(AdditionalBars.MODID, "waxed_horizontal_weathered_copper_bars"), new BlockItem(ABContent.WAXED_HORIZONTAL_WEATHERED_COPPER_BARS, new Item.Settings().group(AdditionalBars.HORIZONTAL_ADDITIONAL_BARS)));
+        Registry.register(Registry.ITEM, new Identifier(AdditionalBars.MODID, "waxed_horizontal_oxidized_copper_bars"), new BlockItem(ABContent.WAXED_HORIZONTAL_OXIDIZED_COPPER_BARS, new Item.Settings().group(AdditionalBars.HORIZONTAL_ADDITIONAL_BARS)));
+
+        Registry.register(Registry.ITEM, new Identifier(AdditionalBars.MODID, "waxed_horizontal_crossed_copper_bars"), new BlockItem(ABContent.WAXED_HORIZONTAL_CROSSED_COPPER_BARS, new Item.Settings().group(AdditionalBars.HORIZONTAL_ADDITIONAL_BARS)));
+        Registry.register(Registry.ITEM, new Identifier(AdditionalBars.MODID, "waxed_horizontal_crossed_exposed_copper_bars"), new BlockItem(ABContent.WAXED_HORIZONTAL_CROSSED_EXPOSED_COPPER_BARS, new Item.Settings().group(AdditionalBars.HORIZONTAL_ADDITIONAL_BARS)));
+        Registry.register(Registry.ITEM, new Identifier(AdditionalBars.MODID, "waxed_horizontal_crossed_weathered_copper_bars"), new BlockItem(ABContent.WAXED_HORIZONTAL_CROSSED_WEATHERED_COPPER_BARS, new Item.Settings().group(AdditionalBars.HORIZONTAL_ADDITIONAL_BARS)));
+        Registry.register(Registry.ITEM, new Identifier(AdditionalBars.MODID, "waxed_horizontal_crossed_oxidized_copper_bars"), new BlockItem(ABContent.WAXED_HORIZONTAL_CROSSED_OXIDIZED_COPPER_BARS, new Item.Settings().group(AdditionalBars.HORIZONTAL_ADDITIONAL_BARS)));
 
     }
     public static void registerRenderLayer()

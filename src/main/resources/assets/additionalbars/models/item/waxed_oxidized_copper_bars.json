@@ -1,0 +1,6 @@
+{
+	"parent": "additionalbars:item/parent/special_bars_inventory",
+	"textures": {
+		"texture": "additionalbars:block/oxidized_copper_bars"
+	}
+}
