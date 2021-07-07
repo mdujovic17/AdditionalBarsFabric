@@ -18,8 +18,7 @@ jobs:
           16     # Latest version
         ]
         # and run on both Linux and Windows
-        # os: [ubuntu-latest, windows-latest]
-        os: [fedora-latest]
+        os: [ubuntu-latest, windows-latest]
     runs-on: ${{ matrix.os }}
     steps:
       - name: checkout repository
