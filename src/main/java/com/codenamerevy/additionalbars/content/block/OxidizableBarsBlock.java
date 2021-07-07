@@ -3,12 +3,13 @@
 package com.codenamerevy.additionalbars.content.block;
 
 import net.minecraft.block.BlockState;
+import net.minecraft.block.Oxidizable;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.BlockPos;
 
 import java.util.Random;
 
-public class OxidizableBarsBlock extends BarsBlock implements OxidizableBars {
+public class OxidizableBarsBlock extends BarsBlock implements Oxidizable {
     private final OxidizationLevel oxidizationLevel;
 
     public OxidizableBarsBlock(OxidizationLevel oxidizationLevel, Settings settings, String pathName, EnumType type, String texturePath) {
@@ -23,7 +24,7 @@ public class OxidizableBarsBlock extends BarsBlock implements OxidizableBars {
 
     @Override
     public boolean hasRandomTicks(BlockState state) {
-        return OxidizableBars.getIncreasedOxidationBlock(state.getBlock()).isPresent();
+        return Oxidizable.getIncreasedOxidationBlock(state.getBlock()).isPresent();
     }
     @Override
     public OxidizationLevel getDegradationLevel() {

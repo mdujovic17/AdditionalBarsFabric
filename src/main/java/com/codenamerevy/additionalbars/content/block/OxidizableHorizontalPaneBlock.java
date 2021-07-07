@@ -1,12 +1,13 @@
 package com.codenamerevy.additionalbars.content.block;
 
 import net.minecraft.block.BlockState;
+import net.minecraft.block.Oxidizable;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.BlockPos;
 
 import java.util.Random;
 
-public class OxidizableHorizontalPaneBlock extends HorizontalPaneBlock implements OxidizableBars {
+public class OxidizableHorizontalPaneBlock extends HorizontalPaneBlock implements Oxidizable {
     private final OxidizationLevel oxidizationLevel;
 
     protected OxidizableHorizontalPaneBlock(OxidizationLevel oxidizationLevel, Settings settings) {
@@ -26,7 +27,7 @@ public class OxidizableHorizontalPaneBlock extends HorizontalPaneBlock implement
 
     @Override
     public boolean hasRandomTicks(BlockState state) {
-        return OxidizableBars.getIncreasedOxidationBlock(state.getBlock()).isPresent();
+        return Oxidizable.getIncreasedOxidationBlock(state.getBlock()).isPresent();
     }
 
     @Override
