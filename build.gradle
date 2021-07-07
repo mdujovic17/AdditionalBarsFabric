@@ -1,5 +1,5 @@
 plugins {
-	id 'fabric-loom' version '0.8-SNAPSHOT'
+	id 'fabric-loom' version '0.9-SNAPSHOT'
 	id 'maven-publish'
 }
 
@@ -19,6 +19,11 @@ repositories {
 		name = 'Shedaniel maven'
 		url = "https://maven.shedaniel.me/"
 	}
+	maven {
+		name = 'TerraformersMC maven'
+		url = "https://maven.terraformersmc.com/"
+	}
+	//flatDir { dirs "libs" }
 }
 
 dependencies {
@@ -30,20 +35,14 @@ dependencies {
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
-	implementation(files("libs/oxidizelib-${project.oxidizeLib}+fabric-mc1.17-dev.jar"))
-	include(files("libs/oxidizelib-${project.oxidizeLib}+fabric-mc1.17-dev.jar"))
+	modApi "me.shedaniel:RoughlyEnoughItems-fabric:${project.rei}"
+	modRuntime "com.terraformersmc:modmenu:${project.modmenu}"
 
-	/** READ! **/
-	/* oxidizeLib isn't updated to latest Fabric API and causes a crash while launching.
-	* To circumvent this, I've compiled oxidizeLib locally with updated APIs
-	* code below should be uncommented only when oxidizeLib gets updated.
-	* When that happens, comment code above.
-	*
-	* I keep an updated fork on my github, clone it, run ./gradlew build and take dev jar from build/libs
-	* to this project in libs/ and update versioning in gradle.properties.
-	* */
+	/*Using forked OxidizeLib, it's the same as original, just updated to 1.17.1
+	* when Original gets updated, fork jitpack maven will be disabled*/
+	modImplementation "com.github.gamma1772:oxidizelib:${project.oxidizeLib}"
+	include "com.github.gamma1772:oxidizelib:${project.oxidizeLib}"
 
-	//modApi "me.shedaniel:RoughlyEnoughItems-fabric:${project.rei}"
 	//implementation "com.github.Shnupbups:oxidizelib:${project.oxidizeLib}"
 	//include "com.github.Shnupbups:oxidizelib:${project.oxidizeLib}"
 

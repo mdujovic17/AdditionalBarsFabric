@@ -27,6 +27,7 @@
   },
 
   "depends": {
+    "oxidizelib": ">=1.1.0",
     "fabricloader": ">=0.11.6",
     "fabric": "*",
     "minecraft": "1.17.x"
