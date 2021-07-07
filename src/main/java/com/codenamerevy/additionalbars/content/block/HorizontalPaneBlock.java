@@ -58,9 +58,12 @@ public class HorizontalPaneBlock extends SlabBlock implements Waterloggable
     public EnumType getType() { return type; }
     public String getTexturePath() { return texturePath; }
 
-    protected HorizontalPaneBlock(Settings settings)
+    public HorizontalPaneBlock(Settings settings)
     {
         super(settings);
+        this.pathName = "";
+        this.texturePath = "";
+        this.type = EnumType.UNDEFINED;
         this.setDefaultState(this.getDefaultState().with(TYPE, SlabType.BOTTOM).with(WATERLOGGED, false));
     }
 
@@ -69,6 +72,7 @@ public class HorizontalPaneBlock extends SlabBlock implements Waterloggable
         this.pathName = pathName;
         this.type = type;
         this.texturePath = texturePath;
+        this.setDefaultState(this.getDefaultState().with(TYPE, SlabType.BOTTOM).with(WATERLOGGED, false));
     }
 
     @Override

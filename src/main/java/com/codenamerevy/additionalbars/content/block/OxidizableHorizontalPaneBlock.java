@@ -10,7 +10,7 @@ import java.util.Random;
 public class OxidizableHorizontalPaneBlock extends HorizontalPaneBlock implements Oxidizable {
     private final OxidizationLevel oxidizationLevel;
 
-    protected OxidizableHorizontalPaneBlock(OxidizationLevel oxidizationLevel, Settings settings) {
+    public OxidizableHorizontalPaneBlock(OxidizationLevel oxidizationLevel, Settings settings) {
         super(settings);
         this.oxidizationLevel = oxidizationLevel;
     }

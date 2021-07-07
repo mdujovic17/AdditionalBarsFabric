@@ -12,6 +12,11 @@ import java.util.Random;
 public class OxidizableBarsBlock extends BarsBlock implements Oxidizable {
     private final OxidizationLevel oxidizationLevel;
 
+    public OxidizableBarsBlock(OxidizationLevel oxidizationLevel, Settings settings) {
+        super(settings);
+        this.oxidizationLevel = oxidizationLevel;
+    }
+
     public OxidizableBarsBlock(OxidizationLevel oxidizationLevel, Settings settings, String pathName, EnumType type, String texturePath) {
         super(settings, pathName, type, texturePath);
         this.oxidizationLevel = oxidizationLevel;

@@ -7,11 +7,11 @@
   ],
   "key": {
     "#": {
-      "item": "minecraft:gold_ingot"
+      "item": "minecraft:copper_ingot"
     }
   },
   "result": {
-    "item": "additionalbars:gold_bars",
+    "item": "additionalbars:copper_bars",
     "count": 16
   }
 }

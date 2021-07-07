@@ -32,10 +32,11 @@ public class BarsBlock extends PaneBlock {
     private EnumType type;
     private String texturePath;
 
-    protected BarsBlock(Settings settings) {
+    public BarsBlock(Settings settings) {
         super(settings);
-        this.pathName = pathName;
-        this.type = type;
+        this.pathName = "";
+        this.texturePath = "";
+        this.type = EnumType.UNDEFINED;
     }
 
     public BarsBlock(Settings settings, String pathName, EnumType type, String texturePath) {
