@@ -1,0 +1,12 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"group": "regular_to_horizontal",
+	"ingredients": [
+    {
+      "item": "additionalbars:waxed_crossed_weathered_copper_bars"
+    }
+  ],
+  "result": {
+    "item": "additionalbars:waxed_horizontal_crossed_weathered_copper_bars"
+  }
+}
