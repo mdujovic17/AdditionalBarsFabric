@@ -36,7 +36,7 @@ dependencies {
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
 	modApi "me.shedaniel:RoughlyEnoughItems-fabric:${project.rei}"
-	modRuntime "com.terraformersmc:modmenu:${project.modmenu}"
+	modRuntimeOnly "com.terraformersmc:modmenu:${project.modmenu}"
 
 	/*Using forked OxidizeLib, it's the same as original, just updated to 1.17.1
 	* when Original gets updated, fork jitpack maven will be disabled*/
@@ -86,13 +86,7 @@ jar {
 publishing {
 	publications {
 		mavenJava(MavenPublication) {
-			// add all the jars that should be included when publishing to maven
-			artifact(remapJar) {
-				builtBy remapJar
-			}
-			artifact(sourcesJar) {
-				builtBy remapSourcesJar
-			}
+			from components.java
 		}
 	}
 
