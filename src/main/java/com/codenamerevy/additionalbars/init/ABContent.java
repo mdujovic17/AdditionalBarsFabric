@@ -42,13 +42,13 @@ public class ABContent
         return false;
     }
 
-    private static final FabricBlockSettings METALLIC_BARS_SETTINGS = FabricBlockSettings.of(Material.METAL).breakByTool(FabricToolTags.PICKAXES, 1).breakByHand(false).hardness(5.0F).resistance(6.0F).sounds(BlockSoundGroup.METAL);
-    private static final FabricBlockSettings WOODEN_BARS_SETTINGS = FabricBlockSettings.of(Material.WOOD).breakByTool(FabricToolTags.AXES, 1).breakByHand(true).hardness(3.0F).resistance(4.0F).sounds(BlockSoundGroup.WOOD);
-    private static final FabricBlockSettings NETHER_BARS_SETTINGS = FabricBlockSettings.of(Material.NETHER_WOOD).breakByTool(FabricToolTags.AXES, 1).breakByHand(true).hardness(3.0F).resistance(4.0F).sounds(BlockSoundGroup.NETHER_STEM);
+    private static final FabricBlockSettings METALLIC_BARS_SETTINGS = FabricBlockSettings.of(Material.METAL).breakByHand(false).hardness(5.0F).resistance(6.0F).sounds(BlockSoundGroup.METAL);
+    private static final FabricBlockSettings WOODEN_BARS_SETTINGS = FabricBlockSettings.of(Material.WOOD).breakByHand(true).hardness(3.0F).resistance(4.0F).sounds(BlockSoundGroup.WOOD);
+    private static final FabricBlockSettings NETHER_BARS_SETTINGS = FabricBlockSettings.of(Material.NETHER_WOOD).breakByHand(true).hardness(3.0F).resistance(4.0F).sounds(BlockSoundGroup.NETHER_STEM);
 
-    private static final FabricBlockSettings HORIZONTAL_METALLIC_BARS_SETTINGS = FabricBlockSettings.of(Material.METAL).nonOpaque().solidBlock(ABContent::never).blockVision(ABContent::never).suffocates(ABContent::never).breakByTool(FabricToolTags.PICKAXES, 1).breakByHand(false).hardness(5.0F).resistance(6.0F).sounds(BlockSoundGroup.METAL);
-    private static final FabricBlockSettings HORIZONTAL_WOODEN_BARS_SETTINGS = FabricBlockSettings.of(Material.WOOD).solidBlock(ABContent::never).blockVision(ABContent::never).suffocates(ABContent::never).breakByTool(FabricToolTags.AXES, 1).nonOpaque().breakByHand(true).hardness(3.0F).resistance(4.0F).sounds(BlockSoundGroup.WOOD);
-    private static final FabricBlockSettings HORIZONTAL_NETHER_BARS_SETTINGS = FabricBlockSettings.of(Material.NETHER_WOOD).nonOpaque().solidBlock(ABContent::never).blockVision(ABContent::never).suffocates(ABContent::never).breakByTool(FabricToolTags.AXES, 1).hardness(3.0F).breakByHand(true).resistance(4.0F).sounds(BlockSoundGroup.NETHER_STEM);
+    private static final FabricBlockSettings HORIZONTAL_METALLIC_BARS_SETTINGS = FabricBlockSettings.of(Material.METAL).nonOpaque().solidBlock(ABContent::never).blockVision(ABContent::never).suffocates(ABContent::never).breakByHand(false).hardness(5.0F).resistance(6.0F).sounds(BlockSoundGroup.METAL);
+    private static final FabricBlockSettings HORIZONTAL_WOODEN_BARS_SETTINGS = FabricBlockSettings.of(Material.WOOD).solidBlock(ABContent::never).blockVision(ABContent::never).suffocates(ABContent::never).nonOpaque().breakByHand(true).hardness(3.0F).resistance(4.0F).sounds(BlockSoundGroup.WOOD);
+    private static final FabricBlockSettings HORIZONTAL_NETHER_BARS_SETTINGS = FabricBlockSettings.of(Material.NETHER_WOOD).nonOpaque().solidBlock(ABContent::never).blockVision(ABContent::never).suffocates(ABContent::never).hardness(3.0F).breakByHand(true).resistance(4.0F).sounds(BlockSoundGroup.NETHER_STEM);
 
     //public static final Block TEST_BLOCK = new BarsBlock(METALLIC_BARS_SETTINGS);
 
