@@ -8,14 +8,14 @@ import net.minecraft.util.math.BlockPos;
 import java.util.Random;
 
 public class OxidizableHorizontalPaneBlock extends HorizontalPaneBlock implements Oxidizable {
-    private final OxidizationLevel oxidizationLevel;
+    private final OxidationLevel oxidizationLevel;
 
-    public OxidizableHorizontalPaneBlock(OxidizationLevel oxidizationLevel, Settings settings) {
+    public OxidizableHorizontalPaneBlock(OxidationLevel oxidizationLevel, Settings settings) {
         super(settings);
         this.oxidizationLevel = oxidizationLevel;
     }
 
-    public OxidizableHorizontalPaneBlock(OxidizationLevel oxidizationLevel, Settings settings, String pathName, EnumType type, String texturePath) {
+    public OxidizableHorizontalPaneBlock(OxidationLevel oxidizationLevel, Settings settings, String pathName, EnumType type, String texturePath) {
         super(settings, pathName, type, texturePath);
         this.oxidizationLevel = oxidizationLevel;
     }
@@ -31,7 +31,7 @@ public class OxidizableHorizontalPaneBlock extends HorizontalPaneBlock implement
     }
 
     @Override
-    public OxidizationLevel getDegradationLevel() {
+    public OxidationLevel getDegradationLevel() {
         return this.oxidizationLevel;
     }
 }

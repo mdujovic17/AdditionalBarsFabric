@@ -10,14 +10,14 @@ import net.minecraft.util.math.BlockPos;
 import java.util.Random;
 
 public class OxidizableBarsBlock extends BarsBlock implements Oxidizable {
-    private final OxidizationLevel oxidizationLevel;
+    private final OxidationLevel oxidizationLevel;
 
-    public OxidizableBarsBlock(OxidizationLevel oxidizationLevel, Settings settings) {
+    public OxidizableBarsBlock(OxidationLevel oxidizationLevel, Settings settings) {
         super(settings);
         this.oxidizationLevel = oxidizationLevel;
     }
 
-    public OxidizableBarsBlock(OxidizationLevel oxidizationLevel, Settings settings, String pathName, EnumType type, String texturePath) {
+    public OxidizableBarsBlock(OxidationLevel oxidizationLevel, Settings settings, String pathName, EnumType type, String texturePath) {
         super(settings, pathName, type, texturePath);
         this.oxidizationLevel = oxidizationLevel;
     }
@@ -32,7 +32,7 @@ public class OxidizableBarsBlock extends BarsBlock implements Oxidizable {
         return Oxidizable.getIncreasedOxidationBlock(state.getBlock()).isPresent();
     }
     @Override
-    public OxidizationLevel getDegradationLevel() {
+    public OxidationLevel getDegradationLevel() {
         return this.oxidizationLevel;
     }
 }
