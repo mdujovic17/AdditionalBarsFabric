@@ -37,17 +37,6 @@ dependencies {
 
 	modApi "me.shedaniel:RoughlyEnoughItems-fabric:${project.rei}"
 	modRuntimeOnly "com.terraformersmc:modmenu:${project.modmenu}"
-
-	/*Using forked OxidizeLib, it's the same as original, just updated to 1.17.1
-	* when Original gets updated, fork jitpack maven will be disabled*/
-	//modImplementation "com.github.gamma1772:oxidizelib:${project.oxidizeLib}"
-	//include "com.github.gamma1772:oxidizelib:${project.oxidizeLib}"
-
-	modImplementation "com.github.Shnupbups:oxidizelib:${project.oxidizeLib}"
-	include "com.github.Shnupbups:oxidizelib:${project.oxidizeLib}"
-
-	// PSA: Some older mods, compiled on Loom 0.2.1, might have outdated Maven POMs.
-	// You may need to force-disable transitiveness on them.
 }
 
 processResources {

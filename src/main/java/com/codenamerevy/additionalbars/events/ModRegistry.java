@@ -25,61 +25,29 @@ SOFTWARE.
 package com.codenamerevy.additionalbars.events;
 
 import com.codenamerevy.additionalbars.AdditionalBars;
-import com.codenamerevy.additionalbars.content.block.BarsBlock;
 import com.codenamerevy.additionalbars.init.ABContent;
-import com.shnupbups.oxidizelib.OxidizableFamily;
-import com.shnupbups.oxidizelib.OxidizableBlocksRegistry;
-import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
 import net.fabricmc.fabric.api.resource.ResourcePackActivationType;
 import net.fabricmc.loader.api.FabricLoader;
 import net.fabricmc.loader.api.ModContainer;
-import net.minecraft.block.Block;
-import net.minecraft.block.Oxidizable;
-import net.minecraft.client.render.RenderLayer;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
+import net.fabricmc.fabric.api.registry.OxidizableBlocksRegistry;
+
 import java.util.*;
-import java.util.logging.Logger;
 
 public class ModRegistry
 {
-    //public static ArrayList<Block> bars;
     public static void setup()
     {
-//        if (AdditionalBars.INSTANCE.generateData) {
-//            bars = new ArrayList<>();
-//            populateList();
-//        }
+
         registerBlocks();
         registerItems();
-
-        OxidizableBlocksRegistry.registerOxidizableFamily(new OxidizableFamily.Builder()
-                .unaffected(ABContent.COPPER_BARS, ABContent.WAXED_COPPER_BARS)
-                .exposed(ABContent.EXPOSED_COPPER_BARS, ABContent.WAXED_EXPOSED_COPPER_BARS)
-                .weathered(ABContent.WEATHERED_COPPER_BARS, ABContent.WAXED_WEATHERED_COPPER_BARS)
-                .oxidized(ABContent.OXIDIZED_COPPER_BARS, ABContent.WAXED_OXIDIZED_COPPER_BARS).build());
-
-        OxidizableBlocksRegistry.registerOxidizableFamily(new OxidizableFamily.Builder()
-                .unaffected(ABContent.CROSSED_COPPER_BARS, ABContent.WAXED_CROSSED_COPPER_BARS)
-                .exposed(ABContent.CROSSED_EXPOSED_COPPER_BARS, ABContent.WAXED_CROSSED_EXPOSED_COPPER_BARS)
-                .weathered(ABContent.CROSSED_WEATHERED_COPPER_BARS, ABContent.WAXED_CROSSED_WEATHERED_COPPER_BARS)
-                .oxidized(ABContent.CROSSED_OXIDIZED_COPPER_BARS, ABContent.WAXED_CROSSED_OXIDIZED_COPPER_BARS).build());
-
-        OxidizableBlocksRegistry.registerOxidizableFamily(new OxidizableFamily.Builder()
-                .unaffected(ABContent.HORIZONTAL_COPPER_BARS, ABContent.WAXED_HORIZONTAL_COPPER_BARS)
-                .exposed(ABContent.HORIZONTAL_EXPOSED_COPPER_BARS, ABContent.WAXED_HORIZONTAL_EXPOSED_COPPER_BARS)
-                .weathered(ABContent.HORIZONTAL_WEATHERED_COPPER_BARS, ABContent.WAXED_HORIZONTAL_WEATHERED_COPPER_BARS)
-                .oxidized(ABContent.HORIZONTAL_OXIDIZED_COPPER_BARS, ABContent.WAXED_HORIZONTAL_OXIDIZED_COPPER_BARS).build());
-
-        OxidizableBlocksRegistry.registerOxidizableFamily(new OxidizableFamily.Builder()
-                .unaffected(ABContent.HORIZONTAL_CROSSED_COPPER_BARS, ABContent.WAXED_HORIZONTAL_CROSSED_COPPER_BARS)
-                .exposed(ABContent.HORIZONTAL_CROSSED_EXPOSED_COPPER_BARS, ABContent.WAXED_HORIZONTAL_CROSSED_EXPOSED_COPPER_BARS)
-                .weathered(ABContent.HORIZONTAL_CROSSED_WEATHERED_COPPER_BARS, ABContent.WAXED_HORIZONTAL_CROSSED_WEATHERED_COPPER_BARS)
-                .oxidized(ABContent.HORIZONTAL_CROSSED_OXIDIZED_COPPER_BARS, ABContent.WAXED_HORIZONTAL_CROSSED_OXIDIZED_COPPER_BARS).build());
+        registerOxidationStates();
+        registerWaxableStates();
     }
 
     public static void clientSetup()
@@ -264,6 +232,47 @@ public class ModRegistry
         Registry.register(Registry.ITEM, new Identifier(AdditionalBars.MODID, "waxed_horizontal_crossed_oxidized_copper_bars"), new BlockItem(ABContent.WAXED_HORIZONTAL_CROSSED_OXIDIZED_COPPER_BARS, new Item.Settings().group(AdditionalBars.HORIZONTAL_ADDITIONAL_BARS)));
 
     }
+
+    public static void registerOxidationStates() {
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ABContent.COPPER_BARS, ABContent.EXPOSED_COPPER_BARS);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ABContent.EXPOSED_COPPER_BARS, ABContent.WEATHERED_COPPER_BARS);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ABContent.WEATHERED_COPPER_BARS, ABContent.OXIDIZED_COPPER_BARS);
+
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ABContent.CROSSED_COPPER_BARS, ABContent.CROSSED_EXPOSED_COPPER_BARS);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ABContent.CROSSED_EXPOSED_COPPER_BARS, ABContent.CROSSED_WEATHERED_COPPER_BARS);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ABContent.CROSSED_WEATHERED_COPPER_BARS, ABContent.CROSSED_OXIDIZED_COPPER_BARS);
+
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ABContent.HORIZONTAL_COPPER_BARS, ABContent.HORIZONTAL_EXPOSED_COPPER_BARS);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ABContent.HORIZONTAL_EXPOSED_COPPER_BARS, ABContent.HORIZONTAL_WEATHERED_COPPER_BARS);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ABContent.HORIZONTAL_WEATHERED_COPPER_BARS, ABContent.HORIZONTAL_OXIDIZED_COPPER_BARS);
+
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ABContent.HORIZONTAL_CROSSED_COPPER_BARS, ABContent.HORIZONTAL_CROSSED_EXPOSED_COPPER_BARS);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ABContent.HORIZONTAL_CROSSED_EXPOSED_COPPER_BARS, ABContent.HORIZONTAL_CROSSED_WEATHERED_COPPER_BARS);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ABContent.HORIZONTAL_CROSSED_WEATHERED_COPPER_BARS, ABContent.HORIZONTAL_CROSSED_OXIDIZED_COPPER_BARS);
+    }
+
+    public static void registerWaxableStates() {
+        OxidizableBlocksRegistry.registerWaxableBlockPair(ABContent.COPPER_BARS, ABContent.WAXED_COPPER_BARS);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(ABContent.EXPOSED_COPPER_BARS, ABContent.WAXED_EXPOSED_COPPER_BARS);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(ABContent.WEATHERED_COPPER_BARS, ABContent.WAXED_WEATHERED_COPPER_BARS);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(ABContent.OXIDIZED_COPPER_BARS, ABContent.WAXED_OXIDIZED_COPPER_BARS);
+
+        OxidizableBlocksRegistry.registerWaxableBlockPair(ABContent.CROSSED_COPPER_BARS, ABContent.WAXED_CROSSED_COPPER_BARS);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(ABContent.CROSSED_EXPOSED_COPPER_BARS, ABContent.WAXED_CROSSED_EXPOSED_COPPER_BARS);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(ABContent.CROSSED_WEATHERED_COPPER_BARS, ABContent.WAXED_CROSSED_WEATHERED_COPPER_BARS);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(ABContent.CROSSED_OXIDIZED_COPPER_BARS, ABContent.WAXED_CROSSED_OXIDIZED_COPPER_BARS);
+
+        OxidizableBlocksRegistry.registerWaxableBlockPair(ABContent.HORIZONTAL_COPPER_BARS, ABContent.WAXED_HORIZONTAL_COPPER_BARS);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(ABContent.HORIZONTAL_EXPOSED_COPPER_BARS, ABContent.WAXED_HORIZONTAL_EXPOSED_COPPER_BARS);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(ABContent.HORIZONTAL_WEATHERED_COPPER_BARS, ABContent.WAXED_HORIZONTAL_WEATHERED_COPPER_BARS);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(ABContent.HORIZONTAL_OXIDIZED_COPPER_BARS, ABContent.WAXED_HORIZONTAL_OXIDIZED_COPPER_BARS);
+
+        OxidizableBlocksRegistry.registerWaxableBlockPair(ABContent.HORIZONTAL_CROSSED_COPPER_BARS, ABContent.WAXED_HORIZONTAL_CROSSED_COPPER_BARS);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(ABContent.HORIZONTAL_CROSSED_EXPOSED_COPPER_BARS, ABContent.WAXED_HORIZONTAL_CROSSED_EXPOSED_COPPER_BARS);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(ABContent.HORIZONTAL_CROSSED_WEATHERED_COPPER_BARS, ABContent.WAXED_HORIZONTAL_CROSSED_WEATHERED_COPPER_BARS);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(ABContent.HORIZONTAL_CROSSED_OXIDIZED_COPPER_BARS, ABContent.WAXED_HORIZONTAL_CROSSED_OXIDIZED_COPPER_BARS);
+    }
+
     public static void registerRenderLayer()
     {
 //        //BlockRenderLayerMap.INSTANCE.putBlock(ABContent.TEST_BLOCK, RenderLayer.getCutout());
@@ -310,65 +319,7 @@ public class ModRegistry
 //        BlockRenderLayerMap.INSTANCE.putBlock(ABContent.HORIZONTAL_CROSSED_CRIMSON_BARS, RenderLayer.getCutout());
 //        BlockRenderLayerMap.INSTANCE.putBlock(ABContent.HORIZONTAL_CROSSED_WARPED_BARS, RenderLayer.getCutout());
     }
-//    private static void populateList() {
-//        bars.add(ABContent.GOLD_BARS);
-//        bars.add(ABContent.ACACIA_BARS);
-//        bars.add(ABContent.BIRCH_BARS);
-//        bars.add(ABContent.DARK_OAK_BARS);
-//        bars.add(ABContent.JUNGLE_BARS);
-//        bars.add(ABContent.SPRUCE_BARS);
-//        bars.add(ABContent.OAK_BARS);
-//        bars.add(ABContent.CRIMSON_BARS);
-//        bars.add(ABContent.WARPED_BARS);
-//        bars.add(ABContent.COPPER_BARS);
-//        bars.add(ABContent.EXPOSED_COPPER_BARS);
-//        bars.add(ABContent.WEATHERED_COPPER_BARS);
-//        bars.add(ABContent.OXIDIZED_COPPER_BARS);
-//
-//        bars.add(ABContent.CROSSED_IRON_BARS);
-//        bars.add(ABContent.CROSSED_GOLD_BARS);
-//        bars.add(ABContent.CROSSED_ACACIA_BARS);
-//        bars.add(ABContent.CROSSED_BIRCH_BARS);
-//        bars.add(ABContent.CROSSED_DARK_OAK_BARS);
-//        bars.add(ABContent.CROSSED_JUNGLE_BARS);
-//        bars.add(ABContent.CROSSED_SPRUCE_BARS);
-//        bars.add(ABContent.CROSSED_OAK_BARS);
-//        bars.add(ABContent.CROSSED_CRIMSON_BARS);
-//        bars.add(ABContent.CROSSED_WARPED_BARS);
-//        bars.add(ABContent.CROSSED_COPPER_BARS);
-//        bars.add(ABContent.CROSSED_EXPOSED_COPPER_BARS);
-//        bars.add(ABContent.CROSSED_WEATHERED_COPPER_BARS);
-//        bars.add(ABContent.CROSSED_OXIDIZED_COPPER_BARS);
-//
-//        bars.add(ABContent.HORIZONTAL_GOLD_BARS);
-//        bars.add(ABContent.HORIZONTAL_ACACIA_BARS);
-//        bars.add(ABContent.HORIZONTAL_BIRCH_BARS);
-//        bars.add(ABContent.HORIZONTAL_DARK_OAK_BARS);
-//        bars.add(ABContent.HORIZONTAL_JUNGLE_BARS);
-//        bars.add(ABContent.HORIZONTAL_SPRUCE_BARS);
-//        bars.add(ABContent.HORIZONTAL_OAK_BARS);
-//        bars.add(ABContent.HORIZONTAL_CRIMSON_BARS);
-//        bars.add(ABContent.HORIZONTAL_WARPED_BARS);
-//        bars.add(ABContent.HORIZONTAL_COPPER_BARS);
-//        bars.add(ABContent.HORIZONTAL_EXPOSED_COPPER_BARS);
-//        bars.add(ABContent.HORIZONTAL_WEATHERED_COPPER_BARS);
-//        bars.add(ABContent.HORIZONTAL_OXIDIZED_COPPER_BARS);
-//
-//        bars.add(ABContent.HORIZONTAL_CROSSED_IRON_BARS);
-//        bars.add(ABContent.HORIZONTAL_CROSSED_GOLD_BARS);
-//        bars.add(ABContent.HORIZONTAL_CROSSED_ACACIA_BARS);
-//        bars.add(ABContent.HORIZONTAL_CROSSED_BIRCH_BARS);
-//        bars.add(ABContent.HORIZONTAL_CROSSED_DARK_OAK_BARS);
-//        bars.add(ABContent.HORIZONTAL_CROSSED_JUNGLE_BARS);
-//        bars.add(ABContent.HORIZONTAL_CROSSED_SPRUCE_BARS);
-//        bars.add(ABContent.HORIZONTAL_CROSSED_OAK_BARS);
-//        bars.add(ABContent.HORIZONTAL_CROSSED_CRIMSON_BARS);
-//        bars.add(ABContent.HORIZONTAL_CROSSED_WARPED_BARS);
-//        bars.add(ABContent.HORIZONTAL_CROSSED_COPPER_BARS);
-//        bars.add(ABContent.HORIZONTAL_CROSSED_EXPOSED_COPPER_BARS);
-//        bars.add(ABContent.HORIZONTAL_CROSSED_WEATHERED_COPPER_BARS);
-//        bars.add(ABContent.HORIZONTAL_CROSSED_OXIDIZED_COPPER_BARS);
-//    }
+
     private static void registerResourcePacks() {
         Optional<ModContainer> CONTAINER = FabricLoader.getInstance().getModContainer(AdditionalBars.MODID);
         ResourceManagerHelper.registerBuiltinResourcePack(new Identifier("additionalbars:classic"), CONTAINER.get(), ResourcePackActivationType.NORMAL);
