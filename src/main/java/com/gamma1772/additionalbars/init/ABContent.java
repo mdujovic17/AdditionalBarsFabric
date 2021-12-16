@@ -22,11 +22,14 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
  */
 
-package com.codenamerevy.additionalbars.init;
+package com.gamma1772.additionalbars.init;
 
-import com.codenamerevy.additionalbars.content.block.*;
+import com.gamma1772.additionalbars.content.block.*;
+import com.gamma1772.additionalbars.content.block.BarsBlock;
+import com.gamma1772.additionalbars.content.block.HorizontalPaneBlock;
+import com.gamma1772.additionalbars.content.block.OxidizableBarsBlock;
+import com.gamma1772.additionalbars.content.block.OxidizableHorizontalPaneBlock;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Material;

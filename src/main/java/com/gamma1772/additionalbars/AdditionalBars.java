@@ -22,10 +22,10 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
  */
 
-package com.codenamerevy.additionalbars;
+package com.gamma1772.additionalbars;
 
-import com.codenamerevy.additionalbars.events.ModRegistry;
-import com.codenamerevy.additionalbars.init.ABContent;
+import com.gamma1772.additionalbars.events.ModRegistry;
+import com.gamma1772.additionalbars.init.ABContent;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.minecraft.item.ItemGroup;

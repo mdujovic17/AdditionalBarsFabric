@@ -1,4 +1,4 @@
-package com.codenamerevy.additionalbars.content.block;
+package com.gamma1772.additionalbars.content.block;
 
 public enum EnumType {
     UNDEFINED,

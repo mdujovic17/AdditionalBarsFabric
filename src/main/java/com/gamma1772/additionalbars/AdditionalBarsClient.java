@@ -22,37 +22,18 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
  */
 
-package com.codenamerevy.additionalbars.content.block;
+package com.gamma1772.additionalbars;
 
-import net.minecraft.block.PaneBlock;
+import com.gamma1772.additionalbars.events.ModRegistry;
+import net.fabricmc.api.ClientModInitializer;
 
-public class BarsBlock extends PaneBlock {
-
-    private String pathName;
-    private EnumType type;
-    private String texturePath;
-
-    public BarsBlock(Settings settings) {
-        super(settings);
-        this.pathName = "";
-        this.texturePath = "";
-        this.type = EnumType.UNDEFINED;
+public class AdditionalBarsClient implements ClientModInitializer
+{
+    private static AdditionalBarsClient INSTANCE;
+    @Override
+    public void onInitializeClient()
+    {
+        INSTANCE = this;
+        ModRegistry.clientSetup();
     }
-
-    public BarsBlock(Settings settings, String pathName, EnumType type, String texturePath) {
-        super(settings);
-        this.pathName = pathName;
-        this.type = type;
-
-        if (!(texturePath.charAt(0) == '/')) {
-            this.texturePath = "minecraft:block/" + texturePath;
-        }
-        else {
-            this.texturePath = "additionalbars:block" + texturePath;
-        }
-    }
-
-    public String getPathName() { return pathName; }
-    public EnumType getType() { return type; }
-    public String getTexturePath() { return texturePath; }
 }

@@ -1,6 +1,4 @@
-
-
-package com.codenamerevy.additionalbars.content.block;
+package com.gamma1772.additionalbars.content.block;
 
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Oxidizable;
@@ -9,15 +7,15 @@ import net.minecraft.util.math.BlockPos;
 
 import java.util.Random;
 
-public class OxidizableBarsBlock extends BarsBlock implements Oxidizable {
+public class OxidizableHorizontalPaneBlock extends HorizontalPaneBlock implements Oxidizable {
     private final OxidationLevel oxidizationLevel;
 
-    public OxidizableBarsBlock(OxidationLevel oxidizationLevel, Settings settings) {
+    public OxidizableHorizontalPaneBlock(OxidationLevel oxidizationLevel, Settings settings) {
         super(settings);
         this.oxidizationLevel = oxidizationLevel;
     }
 
-    public OxidizableBarsBlock(OxidationLevel oxidizationLevel, Settings settings, String pathName, EnumType type, String texturePath) {
+    public OxidizableHorizontalPaneBlock(OxidationLevel oxidizationLevel, Settings settings, String pathName, EnumType type, String texturePath) {
         super(settings, pathName, type, texturePath);
         this.oxidizationLevel = oxidizationLevel;
     }
@@ -31,6 +29,7 @@ public class OxidizableBarsBlock extends BarsBlock implements Oxidizable {
     public boolean hasRandomTicks(BlockState state) {
         return Oxidizable.getIncreasedOxidationBlock(state.getBlock()).isPresent();
     }
+
     @Override
     public OxidationLevel getDegradationLevel() {
         return this.oxidizationLevel;
