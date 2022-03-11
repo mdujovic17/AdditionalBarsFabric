@@ -25,34 +25,33 @@ SOFTWARE.
 package com.gamma1772.additionalbars.content.block;
 
 import net.minecraft.block.PaneBlock;
+import net.minecraft.client.item.TooltipContext;
+import net.minecraft.item.ItemStack;
+import net.minecraft.text.Text;
+import net.minecraft.world.BlockView;
+import org.jetbrains.annotations.Nullable;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class BarsBlock extends PaneBlock {
 
-    private String pathName;
-    private EnumType type;
-    private String texturePath;
+    ArrayList<BlockTypes> barsTypes = new ArrayList<>();
 
     public BarsBlock(Settings settings) {
         super(settings);
-        this.pathName = "";
-        this.texturePath = "";
-        this.type = EnumType.UNDEFINED;
     }
 
-    public BarsBlock(Settings settings, String pathName, EnumType type, String texturePath) {
+    public BarsBlock(Settings settings, BlockTypes... types) {
         super(settings);
-        this.pathName = pathName;
-        this.type = type;
-
-        if (!(texturePath.charAt(0) == '/')) {
-            this.texturePath = "minecraft:block/" + texturePath;
-        }
-        else {
-            this.texturePath = "additionalbars:block" + texturePath;
-        }
+        barsTypes.addAll(Arrays.stream(types).toList());
     }
 
-    public String getPathName() { return pathName; }
-    public EnumType getType() { return type; }
-    public String getTexturePath() { return texturePath; }
+    @Override
+    public void appendTooltip(ItemStack stack, @Nullable BlockView world, List<Text> tooltip, TooltipContext options) {
+        for ( BlockTypes type : barsTypes) {
+            tooltip.add(type.getTranslatableText().formatted(type.getTextColor()));
+        }
+    }
 }

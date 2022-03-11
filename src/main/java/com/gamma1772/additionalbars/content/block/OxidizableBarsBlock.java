@@ -17,8 +17,8 @@ public class OxidizableBarsBlock extends BarsBlock implements Oxidizable {
         this.oxidizationLevel = oxidizationLevel;
     }
 
-    public OxidizableBarsBlock(OxidationLevel oxidizationLevel, Settings settings, String pathName, EnumType type, String texturePath) {
-        super(settings, pathName, type, texturePath);
+    public OxidizableBarsBlock(OxidationLevel oxidizationLevel, Settings settings, BlockTypes... types) {
+        super(settings, types);
         this.oxidizationLevel = oxidizationLevel;
     }
 

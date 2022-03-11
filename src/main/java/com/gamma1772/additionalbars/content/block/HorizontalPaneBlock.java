@@ -43,10 +43,6 @@ import org.jetbrains.annotations.Nullable;
 
 public class HorizontalPaneBlock extends SlabBlock implements Waterloggable
 {
-    private String pathName;
-    private EnumType type;
-    private String texturePath;
-
     public static final EnumProperty<SlabType> TYPE = Properties.SLAB_TYPE;
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
 
@@ -54,25 +50,13 @@ public class HorizontalPaneBlock extends SlabBlock implements Waterloggable
     protected static final VoxelShape SHAPE_TOP = Block.createCuboidShape(0.0F, 6.0F + 8.0F, 0.0F, 16.0F, 8.0F + 8.0F, 16.0F); //This is a top shape.
     protected static final VoxelShape SHAPE_COM = VoxelShapes.union(SHAPE_BOT, SHAPE_TOP); //This is a combined shape
 
-    public String getPathName() { return pathName; }
-    public EnumType getType() { return type; }
-    public String getTexturePath() { return texturePath; }
-
     public HorizontalPaneBlock(Settings settings)
     {
         super(settings);
-        this.pathName = "";
-        this.texturePath = "";
-        this.type = EnumType.UNDEFINED;
-        this.setDefaultState(this.getDefaultState().with(TYPE, SlabType.BOTTOM).with(WATERLOGGED, false));
     }
 
-    public HorizontalPaneBlock(Settings settings, String pathName, EnumType type, String texturePath) {
+    public HorizontalPaneBlock(Settings settings, BlockTypes... types) {
         super(settings);
-        this.pathName = pathName;
-        this.type = type;
-        this.texturePath = texturePath;
-        this.setDefaultState(this.getDefaultState().with(TYPE, SlabType.BOTTOM).with(WATERLOGGED, false));
     }
 
     @Override

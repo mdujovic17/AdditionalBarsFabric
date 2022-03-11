@@ -15,8 +15,8 @@ public class OxidizableHorizontalPaneBlock extends HorizontalPaneBlock implement
         this.oxidizationLevel = oxidizationLevel;
     }
 
-    public OxidizableHorizontalPaneBlock(OxidationLevel oxidizationLevel, Settings settings, String pathName, EnumType type, String texturePath) {
-        super(settings, pathName, type, texturePath);
+    public OxidizableHorizontalPaneBlock(OxidationLevel oxidizationLevel, Settings settings, BlockTypes... types) {
+        super(settings, types);
         this.oxidizationLevel = oxidizationLevel;
     }
 
