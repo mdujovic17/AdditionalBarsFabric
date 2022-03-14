@@ -49,11 +49,11 @@ public class ABContent
     private static final FabricBlockSettings HORIZONTAL_WOODEN_BARS_SETTINGS = FabricBlockSettings.of(Material.WOOD).solidBlock(ABContent::never).blockVision(ABContent::never).suffocates(ABContent::never).nonOpaque().hardness(3.0F).resistance(4.0F).sounds(BlockSoundGroup.WOOD);
     private static final FabricBlockSettings HORIZONTAL_NETHER_BARS_SETTINGS = FabricBlockSettings.of(Material.NETHER_WOOD).nonOpaque().solidBlock(ABContent::never).blockVision(ABContent::never).suffocates(ABContent::never).hardness(3.0F).resistance(4.0F).sounds(BlockSoundGroup.NETHER_STEM);
 
-    public static final Block DIAMOND_BARS     = new BarsBlock(METALLIC_BARS_SETTINGS, BarsType.REGULAR);
-    public static final Block NETHERITE_BARS     = new BarsBlock(METALLIC_BARS_SETTINGS, BarsType.REGULAR);
+    //public static final Block DIAMOND_BARS     = new BarsBlock(METALLIC_BARS_SETTINGS, BarsType.REGULAR);
+    //public static final Block NETHERITE_BARS     = new BarsBlock(METALLIC_BARS_SETTINGS, BarsType.REGULAR);
 
-    public static final Block BRICK_BARS     = new BarsBlock(METALLIC_BARS_SETTINGS, BarsType.REGULAR);
-    public static final Block NETHER_BRICK_BARS     = new BarsBlock(METALLIC_BARS_SETTINGS, BarsType.REGULAR);
+    //public static final Block BRICK_BARS     = new BarsBlock(METALLIC_BARS_SETTINGS, BarsType.REGULAR);
+    //public static final Block NETHER_BRICK_BARS     = new BarsBlock(METALLIC_BARS_SETTINGS, BarsType.REGULAR);
 
     public static final Block GOLD_BARS     = new BarsBlock(METALLIC_BARS_SETTINGS, BarsType.REGULAR, BarsType.METAL);
     public static final Block ACACIA_BARS   = new BarsBlock(WOODEN_BARS_SETTINGS, BarsType.REGULAR);
