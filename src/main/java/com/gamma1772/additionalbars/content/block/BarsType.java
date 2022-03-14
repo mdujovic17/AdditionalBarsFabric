@@ -6,7 +6,7 @@ import net.minecraft.util.Formatting;
 public enum BarsType implements BlockTypes {
     REGULAR("regular", Formatting.GRAY), CROSSED("crossed", Formatting.GREEN), HORIZONTAL("horizontal", Formatting.GREEN),
     WOOD("wood", Formatting.GOLD), METAL("metal", Formatting.GOLD), CRYSTAL("crystal", Formatting.GOLD), BRICK("brick", Formatting.GOLD),
-    OXIDIZABLE("oxidizable", Formatting.AQUA),
+    OXIDIZING("oxidizing", Formatting.AQUA),
     WAXED("waxed", Formatting.AQUA),
     NETHER("nether", Formatting.DARK_RED);
 
