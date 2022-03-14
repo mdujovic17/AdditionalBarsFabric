@@ -37,7 +37,7 @@ import java.util.List;
 
 public class BarsBlock extends PaneBlock {
 
-    ArrayList<BlockTypes> barsTypes = new ArrayList<>();
+    protected ArrayList<BlockTypes> barsTypes = new ArrayList<>();
 
     public BarsBlock(Settings settings) {
         super(settings);
