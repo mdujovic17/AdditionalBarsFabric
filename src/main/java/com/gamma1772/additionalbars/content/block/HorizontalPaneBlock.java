@@ -28,12 +28,15 @@ import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.block.*;
 import net.minecraft.block.enums.SlabType;
+import net.minecraft.client.item.TooltipContext;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.item.ItemPlacementContext;
+import net.minecraft.item.ItemStack;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.EnumProperty;
 import net.minecraft.state.property.Properties;
+import net.minecraft.text.Text;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
@@ -41,8 +44,14 @@ import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class HorizontalPaneBlock extends SlabBlock implements Waterloggable
 {
+    protected ArrayList<BlockTypes> barsTypes = new ArrayList<>();
+
     public static final EnumProperty<SlabType> TYPE = Properties.SLAB_TYPE;
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
 
@@ -57,6 +66,7 @@ public class HorizontalPaneBlock extends SlabBlock implements Waterloggable
 
     public HorizontalPaneBlock(Settings settings, BlockTypes... types) {
         super(settings);
+        barsTypes.addAll(Arrays.stream(types).toList());
     }
 
     @Override
@@ -121,5 +131,12 @@ public class HorizontalPaneBlock extends SlabBlock implements Waterloggable
     public boolean isTranslucent(BlockState state, BlockView world, BlockPos pos)
     {
         return true;
+    }
+
+    @Override
+    public void appendTooltip(ItemStack stack, @Nullable BlockView world, List<Text> tooltip, TooltipContext options) {
+        for ( BlockTypes type : barsTypes) {
+            tooltip.add(type.getTranslatableText().formatted(type.getTextColor()));
+        }
     }
 }
