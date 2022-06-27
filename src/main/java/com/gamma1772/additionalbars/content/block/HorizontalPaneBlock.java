@@ -136,7 +136,7 @@ public class HorizontalPaneBlock extends SlabBlock implements Waterloggable
     @Override
     public void appendTooltip(ItemStack stack, @Nullable BlockView world, List<Text> tooltip, TooltipContext options) {
         for ( BlockTypes type : barsTypes) {
-            tooltip.add(type.getTranslatableText().formatted(type.getTextColor()));
+            tooltip.add(Text.translatable(type.getText().getString()).formatted(type.getTextColor()));
         }
     }
 }
