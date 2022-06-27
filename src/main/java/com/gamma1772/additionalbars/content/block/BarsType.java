@@ -1,6 +1,6 @@
 package com.gamma1772.additionalbars.content.block;
 
-import net.minecraft.text.TranslatableText;
+import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 
 public enum BarsType implements BlockTypes {
@@ -12,10 +12,10 @@ public enum BarsType implements BlockTypes {
 
     private final String type;
     private final Formatting color;
-    private final TranslatableText translatableText;
+    private final Text text;
     BarsType(String type, Formatting color) {
         this.type = type;
-        this.translatableText = new TranslatableText("tooltip.gamma1772." + type);
+        this.text = Text.translatable("tooltip.gamma1772." + type);
         this.color = color;
     }
 
@@ -25,8 +25,8 @@ public enum BarsType implements BlockTypes {
     }
 
     @Override
-    public TranslatableText getTranslatableText() {
-        return translatableText;
+    public Text getText() {
+        return text;
     }
 
     @Override
