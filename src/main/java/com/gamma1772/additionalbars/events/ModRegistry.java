@@ -65,6 +65,7 @@ public class ModRegistry
         Registry.register(Registry.BLOCK, new Identifier(AdditionalBars.MODID, "jungle_bars"),   ABContent.JUNGLE_BARS);
         Registry.register(Registry.BLOCK, new Identifier(AdditionalBars.MODID, "spruce_bars"),   ABContent.SPRUCE_BARS);
         Registry.register(Registry.BLOCK, new Identifier(AdditionalBars.MODID, "oak_bars"),      ABContent.OAK_BARS);
+        Registry.register(Registry.BLOCK, new Identifier(AdditionalBars.MODID, "mangrove_bars"), ABContent.MANGROVE_BARS);
         Registry.register(Registry.BLOCK, new Identifier(AdditionalBars.MODID, "crimson_bars"),  ABContent.CRIMSON_BARS);
         Registry.register(Registry.BLOCK, new Identifier(AdditionalBars.MODID, "warped_bars"),   ABContent.WARPED_BARS);
 
@@ -76,6 +77,7 @@ public class ModRegistry
         Registry.register(Registry.BLOCK, new Identifier(AdditionalBars.MODID, "crossed_jungle_bars"),   ABContent.CROSSED_JUNGLE_BARS);
         Registry.register(Registry.BLOCK, new Identifier(AdditionalBars.MODID, "crossed_spruce_bars"),   ABContent.CROSSED_SPRUCE_BARS);
         Registry.register(Registry.BLOCK, new Identifier(AdditionalBars.MODID, "crossed_oak_bars"),      ABContent.CROSSED_OAK_BARS);
+        Registry.register(Registry.BLOCK, new Identifier(AdditionalBars.MODID, "crossed_mangrove_bars"), ABContent.CROSSED_MANGROVE_BARS);
         Registry.register(Registry.BLOCK, new Identifier(AdditionalBars.MODID, "crossed_crimson_bars"),  ABContent.CROSSED_CRIMSON_BARS);
         Registry.register(Registry.BLOCK, new Identifier(AdditionalBars.MODID, "crossed_warped_bars"),   ABContent.CROSSED_WARPED_BARS);
 
@@ -87,6 +89,7 @@ public class ModRegistry
         Registry.register(Registry.BLOCK, new Identifier(AdditionalBars.MODID, "horizontal_jungle_bars"),   ABContent.HORIZONTAL_JUNGLE_BARS);
         Registry.register(Registry.BLOCK, new Identifier(AdditionalBars.MODID, "horizontal_spruce_bars"),   ABContent.HORIZONTAL_SPRUCE_BARS);
         Registry.register(Registry.BLOCK, new Identifier(AdditionalBars.MODID, "horizontal_oak_bars"),      ABContent.HORIZONTAL_OAK_BARS);
+        Registry.register(Registry.BLOCK, new Identifier(AdditionalBars.MODID, "horizontal_mangrove_bars"), ABContent.HORIZONTAL_MANGROVE_BARS);
         Registry.register(Registry.BLOCK, new Identifier(AdditionalBars.MODID, "horizontal_crimson_bars"),  ABContent.HORIZONTAL_CRIMSON_BARS);
         Registry.register(Registry.BLOCK, new Identifier(AdditionalBars.MODID, "horizontal_warped_bars"),   ABContent.HORIZONTAL_WARPED_BARS);
 
@@ -98,6 +101,7 @@ public class ModRegistry
         Registry.register(Registry.BLOCK, new Identifier(AdditionalBars.MODID, "horizontal_crossed_jungle_bars"),   ABContent.HORIZONTAL_CROSSED_JUNGLE_BARS);
         Registry.register(Registry.BLOCK, new Identifier(AdditionalBars.MODID, "horizontal_crossed_spruce_bars"),   ABContent.HORIZONTAL_CROSSED_SPRUCE_BARS);
         Registry.register(Registry.BLOCK, new Identifier(AdditionalBars.MODID, "horizontal_crossed_oak_bars"),      ABContent.HORIZONTAL_CROSSED_OAK_BARS);
+        Registry.register(Registry.BLOCK, new Identifier(AdditionalBars.MODID, "horizontal_crossed_mangrove_bars"), ABContent.HORIZONTAL_CROSSED_MANGROVE_BARS);
         Registry.register(Registry.BLOCK, new Identifier(AdditionalBars.MODID, "horizontal_crossed_crimson_bars"),  ABContent.HORIZONTAL_CROSSED_CRIMSON_BARS);
         Registry.register(Registry.BLOCK, new Identifier(AdditionalBars.MODID, "horizontal_crossed_warped_bars"),   ABContent.HORIZONTAL_CROSSED_WARPED_BARS);
 

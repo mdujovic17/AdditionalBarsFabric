@@ -62,6 +62,7 @@ public class ABContent
     public static final Block JUNGLE_BARS   = new BarsBlock(WOODEN_BARS_SETTINGS, BarsType.REGULAR);
     public static final Block SPRUCE_BARS   = new BarsBlock(WOODEN_BARS_SETTINGS, BarsType.REGULAR);
     public static final Block OAK_BARS      = new BarsBlock(WOODEN_BARS_SETTINGS, BarsType.REGULAR);
+    public static final Block MANGROVE_BARS = new BarsBlock(WOODEN_BARS_SETTINGS, BarsType.REGULAR);
     public static final Block CRIMSON_BARS  = new BarsBlock(NETHER_BARS_SETTINGS, BarsType.REGULAR, BarsType.NETHER);
     public static final Block WARPED_BARS   = new BarsBlock(NETHER_BARS_SETTINGS, BarsType.REGULAR, BarsType.NETHER);
 
@@ -73,6 +74,7 @@ public class ABContent
     public static final Block CROSSED_JUNGLE_BARS   = new BarsBlock(WOODEN_BARS_SETTINGS, BarsType.CROSSED);
     public static final Block CROSSED_SPRUCE_BARS   = new BarsBlock(WOODEN_BARS_SETTINGS, BarsType.CROSSED);
     public static final Block CROSSED_OAK_BARS      = new BarsBlock(WOODEN_BARS_SETTINGS, BarsType.CROSSED);
+    public static final Block CROSSED_MANGROVE_BARS = new BarsBlock(WOODEN_BARS_SETTINGS, BarsType.CROSSED);
     public static final Block CROSSED_CRIMSON_BARS  = new BarsBlock(NETHER_BARS_SETTINGS, BarsType.CROSSED, BarsType.NETHER);
     public static final Block CROSSED_WARPED_BARS   = new BarsBlock(NETHER_BARS_SETTINGS, BarsType.CROSSED, BarsType.NETHER);
 
@@ -85,6 +87,7 @@ public class ABContent
     public static final Block HORIZONTAL_JUNGLE_BARS    = new HorizontalPaneBlock(HORIZONTAL_WOODEN_BARS_SETTINGS, BarsType.HORIZONTAL);
     public static final Block HORIZONTAL_OAK_BARS       = new HorizontalPaneBlock(HORIZONTAL_WOODEN_BARS_SETTINGS, BarsType.HORIZONTAL);
     public static final Block HORIZONTAL_SPRUCE_BARS    = new HorizontalPaneBlock(HORIZONTAL_WOODEN_BARS_SETTINGS, BarsType.HORIZONTAL);
+    public static final Block HORIZONTAL_MANGROVE_BARS  = new HorizontalPaneBlock(HORIZONTAL_WOODEN_BARS_SETTINGS, BarsType.HORIZONTAL);
     public static final Block HORIZONTAL_CRIMSON_BARS   = new HorizontalPaneBlock(HORIZONTAL_NETHER_BARS_SETTINGS, BarsType.HORIZONTAL, BarsType.NETHER);
     public static final Block HORIZONTAL_WARPED_BARS    = new HorizontalPaneBlock(HORIZONTAL_NETHER_BARS_SETTINGS, BarsType.HORIZONTAL, BarsType.NETHER);
 
@@ -97,6 +100,7 @@ public class ABContent
     public static final Block HORIZONTAL_CROSSED_JUNGLE_BARS    = new HorizontalPaneBlock(HORIZONTAL_WOODEN_BARS_SETTINGS, BarsType.HORIZONTAL, BarsType.CROSSED);
     public static final Block HORIZONTAL_CROSSED_OAK_BARS       = new HorizontalPaneBlock(HORIZONTAL_WOODEN_BARS_SETTINGS, BarsType.HORIZONTAL, BarsType.CROSSED);
     public static final Block HORIZONTAL_CROSSED_SPRUCE_BARS    = new HorizontalPaneBlock(HORIZONTAL_WOODEN_BARS_SETTINGS, BarsType.HORIZONTAL, BarsType.CROSSED);
+    public static final Block HORIZONTAL_CROSSED_MANGROVE_BARS  = new HorizontalPaneBlock(HORIZONTAL_WOODEN_BARS_SETTINGS, BarsType.HORIZONTAL, BarsType.CROSSED);
     public static final Block HORIZONTAL_CROSSED_CRIMSON_BARS   = new HorizontalPaneBlock(HORIZONTAL_NETHER_BARS_SETTINGS, BarsType.HORIZONTAL, BarsType.CROSSED, BarsType.NETHER);
     public static final Block HORIZONTAL_CROSSED_WARPED_BARS    = new HorizontalPaneBlock(HORIZONTAL_NETHER_BARS_SETTINGS, BarsType.HORIZONTAL, BarsType.CROSSED, BarsType.NETHER);
 
