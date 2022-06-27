@@ -7,7 +7,26 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "additionalbars:horizontal_acacia_bars"
+          "name": "additionalbars:horizontal_acacia_bars",
+          "functions": [
+            {
+              "add": false,
+              "conditions": [
+                {
+                  "block": "additionalbars:horizontal_acacia_bars",
+                  "condition": "minecraft:block_state_property",
+                  "properties": {
+                    "type": "double"
+                  }
+                }
+              ],
+              "count": 2.0,
+              "function": "minecraft:set_count"
+            },
+            {
+              "function": "minecraft:explosion_decay"
+            }
+          ]
         }
       ],
       "conditions": [
