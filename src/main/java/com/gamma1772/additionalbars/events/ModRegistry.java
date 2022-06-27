@@ -157,6 +157,7 @@ public class ModRegistry
         Registry.register(Registry.ITEM, new Identifier(AdditionalBars.MODID, "jungle_bars"), new BlockItem(ABContent.JUNGLE_BARS, new Item.Settings().group(AdditionalBars.ADDITIONAL_BARS)));
         Registry.register(Registry.ITEM, new Identifier(AdditionalBars.MODID, "spruce_bars"), new BlockItem(ABContent.SPRUCE_BARS, new Item.Settings().group(AdditionalBars.ADDITIONAL_BARS)));
         Registry.register(Registry.ITEM, new Identifier(AdditionalBars.MODID, "oak_bars"), new BlockItem(ABContent.OAK_BARS, new Item.Settings().group(AdditionalBars.ADDITIONAL_BARS)));
+        Registry.register(Registry.ITEM, new Identifier(AdditionalBars.MODID, "mangrove_bars"), new BlockItem(ABContent.MANGROVE_BARS, new Item.Settings().group(AdditionalBars.ADDITIONAL_BARS)));
         Registry.register(Registry.ITEM, new Identifier(AdditionalBars.MODID, "crimson_bars"), new BlockItem(ABContent.CRIMSON_BARS, new Item.Settings().group(AdditionalBars.ADDITIONAL_BARS)));
         Registry.register(Registry.ITEM, new Identifier(AdditionalBars.MODID, "warped_bars"), new BlockItem(ABContent.WARPED_BARS, new Item.Settings().group(AdditionalBars.ADDITIONAL_BARS)));
 
@@ -168,6 +169,7 @@ public class ModRegistry
         Registry.register(Registry.ITEM, new Identifier(AdditionalBars.MODID, "crossed_jungle_bars"), new BlockItem(ABContent.CROSSED_JUNGLE_BARS, new Item.Settings().group(AdditionalBars.ADDITIONAL_BARS)));
         Registry.register(Registry.ITEM, new Identifier(AdditionalBars.MODID, "crossed_spruce_bars"), new BlockItem(ABContent.CROSSED_SPRUCE_BARS, new Item.Settings().group(AdditionalBars.ADDITIONAL_BARS)));
         Registry.register(Registry.ITEM, new Identifier(AdditionalBars.MODID, "crossed_oak_bars"), new BlockItem(ABContent.CROSSED_OAK_BARS, new Item.Settings().group(AdditionalBars.ADDITIONAL_BARS)));
+        Registry.register(Registry.ITEM, new Identifier(AdditionalBars.MODID, "crossed_mangrove_bars"), new BlockItem(ABContent.CROSSED_MANGROVE_BARS, new Item.Settings().group(AdditionalBars.ADDITIONAL_BARS)));
         Registry.register(Registry.ITEM, new Identifier(AdditionalBars.MODID, "crossed_crimson_bars"), new BlockItem(ABContent.CROSSED_CRIMSON_BARS, new Item.Settings().group(AdditionalBars.ADDITIONAL_BARS)));
         Registry.register(Registry.ITEM, new Identifier(AdditionalBars.MODID, "crossed_warped_bars"), new BlockItem(ABContent.CROSSED_WARPED_BARS, new Item.Settings().group(AdditionalBars.ADDITIONAL_BARS)));
 
@@ -179,6 +181,7 @@ public class ModRegistry
         Registry.register(Registry.ITEM, new Identifier(AdditionalBars.MODID, "horizontal_jungle_bars"), new BlockItem(ABContent.HORIZONTAL_JUNGLE_BARS, new Item.Settings().group(AdditionalBars.HORIZONTAL_ADDITIONAL_BARS)));
         Registry.register(Registry.ITEM, new Identifier(AdditionalBars.MODID, "horizontal_spruce_bars"), new BlockItem(ABContent.HORIZONTAL_SPRUCE_BARS, new Item.Settings().group(AdditionalBars.HORIZONTAL_ADDITIONAL_BARS)));
         Registry.register(Registry.ITEM, new Identifier(AdditionalBars.MODID, "horizontal_oak_bars"), new BlockItem(ABContent.HORIZONTAL_OAK_BARS, new Item.Settings().group(AdditionalBars.HORIZONTAL_ADDITIONAL_BARS)));
+        Registry.register(Registry.ITEM, new Identifier(AdditionalBars.MODID, "horizontal_mangrove_bars"), new BlockItem(ABContent.HORIZONTAL_MANGROVE_BARS, new Item.Settings().group(AdditionalBars.HORIZONTAL_ADDITIONAL_BARS)));
         Registry.register(Registry.ITEM, new Identifier(AdditionalBars.MODID, "horizontal_crimson_bars"), new BlockItem(ABContent.HORIZONTAL_CRIMSON_BARS, new Item.Settings().group(AdditionalBars.HORIZONTAL_ADDITIONAL_BARS)));
         Registry.register(Registry.ITEM, new Identifier(AdditionalBars.MODID, "horizontal_warped_bars"), new BlockItem(ABContent.HORIZONTAL_WARPED_BARS, new Item.Settings().group(AdditionalBars.HORIZONTAL_ADDITIONAL_BARS)));
 
@@ -190,6 +193,7 @@ public class ModRegistry
         Registry.register(Registry.ITEM, new Identifier(AdditionalBars.MODID, "horizontal_crossed_jungle_bars"), new BlockItem(ABContent.HORIZONTAL_CROSSED_JUNGLE_BARS, new Item.Settings().group(AdditionalBars.HORIZONTAL_ADDITIONAL_BARS)));
         Registry.register(Registry.ITEM, new Identifier(AdditionalBars.MODID, "horizontal_crossed_spruce_bars"), new BlockItem(ABContent.HORIZONTAL_CROSSED_SPRUCE_BARS, new Item.Settings().group(AdditionalBars.HORIZONTAL_ADDITIONAL_BARS)));
         Registry.register(Registry.ITEM, new Identifier(AdditionalBars.MODID, "horizontal_crossed_oak_bars"), new BlockItem(ABContent.HORIZONTAL_CROSSED_OAK_BARS, new Item.Settings().group(AdditionalBars.HORIZONTAL_ADDITIONAL_BARS)));
+        Registry.register(Registry.ITEM, new Identifier(AdditionalBars.MODID, "horizontal_crossed_mangrove_bars"), new BlockItem(ABContent.HORIZONTAL_CROSSED_MANGROVE_BARS, new Item.Settings().group(AdditionalBars.HORIZONTAL_ADDITIONAL_BARS)));
         Registry.register(Registry.ITEM, new Identifier(AdditionalBars.MODID, "horizontal_crossed_crimson_bars"), new BlockItem(ABContent.HORIZONTAL_CROSSED_CRIMSON_BARS, new Item.Settings().group(AdditionalBars.HORIZONTAL_ADDITIONAL_BARS)));
         Registry.register(Registry.ITEM, new Identifier(AdditionalBars.MODID, "horizontal_crossed_warped_bars"), new BlockItem(ABContent.HORIZONTAL_CROSSED_WARPED_BARS, new Item.Settings().group(AdditionalBars.HORIZONTAL_ADDITIONAL_BARS)));
 
