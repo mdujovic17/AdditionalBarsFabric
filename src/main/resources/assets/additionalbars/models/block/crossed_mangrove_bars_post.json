@@ -1,0 +1,6 @@
+{
+    "parent": "additionalbars:block/parent/td/crossed/post",
+    "textures": {
+        "texture": "minecraft:block/mangrove_planks"
+    }
+}

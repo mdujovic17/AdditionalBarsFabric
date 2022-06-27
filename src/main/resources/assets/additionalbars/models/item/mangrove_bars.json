@@ -1,0 +1,6 @@
+{
+  "parent": "additionalbars:item/parent/bars_inventory",
+  "textures": {
+    "texture": "minecraft:block/mangrove_planks"
+  }
+}
