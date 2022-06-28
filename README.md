@@ -1,5 +1,5 @@
-![CurseForge](http://cf.way2muchnoise.eu/full_additional-bars-fabric_downloads.svg)
-![CurseForge](http://cf.way2muchnoise.eu/versions/additional-bars-fabric.svg)
+![CurseForge](https://cf.way2muchnoise.eu/short_431823.svg)
+![CurseForge](https://cf.way2muchnoise.eu/versions/431823.svg)
 
 # Additional Bars [FABRIC]
 <p align="center"><img src="https://i.imgur.com/EtKu20y.png"></p>
