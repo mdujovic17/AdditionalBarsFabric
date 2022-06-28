@@ -50,6 +50,7 @@ dependencies {
 	// modApi "me.shedaniel:RoughlyEnoughItems-fabric:${project.rei}"
 	modRuntimeOnly "com.terraformersmc:modmenu:${project.modmenu}"
 
+	// Presence Footsteps
 	modRuntimeOnly "com.minelittlepony:kirin:${project.kirin}"
 	modRuntimeOnly "maven.modrinth:presence-footsteps:${project.presence_footsteps}"
 }
