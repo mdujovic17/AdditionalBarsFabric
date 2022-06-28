@@ -23,6 +23,18 @@ repositories {
 		name = 'TerraformersMC maven'
 		url = "https://maven.terraformersmc.com/"
 	}
+
+	maven {
+		name = "Modrinth"
+		url = "https://api.modrinth.com/maven"
+		content {
+			includeGroup "maven.modrinth"
+		}
+	}
+
+	maven {
+		url = "https://repo.minelittlepony-mod.com/maven/release"
+	}
 	//flatDir { dirs "libs" }
 }
 
@@ -37,6 +49,10 @@ dependencies {
 
 	// modApi "me.shedaniel:RoughlyEnoughItems-fabric:${project.rei}"
 	modRuntimeOnly "com.terraformersmc:modmenu:${project.modmenu}"
+
+	// Presence Footsteps
+	modRuntimeOnly "com.minelittlepony:kirin:${project.kirin}"
+	modRuntimeOnly "maven.modrinth:presence-footsteps:${project.presence_footsteps}"
 }
 
 processResources {
