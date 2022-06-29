@@ -141,8 +141,8 @@
 		},
 		{
 			"name": "east",
-			"from": [16, 14, 0],
-			"to": [16, 16, 16],
+			"from": [15.999, 14, 0],
+			"to": [15.999, 16, 16],
 			"rotation": {"angle": 0, "axis": "y", "origin": [8, 16, 8]},
 			"faces": {
 				"east": {"uv": [16, 3, 0, 5], "texture": "#texture", "cullface": "east"},
@@ -151,8 +151,8 @@
 		},
 		{
 			"name": "south",
-			"from": [0, 14, 16],
-			"to": [16, 16, 16],
+			"from": [0, 14, 15.999],
+			"to": [16, 16, 15.999],
 			"rotation": {"angle": 0, "axis": "y", "origin": [8, 16, 24]},
 			"faces": {
 				"north": {"uv": [16, 3, 0, 5], "texture": "#texture"},
@@ -161,8 +161,8 @@
 		},
 		{
 			"name": "north",
-			"from": [0, 14, 0],
-			"to": [16, 16, 0],
+			"from": [0, 14, 0.001],
+			"to": [16, 16, 0.001],
 			"rotation": {"angle": 0, "axis": "y", "origin": [8, 16, 8]},
 			"faces": {
 				"north": {"uv": [16, 3, 0, 5], "texture": "#texture", "cullface": "north"},
@@ -171,8 +171,8 @@
 		},
 		{
 			"name": "west",
-			"from": [0, 14, 0],
-			"to": [0, 16, 16],
+			"from": [0.001, 14, 0],
+			"to": [0.001, 16, 16],
 			"rotation": {"angle": 0, "axis": "y", "origin": [8, 16, 8]},
 			"faces": {
 				"east": {"uv": [16, 3, 0, 5], "texture": "#texture"},
@@ -212,11 +212,13 @@
 		{
 			"name": "bars_top",
 			"origin": [8, 8, 8],
+			"color": 0,
 			"children": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
 		},
 		{
 			"name": "frame_top",
 			"origin": [8, 8, 8],
+			"color": 0,
 			"children": [15, 16, 17, 18]
 		}
 	]
