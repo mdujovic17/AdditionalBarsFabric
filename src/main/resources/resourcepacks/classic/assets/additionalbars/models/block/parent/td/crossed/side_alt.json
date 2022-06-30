@@ -2,24 +2,26 @@
 	"credit": "Made with Blockbench",
 	"ambientocclusion": false,
 	"textures": {
-		"particle": "#texture"
+		"particle": "#texture",
+		"bars": "#texture",
+		"edge": "#texture"
 	},
 	"elements": [
 		{
 			"from": [7, 15.965, 9],
 			"to": [9, 15.965, 16],
 			"faces": {
-				"up": {"uv": [0, 7, 7, 9], "rotation": 90, "texture": "#texture"},
-				"down": {"uv": [7, 7, 0, 9], "rotation": 90, "texture": "#texture"}
+				"up": {"uv": [0, 7, 7, 9], "rotation": 90, "texture": "#edge"},
+				"down": {"uv": [7, 7, 0, 9], "rotation": 90, "texture": "#edge"}
 			}
 		},
 		{
 			"from": [7, 0.025, 9],
 			"to": [9, 0.025, 16],
 			"faces": {
-				"south": {"uv": [0, 0, 0, 0], "texture": "#texture"},
-				"up": {"uv": [0, 7, 7, 9], "rotation": 90, "texture": "#texture"},
-				"down": {"uv": [0, 9, 7, 7], "rotation": 270, "texture": "#texture"}
+				"south": {"uv": [0, 0, 0, 0], "texture": "#edge"},
+				"up": {"uv": [0, 7, 7, 9], "rotation": 90, "texture": "#edge"},
+				"down": {"uv": [0, 9, 7, 7], "rotation": 270, "texture": "#edge"}
 			}
 		},
 		{
@@ -28,8 +30,8 @@
 			"to": [8, 16, 14],
 			"rotation": {"angle": 0, "axis": "y", "origin": [8, 8, 8.5]},
 			"faces": {
-				"east": {"uv": [16, 11, 0, 13], "rotation": 90, "texture": "#texture"},
-				"west": {"uv": [16, 13, 0, 11], "rotation": 90, "texture": "#texture"}
+				"east": {"uv": [16, 11, 0, 13], "rotation": 90, "texture": "#bars"},
+				"west": {"uv": [16, 13, 0, 11], "rotation": 90, "texture": "#bars"}
 			}
 		},
 		{
@@ -37,8 +39,8 @@
 			"from": [8, 0, 8],
 			"to": [8, 16, 9],
 			"faces": {
-				"east": {"uv": [0, 8, 16, 9], "rotation": 90, "texture": "#texture"},
-				"west": {"uv": [0, 8, 16, 9], "rotation": 90, "texture": "#texture"}
+				"east": {"uv": [0, 8, 16, 9], "rotation": 90, "texture": "#bars"},
+				"west": {"uv": [0, 8, 16, 9], "rotation": 90, "texture": "#bars"}
 			}
 		},
 		{
@@ -46,8 +48,8 @@
 			"to": [8, 4, 16],
 			"rotation": {"angle": 0, "axis": "y", "origin": [15.25, 10, 23]},
 			"faces": {
-				"east": {"uv": [0, 11, 2, 13], "texture": "#texture"},
-				"west": {"uv": [2, 11, 0, 13], "texture": "#texture"}
+				"east": {"uv": [0, 11, 2, 13], "texture": "#bars"},
+				"west": {"uv": [2, 11, 0, 13], "texture": "#bars"}
 			}
 		},
 		{
@@ -55,8 +57,8 @@
 			"to": [8, 14, 12],
 			"rotation": {"angle": 0, "axis": "y", "origin": [15.25, 20, 29.8]},
 			"faces": {
-				"east": {"uv": [4, 3, 7, 5], "texture": "#texture"},
-				"west": {"uv": [7, 3, 4, 5], "texture": "#texture"}
+				"east": {"uv": [4, 3, 7, 5], "texture": "#bars"},
+				"west": {"uv": [7, 3, 4, 5], "texture": "#bars"}
 			}
 		},
 		{
@@ -64,8 +66,8 @@
 			"to": [8, 9, 12],
 			"rotation": {"angle": 0, "axis": "y", "origin": [15.25, 15, 29.8]},
 			"faces": {
-				"east": {"uv": [4, 7, 7, 9], "texture": "#texture"},
-				"west": {"uv": [7, 7, 4, 9], "texture": "#texture"}
+				"east": {"uv": [4, 7, 7, 9], "texture": "#bars"},
+				"west": {"uv": [7, 7, 4, 9], "texture": "#bars"}
 			}
 		},
 		{
@@ -73,8 +75,8 @@
 			"to": [8, 4, 12],
 			"rotation": {"angle": 0, "axis": "y", "origin": [15.25, 10, 29.8]},
 			"faces": {
-				"east": {"uv": [4, 11, 7, 13], "texture": "#texture"},
-				"west": {"uv": [7, 11, 4, 13], "texture": "#texture"}
+				"east": {"uv": [4, 11, 7, 13], "texture": "#bars"},
+				"west": {"uv": [7, 11, 4, 13], "texture": "#bars"}
 			}
 		},
 		{
@@ -82,8 +84,8 @@
 			"to": [8, 9, 16],
 			"rotation": {"angle": 0, "axis": "y", "origin": [15.25, 15, 23]},
 			"faces": {
-				"east": {"uv": [0, 7, 2, 9], "texture": "#texture"},
-				"west": {"uv": [0, 7, 2, 9], "texture": "#texture"}
+				"east": {"uv": [0, 7, 2, 9], "texture": "#bars"},
+				"west": {"uv": [0, 7, 2, 9], "texture": "#bars"}
 			}
 		},
 		{
@@ -91,8 +93,8 @@
 			"to": [8, 14, 16],
 			"rotation": {"angle": 0, "axis": "y", "origin": [15.25, 20, 23]},
 			"faces": {
-				"east": {"uv": [0, 3, 2, 5], "texture": "#texture"},
-				"west": {"uv": [2, 3, 0, 5], "texture": "#texture"}
+				"east": {"uv": [0, 3, 2, 5], "texture": "#bars"},
+				"west": {"uv": [2, 3, 0, 5], "texture": "#bars"}
 			}
 		}
 	],

@@ -1,6 +1,7 @@
 {
     "parent": "additionalbars:block/parent/td/special/post_ends",
     "textures": {
-        "texture": "additionalbars:block/gold_bars"
+        "particle": "additionalbars:block/gold_bars",
+        "edge": "additionalbars:block/gold_bars"
     }
 }
