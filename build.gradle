@@ -12,6 +12,17 @@ group = project.maven_group
 
 repositories {
 	maven {
+		name = 'CurseMaven'
+		url = "https://cursemaven.com"
+		content {
+			includeGroup "curse.maven"
+		}
+	}
+	maven {
+		name "tterrag maven"
+		url "https://maven.tterrag.com/"
+	}
+	maven {
 		name = 'Jitpack'
 		url = 'https://jitpack.io'
 	}
