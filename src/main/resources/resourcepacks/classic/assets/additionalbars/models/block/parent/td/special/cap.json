@@ -8,7 +8,7 @@
 		{
 			"from": [8, 0, 8],
 			"to": [8, 16, 9],
-			"rotation": {"angle": 0, "axis": "y", "origin": [8.25, 8, 8]},
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 8, 8]},
 			"faces": {
 				"east": {"uv": [3, 0, 4, 16], "texture": "#texture"},
 				"west": {"uv": [4, 0, 3, 16], "texture": "#texture"}
