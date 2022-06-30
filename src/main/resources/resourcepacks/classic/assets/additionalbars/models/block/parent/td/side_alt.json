@@ -6,16 +6,16 @@
 	},
 	"elements": [
 		{
-			"from": [7, 15.999, 9],
-			"to": [9, 15.999, 16],
+			"from": [7, 15.965, 9],
+			"to": [9, 15.965, 16],
 			"faces": {
 				"up": {"uv": [0, 7, 7, 9], "rotation": 90, "texture": "#texture"},
 				"down": {"uv": [7, 7, 0, 9], "rotation": 90, "texture": "#texture"}
 			}
 		},
 		{
-			"from": [7, 0.001, 9],
-			"to": [9, 0.001, 16],
+			"from": [7, 0.025, 9],
+			"to": [9, 0.025, 16],
 			"faces": {
 				"up": {"uv": [0, 7, 7, 9], "rotation": 90, "texture": "#texture"},
 				"down": {"uv": [0, 9, 7, 7], "rotation": 270, "texture": "#texture"}
