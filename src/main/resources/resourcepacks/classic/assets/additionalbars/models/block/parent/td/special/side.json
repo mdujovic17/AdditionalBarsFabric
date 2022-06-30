@@ -62,11 +62,13 @@
 		{
 			"name": "bars",
 			"origin": [8, 8, 8],
+			"color": 0,
 			"children": [0, 1, 2, 3]
 		},
 		{
 			"name": "frame",
 			"origin": [8, 8, 8],
+			"color": 0,
 			"children": [4, 5]
 		}
 	]
