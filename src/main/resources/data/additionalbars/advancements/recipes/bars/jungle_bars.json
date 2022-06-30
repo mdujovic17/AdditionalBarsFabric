@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "additionalbars:jungle_bars"
+    ]
+  },
+  "criteria": {
+    "has_jungle_log": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:jungle_log"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "additionalbars:jungle_bars"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_jungle_log",
+      "has_the_recipe"
+    ]
+  ]
+}
