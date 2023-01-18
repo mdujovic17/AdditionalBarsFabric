@@ -25,36 +25,20 @@ SOFTWARE.
 package com.gamma1772.additionalbars;
 
 import com.gamma1772.additionalbars.events.ModRegistry;
-import com.gamma1772.additionalbars.init.ABContent;
+import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.Identifier;
 
-public class AdditionalBars implements ModInitializer
+public class AdditionalBars implements ModInitializer, ClientModInitializer
 {
-    //public boolean generateData = false;
     public static final String MODID = "additionalbars";
-
-    public static final ItemGroup ADDITIONAL_BARS = FabricItemGroupBuilder.build(
-            new Identifier(MODID, "additionalbars"),
-            () -> new ItemStack(ABContent.GOLD_BARS));
-    public static final ItemGroup HORIZONTAL_ADDITIONAL_BARS = FabricItemGroupBuilder.build(
-            new Identifier(MODID, "horizontaladditionalbars"),
-            () -> new ItemStack(ABContent.HORIZONTAL_GOLD_BARS));
-
-    public static AdditionalBars INSTANCE;
-
     @Override
     public void onInitialize()
     {
-        INSTANCE = this;
         ModRegistry.setup();
+    }
 
-//        if (generateData) {
-//            DataGenerator.init();
-//            System.exit(999);
-//        }
+    @Override
+    public void onInitializeClient() {
+        ModRegistry.clientSetup();
     }
 }
