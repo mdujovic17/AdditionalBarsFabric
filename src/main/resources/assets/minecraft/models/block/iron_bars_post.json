@@ -1,7 +1,0 @@
-{
-    "parent": "additionalbars:block/parent/td/special/post",
-    "textures": {
-        "particle": "minecraft:block/iron_bars",
-        "bars": "minecraft:block/iron_bars"
-    }
-}

@@ -1,8 +1,0 @@
-{
-    "parent": "additionalbars:block/parent/td/special/cap_alt",
-    "textures": {
-        "particle": "minecraft:block/iron_bars",
-        "bars": "minecraft:block/iron_bars",
-        "edge": "minecraft:block/iron_bars"
-    }
-}
