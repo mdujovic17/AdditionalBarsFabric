@@ -1,9 +1,9 @@
 plugins {
-	id 'fabric-loom' version '0.12-SNAPSHOT'
+	id 'fabric-loom' version '1.0-SNAPSHOT'
 	id 'maven-publish'
 }
 
-sourceCompatibility = JavaVersion.VERSION_18
+sourceCompatibility = JavaVersion.VERSION_19
 targetCompatibility = JavaVersion.VERSION_17
 
 archivesBaseName = project.archives_base_name
@@ -51,8 +51,8 @@ dependencies {
 	modRuntimeOnly "com.terraformersmc:modmenu:${project.modmenu}"
 
 	// Presence Footsteps
-	modRuntimeOnly "com.minelittlepony:kirin:${project.kirin}"
-	modRuntimeOnly "maven.modrinth:presence-footsteps:${project.presence_footsteps}"
+	// modRuntimeOnly "com.minelittlepony:kirin:${project.kirin}"
+	// modRuntimeOnly "maven.modrinth:presence-footsteps:${project.presence_footsteps}"
 }
 
 processResources {
