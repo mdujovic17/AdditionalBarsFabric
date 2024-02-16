@@ -1,4 +1,4 @@
-package com.gamma1772.additionalbars.content.block;
+package com.mdujovic17.additionalbars.content.block;
 
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;

@@ -22,7 +22,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
  */
 
-package com.gamma1772.additionalbars.content.block;
+package com.mdujovic17.additionalbars.content.block;
 
 import net.minecraft.block.PaneBlock;
 import net.minecraft.client.item.TooltipContext;

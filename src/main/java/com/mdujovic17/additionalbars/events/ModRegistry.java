@@ -22,10 +22,9 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
  */
 
-package com.gamma1772.additionalbars.events;
+package com.mdujovic17.additionalbars.events;
 
-import com.gamma1772.additionalbars.AdditionalBars;
-import com.gamma1772.additionalbars.init.ABContent;
+import com.mdujovic17.additionalbars.init.ABContent;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
@@ -44,7 +43,7 @@ import net.fabricmc.fabric.api.registry.OxidizableBlocksRegistry;
 
 import java.util.*;
 
-import static com.gamma1772.additionalbars.AdditionalBars.MODID;
+import static com.mdujovic17.additionalbars.AdditionalBars.MODID;
 
 public class ModRegistry
 {

@@ -4,13 +4,13 @@
   "version": "${version}",
 
   "name": "Additional Bars",
-  "description": "This mod adds additional bars to the game that go along with Iron Bars!\n Credits:\n ruchom4u (Spanish Translations)\n fantasyair18 (Chinese Traditional (Taiwan) Translations)\n TheDirectorX (Russian Translations)\n BardinTheDwarf (Russian Translations)\n Zijuna (German Translations)\n justmonika (Simple Chinese Translations)\n mindy15963 (Korean Translations)\n WadeMason\n BoredBrownBear",
+  "description": "Adds additional bars blocks to Minecraft",
   "authors": [
-    "Gamma1772"
+    "Marko Dujović"
   ],
   "contact": {
-    "homepage": "gamma1772.github.io",
-    "sources": "https://github.com/CodenameRevy/AdditionalBarsFabric"
+    "homepage": "mdujovic17.github.io",
+    "sources": "https://github.com/mdujovic17/AdditionalBarsFabric"
   },
 
   "license": "MIT",
@@ -19,10 +19,10 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.gamma1772.additionalbars.AdditionalBars"
+      "com.mdujovic17.additionalbars.AdditionalBars"
     ],
     "client": [
-      "com.gamma1772.additionalbars.AdditionalBars"
+      "com.mdujovic17.additionalbars.AdditionalBars"
     ]
   },
 

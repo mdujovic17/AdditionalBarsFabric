@@ -22,9 +22,9 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
  */
 
-package com.gamma1772.additionalbars;
+package com.mdujovic17.additionalbars;
 
-import com.gamma1772.additionalbars.events.ModRegistry;
+import com.mdujovic17.additionalbars.events.ModRegistry;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.ModInitializer;
 
