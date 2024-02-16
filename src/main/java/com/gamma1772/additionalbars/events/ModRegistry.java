@@ -32,12 +32,12 @@ import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
 import net.fabricmc.fabric.api.resource.ResourcePackActivationType;
 import net.fabricmc.loader.api.FabricLoader;
 import net.fabricmc.loader.api.ModContainer;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
+import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
+import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
 import net.fabricmc.fabric.api.registry.OxidizableBlocksRegistry;
@@ -48,12 +48,23 @@ import static com.gamma1772.additionalbars.AdditionalBars.MODID;
 
 public class ModRegistry
 {
-    public static final ItemGroup ADDITIONAL_BARS = FabricItemGroup.builder(new Identifier(MODID, "additionalbars")).icon(() -> new ItemStack(ABContent.GOLD_BARS)).build();
-    public static final ItemGroup HORIZONTAL_ADDITIONAL_BARS = FabricItemGroup.builder(new Identifier(MODID, "horizontaladditionalbars")).icon(() -> new ItemStack(ABContent.HORIZONTAL_GOLD_BARS)).build();
+//    public static final ItemGroup ADDITIONAL_BARS = FabricItemGroup.builder()
+//            .icon(() -> new ItemStack(ABContent.GOLD_BARS))
+//            .displayName(Text.translatable("itemGroup.additionalbars.additionalbars"))
+//            .build();
+//    public static final ItemGroup HORIZONTAL_ADDITIONAL_BARS = FabricItemGroup.builder()
+//            .icon(() -> new ItemStack(ABContent.HORIZONTAL_GOLD_BARS))
+//            .displayName(Text.translatable("itemGroup.additionalbars.horizontaladditionalbars"))
+//            .build();
+
+    public static final RegistryKey<ItemGroup> ADDITIONAL_BARS = RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier(MODID, "additionalbars"));
+    public static final RegistryKey<ItemGroup> HORIZONTAL_ADDITIONAL_BARS = RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier(MODID, "horizontaladditionalbars"));
+
     public static void setup()
     {
         registerBlocks();
         registerItems();
+        registerItemGroups();
         registerOxidationStates();
         registerWaxableStates();
         addItemsToItemGroups();
@@ -248,6 +259,17 @@ public class ModRegistry
         Registry.register(Registries.ITEM, new Identifier(MODID, "waxed_horizontal_crossed_weathered_copper_bars"), new BlockItem(ABContent.WAXED_HORIZONTAL_CROSSED_WEATHERED_COPPER_BARS, new Item.Settings()));
         Registry.register(Registries.ITEM, new Identifier(MODID, "waxed_horizontal_crossed_oxidized_copper_bars"), new BlockItem(ABContent.WAXED_HORIZONTAL_CROSSED_OXIDIZED_COPPER_BARS, new Item.Settings()));
 
+    }
+
+    public static void registerItemGroups() {
+        Registry.register(Registries.ITEM_GROUP, ADDITIONAL_BARS, FabricItemGroup.builder()
+                .icon(() -> new ItemStack(ABContent.GOLD_BARS))
+                .displayName(Text.translatable("itemGroup.additionalbars.additionalbars"))
+                .build());
+        Registry.register(Registries.ITEM_GROUP, HORIZONTAL_ADDITIONAL_BARS, FabricItemGroup.builder()
+                .icon(() -> new ItemStack(ABContent.HORIZONTAL_GOLD_BARS))
+                .displayName(Text.translatable("itemGroup.additionalbars.horizontaladditionalbars"))
+                .build());
     }
 
     public static void registerOxidationStates() {

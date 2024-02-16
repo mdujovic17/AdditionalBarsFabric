@@ -28,7 +28,6 @@ import com.gamma1772.additionalbars.content.block.*;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.Material;
 import net.minecraft.block.Oxidizable;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.math.BlockPos;
@@ -41,13 +40,13 @@ public class ABContent
         return false;
     }
 
-    private static final FabricBlockSettings METALLIC_BARS_SETTINGS = FabricBlockSettings.of(Material.METAL).requiresTool().hardness(5.0F).resistance(6.0F).sounds(BlockSoundGroup.METAL);
-    private static final FabricBlockSettings WOODEN_BARS_SETTINGS = FabricBlockSettings.of(Material.WOOD).hardness(3.0F).resistance(4.0F).sounds(BlockSoundGroup.WOOD);
-    private static final FabricBlockSettings NETHER_BARS_SETTINGS = FabricBlockSettings.of(Material.NETHER_WOOD).hardness(3.0F).resistance(4.0F).sounds(BlockSoundGroup.NETHER_STEM);
+    private static final FabricBlockSettings METALLIC_BARS_SETTINGS = FabricBlockSettings.create().nonOpaque().solidBlock(ABContent::never).blockVision(ABContent::never).suffocates(ABContent::never).requiresTool().hardness(5.0F).resistance(6.0F).sounds(BlockSoundGroup.METAL);
+    private static final FabricBlockSettings WOODEN_BARS_SETTINGS = FabricBlockSettings.create().nonOpaque().solidBlock(ABContent::never).blockVision(ABContent::never).suffocates(ABContent::never).hardness(3.0F).resistance(4.0F).sounds(BlockSoundGroup.WOOD);
+    private static final FabricBlockSettings NETHER_BARS_SETTINGS = FabricBlockSettings.create().nonOpaque().solidBlock(ABContent::never).blockVision(ABContent::never).suffocates(ABContent::never).hardness(3.0F).resistance(4.0F).sounds(BlockSoundGroup.NETHER_STEM);
 
-    private static final FabricBlockSettings HORIZONTAL_METALLIC_BARS_SETTINGS = FabricBlockSettings.of(Material.METAL).nonOpaque().solidBlock(ABContent::never).blockVision(ABContent::never).suffocates(ABContent::never).requiresTool().hardness(5.0F).resistance(6.0F).sounds(BlockSoundGroup.METAL);
-    private static final FabricBlockSettings HORIZONTAL_WOODEN_BARS_SETTINGS = FabricBlockSettings.of(Material.WOOD).solidBlock(ABContent::never).blockVision(ABContent::never).suffocates(ABContent::never).nonOpaque().hardness(3.0F).resistance(4.0F).sounds(BlockSoundGroup.WOOD);
-    private static final FabricBlockSettings HORIZONTAL_NETHER_BARS_SETTINGS = FabricBlockSettings.of(Material.NETHER_WOOD).nonOpaque().solidBlock(ABContent::never).blockVision(ABContent::never).suffocates(ABContent::never).hardness(3.0F).resistance(4.0F).sounds(BlockSoundGroup.NETHER_STEM);
+    private static final FabricBlockSettings HORIZONTAL_METALLIC_BARS_SETTINGS = FabricBlockSettings.create().nonOpaque().solidBlock(ABContent::never).blockVision(ABContent::never).suffocates(ABContent::never).requiresTool().hardness(5.0F).resistance(6.0F).sounds(BlockSoundGroup.METAL);
+    private static final FabricBlockSettings HORIZONTAL_WOODEN_BARS_SETTINGS = FabricBlockSettings.create().nonOpaque().solidBlock(ABContent::never).blockVision(ABContent::never).suffocates(ABContent::never).nonOpaque().hardness(3.0F).resistance(4.0F).sounds(BlockSoundGroup.WOOD);
+    private static final FabricBlockSettings HORIZONTAL_NETHER_BARS_SETTINGS = FabricBlockSettings.create().nonOpaque().solidBlock(ABContent::never).blockVision(ABContent::never).suffocates(ABContent::never).hardness(3.0F).resistance(4.0F).sounds(BlockSoundGroup.NETHER_STEM);
 
     //public static final Block DIAMOND_BARS     = new BarsBlock(METALLIC_BARS_SETTINGS, BarsType.REGULAR);
     //public static final Block NETHERITE_BARS     = new BarsBlock(METALLIC_BARS_SETTINGS, BarsType.REGULAR);
