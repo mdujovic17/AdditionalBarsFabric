@@ -21,7 +21,7 @@ It features Horizontal Bars for every type of bars!
 <hr>
 
 ### Credits
-###### [CodenameRevy](https://github.com/CodenameRevy) (Mod Developer)
+###### [Marko Dujovic](https://github.com/CodenameRevy) (Mod Developer)
 ###### [ruchom4u](https://github.com/ruchom4u) (Spanish Translations)
 ###### [fantasyair18](https://github.com/fantasyair18) (Chinese Traditional (Taiwan) Translations)
 ###### [TheDirectorX](https://github.com/TheDirectorX), [BardinTheDwarf](https://github.com/BardInTheDwarf) (Russian Translations)
