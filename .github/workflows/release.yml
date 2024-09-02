@@ -40,7 +40,7 @@ jobs:
         uses: Kir-Antipov/mc-publish@v3.3
         with:
           github-tag: "v${{env.VERSION}}"
-          github-token: "v${{env.GITHUB_TOKEN}}"
+          github-token: "${{env.GITHUB_TOKEN}}"
 
           name: "${{env.RELEASE_NAME}}"                             
           version: "${{env.VERSION}}"
