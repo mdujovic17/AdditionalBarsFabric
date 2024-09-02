@@ -1,24 +1,49 @@
-- name: mc-publish        
-  uses: Kir-Antipov/mc-publish@v3.3.0
----
+name: Publish on GitHub Releases, CurseForge and Modrinth
+on: [pull_request, workflow_dispatch]
+
+env:
+  MINECRAFT_VERSION: 1.21.1
+  JAVA_VERSION: 21
+  VERSION: 5.0.0+1.21.1
+  RELEASE_NAME: Additional Bars 5.0.0
+  GITHUB_TOKEN: ${{ secrets.PUBLISH_GITHUB_TOKEN }}
+
+permissions:
+  contents: write
+
 jobs:
   build:
-    # ...
-    permissions:
-      contents: write
+    runs-on: ubuntu-latest
     steps:
-      - uses: Kir-Antipov/mc-publish@v3.3
+      - name: Check Environment Variables
+        # run: env
+
+      - name: Check-out Repo
+        uses: actions/checkout@v3
         with:
-          # Only include this section if you wish to publish
-          # your assets on Modrinth.
-          # modrinth-id: id
-          # modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
+          submodules: true
 
-          # Only include this section if you wish to publish
-          # your assets on CurseForge.
-          # curseforge-id: id
-          # curseforge-token: ${{ secrets.CURSEFORGE_TOKEN }}
+      - name: Setup Java
+        uses: actions/setup-java@v2
 
-          # Only include this section if you wish to publish
-          # your assets on GitHub.
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Make Gradle Wrapper Executable
+        if: ${{ runner.os != 'Windows' }}
+        run: chmod +x ./gradlew
+
+      - name: Build
+        run: ./gradlew clean build
+
+      - name: Publish to GitHub
+        uses: Kir-Antipov/mc-publish@v3.3
+        with:
+          github-tag: "v${{env.VERSION}}"
+          github-token: "v${{env.GITHUB_TOKEN}}"
+
+          name: "${{env.RELEASE_NAME}}"                             
+          version: "${{env.VERSION}}"
+          version-type: release
+          # changelog-file: CHANGELOG.md 
+
+          loaders: fabric
+          game-versions: "${{env.MINECRAFT_VERSION}}"
+          java: "${{env.JAVA_VERSION}}"
