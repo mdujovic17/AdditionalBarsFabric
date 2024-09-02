@@ -25,11 +25,10 @@ SOFTWARE.
 package com.mdujovic17.additionalbars.content.block;
 
 import net.minecraft.block.PaneBlock;
-import net.minecraft.client.item.TooltipContext;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.text.Text;
-import net.minecraft.world.BlockView;
-import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -49,9 +48,9 @@ public class BarsBlock extends PaneBlock {
     }
 
     @Override
-    public void appendTooltip(ItemStack stack, @Nullable BlockView world, List<Text> tooltip, TooltipContext options) {
-        for ( BlockTypes type : barsTypes) {
-            tooltip.add(Text.translatable(type.getText().getString()).formatted(type.getTextColor()));
+    public void appendTooltip(ItemStack stack, Item.TooltipContext options, List<Text> tooltip, TooltipType type) {
+        for ( BlockTypes types : barsTypes) {
+            tooltip.add(Text.translatable(types.getText().getString()).formatted(types.getTextColor()));
         }
     }
 }

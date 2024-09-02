@@ -28,11 +28,12 @@ import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.block.*;
 import net.minecraft.block.enums.SlabType;
-import net.minecraft.client.item.TooltipContext;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.EnumProperty;
 import net.minecraft.state.property.Properties;
@@ -134,9 +135,9 @@ public class HorizontalPaneBlock extends SlabBlock implements Waterloggable
     }
 
     @Override
-    public void appendTooltip(ItemStack stack, @Nullable BlockView world, List<Text> tooltip, TooltipContext options) {
-        for ( BlockTypes type : barsTypes) {
-            tooltip.add(Text.translatable(type.getText().getString()).formatted(type.getTextColor()));
+    public void appendTooltip(ItemStack stack, Item.TooltipContext options, List<Text> tooltip, TooltipType type) {
+        for ( BlockTypes types : barsTypes) {
+            tooltip.add(Text.translatable(types.getText().getString()).formatted(types.getTextColor()));
         }
     }
 }
