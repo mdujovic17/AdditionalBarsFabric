@@ -1,5 +1,8 @@
-![CurseForge](http://cf.way2muchnoise.eu/full_additional-bars-fabric_downloads.svg)
-![CurseForge](http://cf.way2muchnoise.eu/versions/additional-bars-fabric.svg)
+![CurseForge](https://cf.way2muchnoise.eu/versions/431823.svg)<br>
+![CurseForge](https://cf.way2muchnoise.eu/short_431823.svg)
+![Modrinth](https://img.shields.io/modrinth/dt/hgNzwsf3?label=Modrinth) 
+
+
 
 # Additional Bars [FABRIC]
 <p align="center"><img src="https://i.imgur.com/EtKu20y.png"></p>
@@ -18,7 +21,7 @@ It features Horizontal Bars for every type of bars!
 <hr>
 
 ### Credits
-###### [CodenameRevy](https://github.com/CodenameRevy) (Mod Developer)
+###### [Marko Dujovic](https://github.com/CodenameRevy) (Mod Developer)
 ###### [ruchom4u](https://github.com/ruchom4u) (Spanish Translations)
 ###### [fantasyair18](https://github.com/fantasyair18) (Chinese Traditional (Taiwan) Translations)
 ###### [TheDirectorX](https://github.com/TheDirectorX), [BardinTheDwarf](https://github.com/BardInTheDwarf) (Russian Translations)

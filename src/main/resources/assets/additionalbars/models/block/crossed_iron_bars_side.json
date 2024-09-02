@@ -1,5 +1,5 @@
 {
-    "parent": "additionalbars:block/parent/td/crossed/crossed_side",
+    "parent": "additionalbars:block/parent/td/crossed/side",
     "textures": {
         "texture": "additionalbars:block/crossed_iron_bars"
     }

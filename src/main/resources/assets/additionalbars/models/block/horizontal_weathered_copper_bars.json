@@ -1,0 +1,6 @@
+{
+	"parent": "additionalbars:block/parent/td/horizontal/special/bot",
+	"textures": {
+		"texture": "additionalbars:block/weathered_copper_bars"
+	}
+}

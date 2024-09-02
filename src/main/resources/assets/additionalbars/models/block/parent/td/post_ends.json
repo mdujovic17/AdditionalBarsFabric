@@ -2,60 +2,25 @@
 	"credit": "Made with Blockbench",
 	"ambientocclusion": false,
 	"textures": {
-		"particle": "#texture"
+		"particle": "#texture",
+		"edge": "#texture"
 	},
 	"elements": [
 		{
-			"from": [7, 0, 7],
-			"to": [9, 0.25, 9],
+			"from": [7, 0.025, 7],
+			"to": [9, 0.025, 9],
 			"faces": {
-				"north": {"uv": [7, 7, 8, 9], "rotation": 270, "texture": "#texture"},
-				"east": {"uv": [7, 7, 9, 8], "texture": "#texture"},
-				"south": {"uv": [7, 7, 8, 9], "rotation": 90, "texture": "#texture"},
-				"west": {"uv": [7, 8, 9, 9], "texture": "#texture"},
-				"up": {"uv": [7, 7, 9, 9], "rotation": 90, "texture": "#texture"},
-				"down": {"uv": [7, 7, 9, 9], "rotation": 90, "texture": "#texture"}
+				"up": {"uv": [7, 7, 9, 9], "rotation": 90, "texture": "#edge"},
+				"down": {"uv": [7, 7, 9, 9], "rotation": 90, "texture": "#edge"}
 			}
 		},
 		{
-			"from": [7, 15.75, 7],
-			"to": [9, 16, 9],
+			"from": [7, 15.965, 7],
+			"to": [9, 15.965, 9],
 			"faces": {
-				"north": {"uv": [8, 9, 9, 7], "rotation": 90, "texture": "#texture"},
-				"east": {"uv": [7, 8, 9, 9], "texture": "#texture"},
-				"south": {"uv": [7, 9, 8, 7], "rotation": 270, "texture": "#texture"},
-				"west": {"uv": [7, 8, 9, 9], "texture": "#texture"},
-				"up": {"uv": [7, 7, 9, 9], "rotation": 90, "texture": "#texture"},
-				"down": {"uv": [7, 9, 9, 7], "rotation": 270, "texture": "#texture"}
+				"up": {"uv": [7, 7, 9, 9], "rotation": 90, "texture": "#edge"},
+				"down": {"uv": [7, 9, 9, 7], "rotation": 270, "texture": "#edge"}
 			}
 		}
-	],
-	"display": {
-		"thirdperson_righthand": {
-			"rotation": [75, 15, 0],
-			"scale": [0.5, 0.5, 0.5]
-		},
-		"firstperson_righthand": {
-			"rotation": [4, 3, 6],
-			"scale": [0.9, 0.9, 0.9]
-		},
-		"firstperson_lefthand": {
-			"rotation": [4, 3, 6],
-			"scale": [0.9, 0.9, 0.9]
-		},
-		"ground": {
-			"scale": [0.5, 0.5, 0.5]
-		},
-		"gui": {
-			"rotation": [20, 45, 0],
-			"scale": [0.65, 0.7, 0.65]
-		},
-		"head": {
-			"translation": [0, 8.25, 0]
-		},
-		"fixed": {
-			"rotation": [-90, 0, 0],
-			"translation": [0, 0, 2]
-		}
-	}
+	]
 }

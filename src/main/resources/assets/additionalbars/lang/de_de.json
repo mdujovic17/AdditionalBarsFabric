@@ -82,6 +82,6 @@
   "block.additionalbars.horizontal_crossed_umbran_bars": "Waagerechte Geflochtene Schattenholzgitter",
   "block.additionalbars.horizontal_crossed_hellbark_bars": "Waagerechte Geflochtene Höllenborkengitter",
 
-  "itemGroup.additionalbars": "Zusätzliche Gitter",
-  "itemGroup.horizontaladditionalbars": "Zusätzliche Gitter (Waagerecht)"
+  "itemGroup.additionalbars.additionalbars": "Zusätzliche Gitter",
+  "itemGroup.additionalbars.horizontaladditionalbars": "Zusätzliche Gitter (Waagerecht)"
 }

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "additionalbars:block/horizontal_crossed_oxidized_copper_bars"
+    },
+    "type=double": {
+      "model": "additionalbars:block/horizontal_crossed_oxidized_copper_bars_com"
+    },
+    "type=top": {
+      "model": "additionalbars:block/horizontal_crossed_oxidized_copper_bars_top"
+    }
+  }
+}

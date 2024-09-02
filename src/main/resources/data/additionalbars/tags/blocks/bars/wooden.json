@@ -7,6 +7,7 @@
     "additionalbars:jungle_bars",
     "additionalbars:oak_bars",
     "additionalbars:spruce_bars",
+    "additionalbars:mangrove_bars",
     "additionalbars:crimson_bars",
     "additionalbars:warped_bars",
 
@@ -16,6 +17,7 @@
     "additionalbars:crossed_jungle_bars",
     "additionalbars:crossed_oak_bars",
     "additionalbars:crossed_spruce_bars",
+    "additionalbars:crossed_mangrove_bars",
     "additionalbars:crossed_crimson_bars",
     "additionalbars:crossed_warped_bars",
 
@@ -25,6 +27,7 @@
     "additionalbars:horizontal_jungle_bars",
     "additionalbars:horizontal_oak_bars",
     "additionalbars:horizontal_spruce_bars",
+    "additionalbars:horizontal_mangrove_bars",
     "additionalbars:horizontal_crimson_bars",
     "additionalbars:horizontal_warped_bars",
 
@@ -34,6 +37,7 @@
     "additionalbars:horizontal_crossed_jungle_bars",
     "additionalbars:horizontal_crossed_oak_bars",
     "additionalbars:horizontal_crossed_spruce_bars",
+    "additionalbars:horizontal_crossed_mangrove_bars",
     "additionalbars:horizontal_crossed_crimson_bars",
     "additionalbars:horizontal_crossed_warped_bars"
   ]
