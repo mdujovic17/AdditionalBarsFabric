@@ -90,7 +90,7 @@ java {
 
 jar {
 	from("LICENSE") {
-		rename { "${it}_${project.base.archivesBaseName.get()}"}
+		rename { "${it}_${project.base.archivesName.get()}"}
 	}
 }
 
