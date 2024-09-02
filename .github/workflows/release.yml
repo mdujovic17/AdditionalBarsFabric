@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check Environment Variables
-        # run: env
+        run: env
 
       - name: Check-out Repo
         uses: actions/checkout@v3
