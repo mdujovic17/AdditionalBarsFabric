@@ -18,6 +18,9 @@
 
   "environment": "*",
   "entrypoints": {
+    "fabric-datagen": [
+      "com.mdujovic17.additionalbars.data.AdditionalBarsDataGenerator"
+    ],
     "main": [
       "com.mdujovic17.additionalbars.AdditionalBars"
     ],
