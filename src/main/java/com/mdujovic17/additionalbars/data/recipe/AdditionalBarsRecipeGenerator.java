@@ -23,6 +23,9 @@ public class AdditionalBarsRecipeGenerator extends FabricRecipeProvider {
         regularBarsRecipes(exporter);
         crossedBarsRecipes(exporter);
         horizontalBarsRecipes(exporter);
+        horizontalCrossedBarsRecipes(exporter);
+        horizontalToVerticalBarsRecipes(exporter);
+        crossedToRegularRecipes(exporter);
     }
 
     private void regularBarsRecipes(RecipeExporter exporter) {
@@ -540,15 +543,369 @@ public class AdditionalBarsRecipeGenerator extends FabricRecipeProvider {
                 .offerTo(exporter);
     }
 
-    private void horizontalToVerticalBarsRecipes(RecipeExporter exporter) {}
+    private void horizontalToVerticalBarsRecipes(RecipeExporter exporter) {
+        // Iron Bars
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, Items.IRON_BARS, 1)
+                .input(ABContent.HORIZONTAL_IRON_BARS, 1)
+                .criterion(FabricRecipeProvider.hasItem(Items.IRON_BARS), FabricRecipeProvider.conditionsFromItem(Items.IRON_BARS))
+                .criterion(FabricRecipeProvider.hasItem(ABContent.HORIZONTAL_IRON_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.HORIZONTAL_IRON_BARS))
+                .group("bars")
+                .offerTo(exporter, "horizontal_to_iron_bars");
+
+        // Gold Bars
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ABContent.GOLD_BARS, 1)
+                .input(ABContent.HORIZONTAL_GOLD_BARS, 1)
+                .criterion(FabricRecipeProvider.hasItem(ABContent.GOLD_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.GOLD_BARS))
+                .criterion(FabricRecipeProvider.hasItem(ABContent.HORIZONTAL_GOLD_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.HORIZONTAL_GOLD_BARS))
+                .group("bars")
+                .offerTo(exporter, "horizontal_to_gold_bars");
+
+        // Copper Bars
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ABContent.COPPER_BARS, 1)
+                .input(ABContent.HORIZONTAL_COPPER_BARS, 1)
+                .criterion(FabricRecipeProvider.hasItem(ABContent.COPPER_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.COPPER_BARS))
+                .criterion(FabricRecipeProvider.hasItem(ABContent.HORIZONTAL_COPPER_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.HORIZONTAL_COPPER_BARS))
+                .group("bars")
+                .offerTo(exporter, "horizontal_to_copper_bars");
+
+        // Exposed Copper Bars
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ABContent.EXPOSED_COPPER_BARS, 1)
+                .input(ABContent.HORIZONTAL_EXPOSED_COPPER_BARS, 1)
+                .criterion(FabricRecipeProvider.hasItem(ABContent.EXPOSED_COPPER_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.EXPOSED_COPPER_BARS))
+                .criterion(FabricRecipeProvider.hasItem(ABContent.HORIZONTAL_EXPOSED_COPPER_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.HORIZONTAL_EXPOSED_COPPER_BARS))
+                .group("bars")
+                .offerTo(exporter, "horizontal_to_exposed_copper_bars");
+
+        // Weathered Copper Bars
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ABContent.WEATHERED_COPPER_BARS, 1)
+                .input(ABContent.HORIZONTAL_WEATHERED_COPPER_BARS, 1)
+                .criterion(FabricRecipeProvider.hasItem(ABContent.WEATHERED_COPPER_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.WEATHERED_COPPER_BARS))
+                .criterion(FabricRecipeProvider.hasItem(ABContent.HORIZONTAL_WEATHERED_COPPER_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.HORIZONTAL_WEATHERED_COPPER_BARS))
+                .group("bars")
+                .offerTo(exporter, "horizontal_to_weather_copper_bars");
+
+        // Oxidized Copper Bars
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ABContent.OXIDIZED_COPPER_BARS, 1)
+                .input(ABContent.HORIZONTAL_OXIDIZED_COPPER_BARS, 1)
+                .criterion(FabricRecipeProvider.hasItem(ABContent.OXIDIZED_COPPER_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.OXIDIZED_COPPER_BARS))
+                .criterion(FabricRecipeProvider.hasItem(ABContent.HORIZONTAL_OXIDIZED_COPPER_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.HORIZONTAL_OXIDIZED_COPPER_BARS))
+                .group("bars")
+                .offerTo(exporter, "horizontal_to_oxidized_copper_bars");
+
+        // Acacia Bars
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ABContent.ACACIA_BARS, 1)
+                .input(ABContent.HORIZONTAL_ACACIA_BARS, 1)
+                .criterion(FabricRecipeProvider.hasItem(ABContent.ACACIA_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.ACACIA_BARS))
+                .criterion(FabricRecipeProvider.hasItem(ABContent.HORIZONTAL_ACACIA_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.HORIZONTAL_ACACIA_BARS))
+                .group("bars")
+                .offerTo(exporter, "horizontal_to_acacia_bars");
+
+        // Birch Bars
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ABContent.BIRCH_BARS, 1)
+                .input(ABContent.HORIZONTAL_BIRCH_BARS, 1)
+                .criterion(FabricRecipeProvider.hasItem(ABContent.BIRCH_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.BIRCH_BARS))
+                .criterion(FabricRecipeProvider.hasItem(ABContent.HORIZONTAL_BIRCH_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.HORIZONTAL_BIRCH_BARS))
+                .group("bars")
+                .offerTo(exporter, "horizontal_to_birch_bars");
+
+        // Oak Bars
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ABContent.OAK_BARS, 1)
+                .input(ABContent.HORIZONTAL_OAK_BARS, 1)
+                .criterion(FabricRecipeProvider.hasItem(ABContent.OAK_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.OAK_BARS))
+                .criterion(FabricRecipeProvider.hasItem(ABContent.HORIZONTAL_OAK_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.HORIZONTAL_OAK_BARS))
+                .group("bars")
+                .offerTo(exporter, "horizontal_to_oak_bars");
+
+        // Dark Oak Bars
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ABContent.DARK_OAK_BARS, 1)
+                .input(ABContent.HORIZONTAL_DARK_OAK_BARS, 1)
+                .criterion(FabricRecipeProvider.hasItem(ABContent.DARK_OAK_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.DARK_OAK_BARS))
+                .criterion(FabricRecipeProvider.hasItem(ABContent.HORIZONTAL_DARK_OAK_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.HORIZONTAL_DARK_OAK_BARS))
+                .group("bars")
+                .offerTo(exporter, "horizontal_to_dark_oak_bars");
+
+        // Jungle Bars
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ABContent.JUNGLE_BARS, 1)
+                .input(ABContent.HORIZONTAL_JUNGLE_BARS, 1)
+                .criterion(FabricRecipeProvider.hasItem(ABContent.JUNGLE_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.JUNGLE_BARS))
+                .criterion(FabricRecipeProvider.hasItem(ABContent.HORIZONTAL_JUNGLE_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.HORIZONTAL_JUNGLE_BARS))
+                .group("bars")
+                .offerTo(exporter, "horizontal_to_jungle_bars");
+
+        // Spruce Bars
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ABContent.SPRUCE_BARS, 1)
+                .input(ABContent.HORIZONTAL_SPRUCE_BARS, 1)
+                .criterion(FabricRecipeProvider.hasItem(ABContent.SPRUCE_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.SPRUCE_BARS))
+                .criterion(FabricRecipeProvider.hasItem(ABContent.HORIZONTAL_SPRUCE_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.HORIZONTAL_SPRUCE_BARS))
+                .group("bars")
+                .offerTo(exporter, "horizontal_to_spruce_bars");
+
+        // Mangrove Bars
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ABContent.MANGROVE_BARS, 1)
+                .input(ABContent.HORIZONTAL_MANGROVE_BARS, 1)
+                .criterion(FabricRecipeProvider.hasItem(ABContent.MANGROVE_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.MANGROVE_BARS))
+                .criterion(FabricRecipeProvider.hasItem(ABContent.HORIZONTAL_MANGROVE_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.HORIZONTAL_MANGROVE_BARS))
+                .group("bars")
+                .offerTo(exporter, "horizontal_to_mangrove_bars");
+
+        // Crimson Bars
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ABContent.CRIMSON_BARS, 1)
+                .input(ABContent.HORIZONTAL_CRIMSON_BARS, 1)
+                .criterion(FabricRecipeProvider.hasItem(ABContent.CRIMSON_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.CRIMSON_BARS))
+                .criterion(FabricRecipeProvider.hasItem(ABContent.HORIZONTAL_CRIMSON_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.HORIZONTAL_CRIMSON_BARS))
+                .group("bars")
+                .offerTo(exporter, "horizontal_to_crimson_bars");
+
+        // Crimson Bars
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ABContent.WARPED_BARS, 1)
+                .input(ABContent.HORIZONTAL_WARPED_BARS, 1)
+                .criterion(FabricRecipeProvider.hasItem(ABContent.WARPED_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.WARPED_BARS))
+                .criterion(FabricRecipeProvider.hasItem(ABContent.HORIZONTAL_WARPED_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.HORIZONTAL_WARPED_BARS))
+                .group("bars")
+                .offerTo(exporter, "horizontal_to_warped_bars");
+
+        // CROSSED //
+
+        // Iron Bars
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ABContent.CROSSED_IRON_BARS, 1)
+                .input(ABContent.HORIZONTAL_CROSSED_IRON_BARS, 1)
+                .criterion(FabricRecipeProvider.hasItem(ABContent.CROSSED_IRON_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.CROSSED_IRON_BARS))
+                .criterion(FabricRecipeProvider.hasItem(ABContent.HORIZONTAL_CROSSED_IRON_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.HORIZONTAL_CROSSED_IRON_BARS))
+                .group("bars")
+                .offerTo(exporter, "horizontal_to_crossed_iron_bars");
+
+        // Gold Bars
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ABContent.CROSSED_GOLD_BARS, 1)
+                .input(ABContent.HORIZONTAL_CROSSED_GOLD_BARS, 1)
+                .criterion(FabricRecipeProvider.hasItem(ABContent.CROSSED_GOLD_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.CROSSED_GOLD_BARS))
+                .criterion(FabricRecipeProvider.hasItem(ABContent.HORIZONTAL_CROSSED_GOLD_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.HORIZONTAL_CROSSED_GOLD_BARS))
+                .group("bars")
+                .offerTo(exporter, "horizontal_to_crossed_gold_bars");
+
+        // Copper Bars
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ABContent.CROSSED_COPPER_BARS, 1)
+                .input(ABContent.HORIZONTAL_CROSSED_COPPER_BARS, 1)
+                .criterion(FabricRecipeProvider.hasItem(ABContent.CROSSED_COPPER_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.CROSSED_COPPER_BARS))
+                .criterion(FabricRecipeProvider.hasItem(ABContent.HORIZONTAL_CROSSED_COPPER_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.HORIZONTAL_CROSSED_COPPER_BARS))
+                .group("bars")
+                .offerTo(exporter, "horizontal_to_crossed_copper_bars");
+
+        // Exposed Copper Bars
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ABContent.CROSSED_EXPOSED_COPPER_BARS, 1)
+                .input(ABContent.HORIZONTAL_CROSSED_EXPOSED_COPPER_BARS, 1)
+                .criterion(FabricRecipeProvider.hasItem(ABContent.CROSSED_EXPOSED_COPPER_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.CROSSED_EXPOSED_COPPER_BARS))
+                .criterion(FabricRecipeProvider.hasItem(ABContent.HORIZONTAL_CROSSED_EXPOSED_COPPER_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.HORIZONTAL_CROSSED_EXPOSED_COPPER_BARS))
+                .group("bars")
+                .offerTo(exporter, "horizontal_to_crossed_exposed_copper_bars");
+
+        // Weathered Copper Bars
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ABContent.CROSSED_WEATHERED_COPPER_BARS, 1)
+                .input(ABContent.HORIZONTAL_CROSSED_WEATHERED_COPPER_BARS, 1)
+                .criterion(FabricRecipeProvider.hasItem(ABContent.CROSSED_WEATHERED_COPPER_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.CROSSED_WEATHERED_COPPER_BARS))
+                .criterion(FabricRecipeProvider.hasItem(ABContent.HORIZONTAL_CROSSED_WEATHERED_COPPER_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.HORIZONTAL_CROSSED_WEATHERED_COPPER_BARS))
+                .group("bars")
+                .offerTo(exporter, "horizontal_to_crossed_weather_copper_bars");
+
+        // Oxidized Copper Bars
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ABContent.CROSSED_OXIDIZED_COPPER_BARS, 1)
+                .input(ABContent.HORIZONTAL_CROSSED_OXIDIZED_COPPER_BARS, 1)
+                .criterion(FabricRecipeProvider.hasItem(ABContent.CROSSED_OXIDIZED_COPPER_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.CROSSED_OXIDIZED_COPPER_BARS))
+                .criterion(FabricRecipeProvider.hasItem(ABContent.HORIZONTAL_CROSSED_OXIDIZED_COPPER_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.HORIZONTAL_CROSSED_OXIDIZED_COPPER_BARS))
+                .group("bars")
+                .offerTo(exporter, "horizontal_to_crossed_oxidized_copper_bars");
+
+        // Acacia Bars
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ABContent.CROSSED_ACACIA_BARS, 1)
+                .input(ABContent.HORIZONTAL_CROSSED_ACACIA_BARS, 1)
+                .criterion(FabricRecipeProvider.hasItem(ABContent.CROSSED_ACACIA_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.CROSSED_ACACIA_BARS))
+                .criterion(FabricRecipeProvider.hasItem(ABContent.HORIZONTAL_CROSSED_ACACIA_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.HORIZONTAL_CROSSED_ACACIA_BARS))
+                .group("bars")
+                .offerTo(exporter, "horizontal_to_crossed_acacia_bars");
+
+        // Birch Bars
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ABContent.CROSSED_BIRCH_BARS, 1)
+                .input(ABContent.HORIZONTAL_CROSSED_BIRCH_BARS, 1)
+                .criterion(FabricRecipeProvider.hasItem(ABContent.CROSSED_BIRCH_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.CROSSED_BIRCH_BARS))
+                .criterion(FabricRecipeProvider.hasItem(ABContent.HORIZONTAL_CROSSED_BIRCH_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.HORIZONTAL_CROSSED_BIRCH_BARS))
+                .group("bars")
+                .offerTo(exporter, "horizontal_to_crossed_birch_bars");
+
+        // Oak Bars
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ABContent.CROSSED_OAK_BARS, 1)
+                .input(ABContent.HORIZONTAL_CROSSED_OAK_BARS, 1)
+                .criterion(FabricRecipeProvider.hasItem(ABContent.CROSSED_OAK_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.CROSSED_OAK_BARS))
+                .criterion(FabricRecipeProvider.hasItem(ABContent.HORIZONTAL_CROSSED_OAK_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.HORIZONTAL_CROSSED_OAK_BARS))
+                .group("bars")
+                .offerTo(exporter, "horizontal_to_crossed_oak_bars");
+
+        // Dark Oak Bars
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ABContent.CROSSED_DARK_OAK_BARS, 1)
+                .input(ABContent.HORIZONTAL_CROSSED_DARK_OAK_BARS, 1)
+                .criterion(FabricRecipeProvider.hasItem(ABContent.CROSSED_DARK_OAK_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.CROSSED_DARK_OAK_BARS))
+                .criterion(FabricRecipeProvider.hasItem(ABContent.HORIZONTAL_CROSSED_DARK_OAK_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.HORIZONTAL_CROSSED_DARK_OAK_BARS))
+                .group("bars")
+                .offerTo(exporter, "horizontal_to_crossed_dark_oak_bars");
+
+        // Jungle Bars
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ABContent.CROSSED_JUNGLE_BARS, 1)
+                .input(ABContent.HORIZONTAL_CROSSED_JUNGLE_BARS, 1)
+                .criterion(FabricRecipeProvider.hasItem(ABContent.CROSSED_JUNGLE_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.CROSSED_JUNGLE_BARS))
+                .criterion(FabricRecipeProvider.hasItem(ABContent.HORIZONTAL_CROSSED_JUNGLE_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.HORIZONTAL_CROSSED_JUNGLE_BARS))
+                .group("bars")
+                .offerTo(exporter, "horizontal_to_crossed_jungle_bars");
+
+        // Spruce Bars
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ABContent.CROSSED_SPRUCE_BARS, 1)
+                .input(ABContent.HORIZONTAL_CROSSED_SPRUCE_BARS, 1)
+                .criterion(FabricRecipeProvider.hasItem(ABContent.CROSSED_SPRUCE_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.CROSSED_SPRUCE_BARS))
+                .criterion(FabricRecipeProvider.hasItem(ABContent.HORIZONTAL_CROSSED_SPRUCE_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.HORIZONTAL_CROSSED_SPRUCE_BARS))
+                .group("bars")
+                .offerTo(exporter, "horizontal_to_crossed_spruce_bars");
+
+        // Mangrove Bars
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ABContent.CROSSED_MANGROVE_BARS, 1)
+                .input(ABContent.HORIZONTAL_CROSSED_MANGROVE_BARS, 1)
+                .criterion(FabricRecipeProvider.hasItem(ABContent.CROSSED_MANGROVE_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.CROSSED_MANGROVE_BARS))
+                .criterion(FabricRecipeProvider.hasItem(ABContent.HORIZONTAL_CROSSED_MANGROVE_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.HORIZONTAL_CROSSED_MANGROVE_BARS))
+                .group("bars")
+                .offerTo(exporter, "horizontal_to_crossed_mangrove_bars");
+
+        // Crimson Bars
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ABContent.CROSSED_CRIMSON_BARS, 1)
+                .input(ABContent.HORIZONTAL_CROSSED_CRIMSON_BARS, 1)
+                .criterion(FabricRecipeProvider.hasItem(ABContent.CROSSED_CRIMSON_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.CROSSED_CRIMSON_BARS))
+                .criterion(FabricRecipeProvider.hasItem(ABContent.HORIZONTAL_CROSSED_CRIMSON_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.HORIZONTAL_CROSSED_CRIMSON_BARS))
+                .group("bars")
+                .offerTo(exporter, "horizontal_to_crossed_crimson_bars");
+
+        // Crimson Bars
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ABContent.CROSSED_WARPED_BARS, 1)
+                .input(ABContent.HORIZONTAL_CROSSED_WARPED_BARS, 1)
+                .criterion(FabricRecipeProvider.hasItem(ABContent.CROSSED_WARPED_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.CROSSED_WARPED_BARS))
+                .criterion(FabricRecipeProvider.hasItem(ABContent.HORIZONTAL_CROSSED_WARPED_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.HORIZONTAL_CROSSED_WARPED_BARS))
+                .group("bars")
+                .offerTo(exporter, "horizontal_to_crossed_warped_bars");
+    }
 
     private void crossedToRegularRecipes(RecipeExporter exporter) {
         // Iron Bars
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, Items.IRON_BARS)
-                .input(ABContent.CROSSED_IRON_BARS)
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, Items.IRON_BARS, 1)
+                .input(ABContent.CROSSED_IRON_BARS, 1)
                 .criterion(FabricRecipeProvider.hasItem(Items.IRON_BARS), FabricRecipeProvider.conditionsFromItem(Items.IRON_BARS))
                 .criterion(FabricRecipeProvider.hasItem(ABContent.CROSSED_IRON_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.CROSSED_IRON_BARS))
                 .group("bars")
-                .offerTo(exporter);
+                .offerTo(exporter, "crossed_to_iron_bars");
+
+        // Gold Bars
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ABContent.GOLD_BARS, 1)
+                .input(ABContent.CROSSED_GOLD_BARS, 1)
+                .criterion(FabricRecipeProvider.hasItem(ABContent.GOLD_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.GOLD_BARS))
+                .criterion(FabricRecipeProvider.hasItem(ABContent.CROSSED_GOLD_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.CROSSED_GOLD_BARS))
+                .group("bars")
+                .offerTo(exporter, "crossed_to_gold_bars");
+
+        // Copper Bars
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ABContent.COPPER_BARS, 1)
+                .input(ABContent.CROSSED_COPPER_BARS, 1)
+                .criterion(FabricRecipeProvider.hasItem(ABContent.COPPER_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.COPPER_BARS))
+                .criterion(FabricRecipeProvider.hasItem(ABContent.CROSSED_COPPER_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.CROSSED_COPPER_BARS))
+                .group("bars")
+                .offerTo(exporter, "crossed_to_copper_bars");
+
+        // Exposed Copper Bars
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ABContent.EXPOSED_COPPER_BARS, 1)
+                .input(ABContent.CROSSED_EXPOSED_COPPER_BARS, 1)
+                .criterion(FabricRecipeProvider.hasItem(ABContent.EXPOSED_COPPER_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.EXPOSED_COPPER_BARS))
+                .criterion(FabricRecipeProvider.hasItem(ABContent.CROSSED_EXPOSED_COPPER_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.CROSSED_EXPOSED_COPPER_BARS))
+                .group("bars")
+                .offerTo(exporter, "crossed_to_exposed_copper_bars");
+
+        // Weathered Copper Bars
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ABContent.WEATHERED_COPPER_BARS, 1)
+                .input(ABContent.CROSSED_WEATHERED_COPPER_BARS, 1)
+                .criterion(FabricRecipeProvider.hasItem(ABContent.WEATHERED_COPPER_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.WEATHERED_COPPER_BARS))
+                .criterion(FabricRecipeProvider.hasItem(ABContent.CROSSED_WEATHERED_COPPER_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.CROSSED_WEATHERED_COPPER_BARS))
+                .group("bars")
+                .offerTo(exporter, "crossed_to_weather_copper_bars");
+
+        // Oxidized Copper Bars
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ABContent.OXIDIZED_COPPER_BARS, 1)
+                .input(ABContent.CROSSED_OXIDIZED_COPPER_BARS, 1)
+                .criterion(FabricRecipeProvider.hasItem(ABContent.OXIDIZED_COPPER_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.OXIDIZED_COPPER_BARS))
+                .criterion(FabricRecipeProvider.hasItem(ABContent.CROSSED_OXIDIZED_COPPER_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.CROSSED_OXIDIZED_COPPER_BARS))
+                .group("bars")
+                .offerTo(exporter, "crossed_to_oxidized_copper_bars");
+
+        // Acacia Bars
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ABContent.ACACIA_BARS, 1)
+                .input(ABContent.CROSSED_ACACIA_BARS, 1)
+                .criterion(FabricRecipeProvider.hasItem(ABContent.ACACIA_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.ACACIA_BARS))
+                .criterion(FabricRecipeProvider.hasItem(ABContent.CROSSED_ACACIA_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.CROSSED_ACACIA_BARS))
+                .group("bars")
+                .offerTo(exporter, "crossed_to_acacia_bars");
+
+        // Birch Bars
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ABContent.BIRCH_BARS, 1)
+                .input(ABContent.CROSSED_BIRCH_BARS, 1)
+                .criterion(FabricRecipeProvider.hasItem(ABContent.BIRCH_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.BIRCH_BARS))
+                .criterion(FabricRecipeProvider.hasItem(ABContent.CROSSED_BIRCH_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.CROSSED_BIRCH_BARS))
+                .group("bars")
+                .offerTo(exporter, "crossed_to_birch_bars");
+
+        // Oak Bars
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ABContent.OAK_BARS, 1)
+                .input(ABContent.CROSSED_OAK_BARS, 1)
+                .criterion(FabricRecipeProvider.hasItem(ABContent.OAK_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.OAK_BARS))
+                .criterion(FabricRecipeProvider.hasItem(ABContent.CROSSED_OAK_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.CROSSED_OAK_BARS))
+                .group("bars")
+                .offerTo(exporter, "crossed_to_oak_bars");
+
+        // Dark Oak Bars
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ABContent.DARK_OAK_BARS, 1)
+                .input(ABContent.CROSSED_DARK_OAK_BARS, 1)
+                .criterion(FabricRecipeProvider.hasItem(ABContent.DARK_OAK_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.DARK_OAK_BARS))
+                .criterion(FabricRecipeProvider.hasItem(ABContent.CROSSED_DARK_OAK_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.CROSSED_DARK_OAK_BARS))
+                .group("bars")
+                .offerTo(exporter, "crossed_to_dark_oak_bars");
+
+        // Jungle Bars
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ABContent.JUNGLE_BARS, 1)
+                .input(ABContent.CROSSED_JUNGLE_BARS, 1)
+                .criterion(FabricRecipeProvider.hasItem(ABContent.JUNGLE_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.JUNGLE_BARS))
+                .criterion(FabricRecipeProvider.hasItem(ABContent.CROSSED_JUNGLE_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.CROSSED_JUNGLE_BARS))
+                .group("bars")
+                .offerTo(exporter, "crossed_to_jungle_bars");
+
+        // Spruce Bars
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ABContent.SPRUCE_BARS, 1)
+                .input(ABContent.CROSSED_SPRUCE_BARS, 1)
+                .criterion(FabricRecipeProvider.hasItem(ABContent.SPRUCE_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.SPRUCE_BARS))
+                .criterion(FabricRecipeProvider.hasItem(ABContent.CROSSED_SPRUCE_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.CROSSED_SPRUCE_BARS))
+                .group("bars")
+                .offerTo(exporter, "crossed_to_spruce_bars");
+
+        // Mangrove Bars
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ABContent.MANGROVE_BARS, 1)
+                .input(ABContent.CROSSED_MANGROVE_BARS, 1)
+                .criterion(FabricRecipeProvider.hasItem(ABContent.MANGROVE_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.MANGROVE_BARS))
+                .criterion(FabricRecipeProvider.hasItem(ABContent.CROSSED_MANGROVE_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.CROSSED_MANGROVE_BARS))
+                .group("bars")
+                .offerTo(exporter, "crossed_to_mangrove_bars");
+
+        // Crimson Bars
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ABContent.CRIMSON_BARS, 1)
+                .input(ABContent.CROSSED_CRIMSON_BARS, 1)
+                .criterion(FabricRecipeProvider.hasItem(ABContent.CRIMSON_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.CRIMSON_BARS))
+                .criterion(FabricRecipeProvider.hasItem(ABContent.CROSSED_CRIMSON_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.CROSSED_CRIMSON_BARS))
+                .group("bars")
+                .offerTo(exporter, "crossed_to_crimson_bars");
+
+        // Crimson Bars
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ABContent.WARPED_BARS, 1)
+                .input(ABContent.CROSSED_WARPED_BARS, 1)
+                .criterion(FabricRecipeProvider.hasItem(ABContent.WARPED_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.WARPED_BARS))
+                .criterion(FabricRecipeProvider.hasItem(ABContent.CROSSED_WARPED_BARS), FabricRecipeProvider.conditionsFromItem(ABContent.CROSSED_WARPED_BARS))
+                .group("bars")
+                .offerTo(exporter, "crossed_to_warped_bars");
     }
 }
