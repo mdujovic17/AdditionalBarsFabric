@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "horizontal_bars",
+  "key": {
+    "B": {
+      "item": "additionalbars:spruce_bars"
+    }
+  },
+  "pattern": [
+    "BBB",
+    "BBB"
+  ],
+  "result": {
+    "count": 6,
+    "id": "additionalbars:horizontal_spruce_bars"
+  }
+}

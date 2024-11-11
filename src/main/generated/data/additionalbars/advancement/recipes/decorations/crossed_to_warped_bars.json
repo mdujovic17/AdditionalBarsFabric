@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_crossed_warped_bars": {
+      "conditions": {
+        "items": [
+          {
+            "items": "additionalbars:crossed_warped_bars"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:crossed_to_warped_bars"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_warped_bars": {
+      "conditions": {
+        "items": [
+          {
+            "items": "additionalbars:warped_bars"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_warped_bars",
+      "has_crossed_warped_bars"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:crossed_to_warped_bars"
+    ]
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_gold_bars": {
+      "conditions": {
+        "items": [
+          {
+            "items": "additionalbars:gold_bars"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_horizontal_gold_bars": {
+      "conditions": {
+        "items": [
+          {
+            "items": "additionalbars:horizontal_gold_bars"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:horizontal_to_gold_bars"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_gold_bars",
+      "has_horizontal_gold_bars"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:horizontal_to_gold_bars"
+    ]
+  }
+}

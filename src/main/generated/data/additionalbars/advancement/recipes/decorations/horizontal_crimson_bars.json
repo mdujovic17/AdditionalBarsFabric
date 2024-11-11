@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_crimson_bars": {
+      "conditions": {
+        "items": [
+          {
+            "items": "additionalbars:crimson_bars"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "additionalbars:horizontal_crimson_bars"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_crimson_bars"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "additionalbars:horizontal_crimson_bars"
+    ]
+  }
+}

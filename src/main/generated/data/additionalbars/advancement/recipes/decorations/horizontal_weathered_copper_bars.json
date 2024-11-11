@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "additionalbars:horizontal_weathered_copper_bars"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_weathered_copper_bars": {
+      "conditions": {
+        "items": [
+          {
+            "items": "additionalbars:weathered_copper_bars"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_weathered_copper_bars"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "additionalbars:horizontal_weathered_copper_bars"
+    ]
+  }
+}
