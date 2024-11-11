@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "bars",
+  "key": {
+    "C": {
+      "item": "minecraft:copper_block"
+    },
+    "N": {
+      "item": "minecraft:copper_ingot"
+    }
+  },
+  "pattern": [
+    "CCC",
+    "NNN",
+    "CCC"
+  ],
+  "result": {
+    "count": 64,
+    "id": "additionalbars:copper_bars"
+  }
+}

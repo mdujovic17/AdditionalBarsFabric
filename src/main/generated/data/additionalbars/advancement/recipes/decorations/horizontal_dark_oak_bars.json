@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_dark_oak_bars": {
+      "conditions": {
+        "items": [
+          {
+            "items": "additionalbars:dark_oak_bars"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "additionalbars:horizontal_dark_oak_bars"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_dark_oak_bars"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "additionalbars:horizontal_dark_oak_bars"
+    ]
+  }
+}

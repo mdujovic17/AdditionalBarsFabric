@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_exposed_copper_bars": {
+      "conditions": {
+        "items": [
+          {
+            "items": "additionalbars:exposed_copper_bars"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_horizontal_exposed_copper_bars": {
+      "conditions": {
+        "items": [
+          {
+            "items": "additionalbars:horizontal_exposed_copper_bars"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:horizontal_to_exposed_copper_bars"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_exposed_copper_bars",
+      "has_horizontal_exposed_copper_bars"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:horizontal_to_exposed_copper_bars"
+    ]
+  }
+}

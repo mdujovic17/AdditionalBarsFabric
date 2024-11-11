@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "bars",
+  "ingredients": [
+    {
+      "item": "additionalbars:horizontal_birch_bars"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "additionalbars:birch_bars"
+  }
+}

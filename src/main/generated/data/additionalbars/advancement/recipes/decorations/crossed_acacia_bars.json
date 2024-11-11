@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_acacia_bars": {
+      "conditions": {
+        "items": [
+          {
+            "items": "additionalbars:acacia_bars"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_crossed_acacia_bars": {
+      "conditions": {
+        "items": [
+          {
+            "items": "additionalbars:crossed_acacia_bars"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "additionalbars:crossed_acacia_bars"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_crossed_acacia_bars",
+      "has_acacia_bars"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "additionalbars:crossed_acacia_bars"
+    ]
+  }
+}

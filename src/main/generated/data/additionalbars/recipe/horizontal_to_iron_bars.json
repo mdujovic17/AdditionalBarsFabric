@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "bars",
+  "ingredients": [
+    {
+      "item": "additionalbars:horizontal_iron_bars"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:iron_bars"
+  }
+}
