@@ -1,5 +1,5 @@
 plugins {
-	id 'fabric-loom' version '1.7-SNAPSHOT'
+	id 'fabric-loom' version '1.9-SNAPSHOT'
 	id 'maven-publish'
 }
 
@@ -15,22 +15,22 @@ repositories {
 //		name = 'Jitpack'
 //		url = 'https://jitpack.io'
 //	}
-//	maven {
-//		name = 'Shedaniel maven'
-//		url = "https://maven.shedaniel.me/"
-//	}
-//	maven {
-//		name = 'TerraformersMC maven'
-//		url = "https://maven.terraformersmc.com/"
-//	}
+	maven {
+		name = 'Shedaniel maven'
+		url = "https://maven.shedaniel.me/"
+	}
+	maven {
+		name = 'TerraformersMC maven'
+		url = "https://maven.terraformersmc.com/"
+	}
 //
-//	maven {
-//		name = "Modrinth"
-//		url = "https://api.modrinth.com/maven"
-//		content {
-//			includeGroup "maven.modrinth"
-//		}
-//	}
+	maven {
+		name = "Modrinth"
+		url = "https://api.modrinth.com/maven"
+		content {
+			includeGroup "maven.modrinth"
+		}
+	}
 //
 //	maven {
 //		url = "https://repo.minelittlepony-mod.com/maven/release"
@@ -57,8 +57,8 @@ dependencies {
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
-	// modApi "me.shedaniel:RoughlyEnoughItems-fabric:${project.rei}"
-	//modRuntimeOnly "com.terraformersmc:modmenu:${project.modmenu}"
+	//modApi "me.shedaniel:RoughlyEnoughItems-fabric:${project.rei}"
+	modRuntimeOnly "com.terraformersmc:modmenu:${project.modmenu}"
 
 	// Presence Footsteps
 	// modRuntimeOnly "com.minelittlepony:kirin:${project.kirin}"
@@ -95,7 +95,12 @@ jar {
 }
 
 fabricApi {
-	configureDataGeneration()
+	configureDataGeneration {
+		createSourceSet = true
+		modId = "additionalbars_datagen"
+		strictValidation = true
+		client = true
+	}
 }
 
 // configure the maven publication
