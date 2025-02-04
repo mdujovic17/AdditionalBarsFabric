@@ -1,6 +1,0 @@
-{
-	"parent": "additionalbars:block/parent/td/horizontal/com",
-	"textures": {
-		"texture": "minecraft:block/spruce_planks"
-	}
-}

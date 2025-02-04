@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "bars",
+  "ingredients": [
+    "additionalbars:crossed_jungle_bars"
+  ],
+  "result": {
+    "count": 1,
+    "id": "additionalbars:jungle_bars"
+  }
+}

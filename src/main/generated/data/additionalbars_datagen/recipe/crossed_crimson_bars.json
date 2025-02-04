@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "bars",
+  "ingredients": [
+    "additionalbars:crimson_bars",
+    "additionalbars:crimson_bars"
+  ],
+  "result": {
+    "count": 2,
+    "id": "additionalbars:crossed_crimson_bars"
+  }
+}

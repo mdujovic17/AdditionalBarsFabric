@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "horizontal_bars",
+  "ingredients": [
+    "additionalbars:horizontal_cherry_bars",
+    "additionalbars:horizontal_cherry_bars"
+  ],
+  "result": {
+    "count": 2,
+    "id": "additionalbars:horizontal_crossed_cherry_bars"
+  }
+}

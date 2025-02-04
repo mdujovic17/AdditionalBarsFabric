@@ -1,0 +1,6 @@
+{
+  "parent": "additionalbars:block/parent/horizontal/bot",
+  "textures": {
+    "texture": "minecraft:block/cherry_planks"
+  }
+}

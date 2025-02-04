@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "bars",
+  "ingredients": [
+    "additionalbars:gold_bars",
+    "additionalbars:gold_bars"
+  ],
+  "result": {
+    "count": 2,
+    "id": "additionalbars:crossed_gold_bars"
+  }
+}

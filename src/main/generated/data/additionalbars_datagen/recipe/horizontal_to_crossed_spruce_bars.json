@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "bars",
+  "ingredients": [
+    "additionalbars:horizontal_crossed_spruce_bars"
+  ],
+  "result": {
+    "count": 1,
+    "id": "additionalbars:crossed_spruce_bars"
+  }
+}

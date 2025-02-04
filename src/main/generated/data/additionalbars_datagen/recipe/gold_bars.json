@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "bars",
+  "key": {
+    "G": "minecraft:gold_ingot",
+    "N": "minecraft:gold_nugget"
+  },
+  "pattern": [
+    "GGG",
+    "NNN",
+    "GGG"
+  ],
+  "result": {
+    "count": 16,
+    "id": "additionalbars:gold_bars"
+  }
+}
