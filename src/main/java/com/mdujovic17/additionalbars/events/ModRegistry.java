@@ -24,14 +24,10 @@ SOFTWARE.
 
 package com.mdujovic17.additionalbars.events;
 
-import com.mdujovic17.additionalbars.AdditionalBars;
-import com.mdujovic17.additionalbars.init.ABContent;
+import com.google.common.collect.Maps;
+import com.mdujovic17.additionalbars.init.ModBlocks;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
-import net.fabricmc.fabric.api.resource.ResourcePackActivationType;
-import net.fabricmc.loader.api.FabricLoader;
-import net.fabricmc.loader.api.ModContainer;
 import net.minecraft.block.Block;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
@@ -43,12 +39,11 @@ import net.minecraft.util.Identifier;
 
 import net.fabricmc.fabric.api.registry.OxidizableBlocksRegistry;
 
-import java.util.*;
+import java.util.Map;
 
 import static com.mdujovic17.additionalbars.AdditionalBars.MODID;
 
-public class ModRegistry
-{
+public class ModRegistry {
 //    public static final ItemGroup ADDITIONAL_BARS = FabricItemGroup.builder()
 //            .icon(() -> new ItemStack(ABContent.GOLD_BARS))
 //            .displayName(Text.translatable("itemGroup.additionalbars.additionalbars"))
@@ -58,354 +53,261 @@ public class ModRegistry
 //            .displayName(Text.translatable("itemGroup.additionalbars.horizontaladditionalbars"))
 //            .build();
 
+    public static final Map<Block, RegistryKey<Block>> ADDITIONALBARS_BLOCKS = Maps.newHashMap();
+
     public static final RegistryKey<ItemGroup> ADDITIONAL_BARS = RegistryKey.of(RegistryKeys.ITEM_GROUP, Identifier.of(MODID, "additionalbars"));
     //public static final RegistryKey<ItemGroup> HORIZONTAL_ADDITIONAL_BARS = RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier(MODID, "horizontaladditionalbars"));
 
-    public static void setup()
-    {
+    public static void setup() {
         registerBlocks();
-        //registerItems();
         registerItemGroups();
         registerOxidationStates();
         registerWaxableStates();
         addItemsToItemGroups();
     }
 
-    public static void clientSetup()
-    {
-        //registerResourcePacks();
+    public static void clientSetup() {
         registerRenderLayer();
     }
 
-    private static void registerBlocks()
-    {
-        register(ABContent.GOLD_BARS,                "gold_bars",                true);
-        register(ABContent.ACACIA_BARS,              "acacia_bars",              true);
-        register(ABContent.BIRCH_BARS,               "birch_bars",               true);
-        register(ABContent.DARK_OAK_BARS,            "dark_oak_bars",            true);
-        register(ABContent.JUNGLE_BARS,              "jungle_bars",              true);
-        register(ABContent.SPRUCE_BARS,              "spruce_bars",              true);
-        register(ABContent.OAK_BARS,                 "oak_bars",                 true);
-        register(ABContent.MANGROVE_BARS,            "mangrove_bars",            true);
-        register(ABContent.CRIMSON_BARS,             "crimson_bars",             true);
-        register(ABContent.WARPED_BARS,              "warped_bars",              true);
+    private static void registerBlocks() {
+        register(ModBlocks.GOLD_BARS, ModRegistryKeys.GOLD_BARS_KEY, true);
+        register(ModBlocks.ACACIA_BARS, ModRegistryKeys.ACACIA_BARS_KEY, true);
+        register(ModBlocks.BIRCH_BARS, ModRegistryKeys.BIRCH_BARS_KEY, true);
+        register(ModBlocks.DARK_OAK_BARS, ModRegistryKeys.DARK_OAK_BARS_KEY, true);
+        register(ModBlocks.JUNGLE_BARS, ModRegistryKeys.JUNGLE_BARS_KEY, true);
+        register(ModBlocks.SPRUCE_BARS, ModRegistryKeys.SPRUCE_BARS_KEY, true);
+        register(ModBlocks.OAK_BARS, ModRegistryKeys.OAK_BARS_KEY, true);
+        register(ModBlocks.CHERRY_BARS, ModRegistryKeys.CHERRY_BARS_KEY, true);
+        register(ModBlocks.MANGROVE_BARS, ModRegistryKeys.MANGROVE_BARS_KEY, true);
+        register(ModBlocks.CRIMSON_BARS, ModRegistryKeys.CRIMSON_BARS_KEY, true);
+        register(ModBlocks.WARPED_BARS, ModRegistryKeys.WARPED_BARS_KEY, true);
 
-        register(ABContent.CROSSED_IRON_BARS,        "crossed_iron_bars",        true);
-        register(ABContent.CROSSED_GOLD_BARS,        "crossed_gold_bars",        true);
-        register(ABContent.CROSSED_ACACIA_BARS,      "crossed_acacia_bars",      true);
-        register(ABContent.CROSSED_BIRCH_BARS,       "crossed_birch_bars",       true);
-        register(ABContent.CROSSED_DARK_OAK_BARS,    "crossed_dark_oak_bars",    true);
-        register(ABContent.CROSSED_JUNGLE_BARS,      "crossed_jungle_bars",      true);
-        register(ABContent.CROSSED_SPRUCE_BARS,      "crossed_spruce_bars",      true);
-        register(ABContent.CROSSED_OAK_BARS,         "crossed_oak_bars",         true);
-        register(ABContent.CROSSED_MANGROVE_BARS,    "crossed_mangrove_bars",    true);
-        register(ABContent.CROSSED_CRIMSON_BARS,     "crossed_crimson_bars",     true);
-        register(ABContent.CROSSED_WARPED_BARS,      "crossed_warped_bars",      true);
+        register(ModBlocks.CROSSED_IRON_BARS, ModRegistryKeys.CROSSED_IRON_BARS_KEY, true);
+        register(ModBlocks.CROSSED_GOLD_BARS, ModRegistryKeys.CROSSED_GOLD_BARS_KEY, true);
+        register(ModBlocks.CROSSED_ACACIA_BARS, ModRegistryKeys.CROSSED_ACACIA_BARS_KEY, true);
+        register(ModBlocks.CROSSED_BIRCH_BARS, ModRegistryKeys.CROSSED_BIRCH_BARS_KEY, true);
+        register(ModBlocks.CROSSED_DARK_OAK_BARS, ModRegistryKeys.CROSSED_DARK_OAK_BARS_KEY, true);
+        register(ModBlocks.CROSSED_JUNGLE_BARS, ModRegistryKeys.CROSSED_JUNGLE_BARS_KEY, true);
+        register(ModBlocks.CROSSED_SPRUCE_BARS, ModRegistryKeys.CROSSED_SPRUCE_BARS_KEY, true);
+        register(ModBlocks.CROSSED_OAK_BARS, ModRegistryKeys.CROSSED_OAK_BARS_KEY, true);
+        register(ModBlocks.CROSSED_CHERRY_BARS, ModRegistryKeys.CROSSED_CHERRY_BARS_KEY, true);
+        register(ModBlocks.CROSSED_MANGROVE_BARS, ModRegistryKeys.CROSSED_MANGROVE_BARS_KEY, true);
+        register(ModBlocks.CROSSED_CRIMSON_BARS, ModRegistryKeys.CROSSED_CRIMSON_BARS_KEY, true);
+        register(ModBlocks.CROSSED_WARPED_BARS, ModRegistryKeys.CROSSED_WARPED_BARS_KEY, true);
 
-        register(ABContent.HORIZONTAL_IRON_BARS,     "horizontal_iron_bars",     true);
-        register(ABContent.HORIZONTAL_GOLD_BARS,     "horizontal_gold_bars",     true);
-        register(ABContent.HORIZONTAL_ACACIA_BARS,   "horizontal_acacia_bars",   true);
-        register(ABContent.HORIZONTAL_BIRCH_BARS,    "horizontal_birch_bars",    true);
-        register(ABContent.HORIZONTAL_DARK_OAK_BARS, "horizontal_dark_oak_bars", true);
-        register(ABContent.HORIZONTAL_JUNGLE_BARS,   "horizontal_jungle_bars",   true);
-        register(ABContent.HORIZONTAL_SPRUCE_BARS,   "horizontal_spruce_bars",   true);
-        register(ABContent.HORIZONTAL_OAK_BARS,      "horizontal_oak_bars",      true);
-        register(ABContent.HORIZONTAL_MANGROVE_BARS, "horizontal_mangrove_bars", true);
-        register(ABContent.HORIZONTAL_CRIMSON_BARS,  "horizontal_crimson_bars",  true);
-        register(ABContent.HORIZONTAL_WARPED_BARS,   "horizontal_warped_bars",   true);
+        register(ModBlocks.HORIZONTAL_IRON_BARS, ModRegistryKeys.HORIZONTAL_IRON_BARS_KEY, true);
+        register(ModBlocks.HORIZONTAL_GOLD_BARS, ModRegistryKeys.HORIZONTAL_GOLD_BARS_KEY, true);
+        register(ModBlocks.HORIZONTAL_ACACIA_BARS, ModRegistryKeys.HORIZONTAL_ACACIA_BARS_KEY, true);
+        register(ModBlocks.HORIZONTAL_BIRCH_BARS, ModRegistryKeys.HORIZONTAL_BIRCH_BARS_KEY, true);
+        register(ModBlocks.HORIZONTAL_DARK_OAK_BARS, ModRegistryKeys.HORIZONTAL_DARK_OAK_BARS_KEY, true);
+        register(ModBlocks.HORIZONTAL_JUNGLE_BARS, ModRegistryKeys.HORIZONTAL_JUNGLE_BARS_KEY, true);
+        register(ModBlocks.HORIZONTAL_SPRUCE_BARS, ModRegistryKeys.HORIZONTAL_SPRUCE_BARS_KEY, true);
+        register(ModBlocks.HORIZONTAL_OAK_BARS, ModRegistryKeys.HORIZONTAL_OAK_BARS_KEY, true);
+        register(ModBlocks.HORIZONTAL_CHERRY_BARS, ModRegistryKeys.HORIZONTAL_CHERRY_BARS_KEY, true);
+        register(ModBlocks.HORIZONTAL_MANGROVE_BARS, ModRegistryKeys.HORIZONTAL_MANGROVE_BARS_KEY, true);
+        register(ModBlocks.HORIZONTAL_CRIMSON_BARS, ModRegistryKeys.HORIZONTAL_CRIMSON_BARS_KEY, true);
+        register(ModBlocks.HORIZONTAL_WARPED_BARS, ModRegistryKeys.HORIZONTAL_WARPED_BARS_KEY, true);
 
-        register(ABContent.HORIZONTAL_CROSSED_IRON_BARS,         "horizontal_crossed_iron_bars",     true);
-        register(ABContent.HORIZONTAL_CROSSED_GOLD_BARS,         "horizontal_crossed_gold_bars",     true);
-        register(ABContent.HORIZONTAL_CROSSED_ACACIA_BARS,       "horizontal_crossed_acacia_bars",   true);
-        register(ABContent.HORIZONTAL_CROSSED_BIRCH_BARS,        "horizontal_crossed_birch_bars",    true);
-        register(ABContent.HORIZONTAL_CROSSED_DARK_OAK_BARS,     "horizontal_crossed_dark_oak_bars", true);
-        register(ABContent.HORIZONTAL_CROSSED_JUNGLE_BARS,       "horizontal_crossed_jungle_bars",   true);
-        register(ABContent.HORIZONTAL_CROSSED_SPRUCE_BARS,       "horizontal_crossed_spruce_bars",   true);
-        register(ABContent.HORIZONTAL_CROSSED_OAK_BARS,          "horizontal_crossed_oak_bars",      true);
-        register(ABContent.HORIZONTAL_CROSSED_MANGROVE_BARS,     "horizontal_crossed_mangrove_bars", true);
-        register(ABContent.HORIZONTAL_CROSSED_CRIMSON_BARS,      "horizontal_crossed_crimson_bars",  true);
-        register(ABContent.HORIZONTAL_CROSSED_WARPED_BARS,       "horizontal_crossed_warped_bars",   true);
+        register(ModBlocks.HORIZONTAL_CROSSED_IRON_BARS, ModRegistryKeys.HORIZONTAL_CROSSED_IRON_BARS_KEY, true);
+        register(ModBlocks.HORIZONTAL_CROSSED_GOLD_BARS, ModRegistryKeys.HORIZONTAL_CROSSED_GOLD_BARS_KEY, true);
+        register(ModBlocks.HORIZONTAL_CROSSED_ACACIA_BARS, ModRegistryKeys.HORIZONTAL_CROSSED_ACACIA_BARS_KEY, true);
+        register(ModBlocks.HORIZONTAL_CROSSED_BIRCH_BARS, ModRegistryKeys.HORIZONTAL_CROSSED_BIRCH_BARS_KEY, true);
+        register(ModBlocks.HORIZONTAL_CROSSED_DARK_OAK_BARS, ModRegistryKeys.HORIZONTAL_CROSSED_DARK_OAK_BARS_KEY, true);
+        register(ModBlocks.HORIZONTAL_CROSSED_JUNGLE_BARS, ModRegistryKeys.HORIZONTAL_CROSSED_JUNGLE_BARS_KEY, true);
+        register(ModBlocks.HORIZONTAL_CROSSED_SPRUCE_BARS, ModRegistryKeys.HORIZONTAL_CROSSED_SPRUCE_BARS_KEY, true);
+        register(ModBlocks.HORIZONTAL_CROSSED_OAK_BARS, ModRegistryKeys.HORIZONTAL_CROSSED_OAK_BARS_KEY, true);
+        register(ModBlocks.HORIZONTAL_CROSSED_CHERRY_BARS, ModRegistryKeys.HORIZONTAL_CROSSED_CHERRY_BARS_KEY, true);
+        register(ModBlocks.HORIZONTAL_CROSSED_MANGROVE_BARS, ModRegistryKeys.HORIZONTAL_CROSSED_MANGROVE_BARS_KEY, true);
+        register(ModBlocks.HORIZONTAL_CROSSED_CRIMSON_BARS, ModRegistryKeys.HORIZONTAL_CROSSED_CRIMSON_BARS_KEY, true);
+        register(ModBlocks.HORIZONTAL_CROSSED_WARPED_BARS, ModRegistryKeys.HORIZONTAL_CROSSED_WARPED_BARS_KEY, true);
 
-        register(ABContent.COPPER_BARS,             "copper_bars",           true);
-        register(ABContent.EXPOSED_COPPER_BARS,     "exposed_copper_bars",   true);
-        register(ABContent.WEATHERED_COPPER_BARS,   "weathered_copper_bars", true);
-        register(ABContent.OXIDIZED_COPPER_BARS,    "oxidized_copper_bars",  true);
+        register(ModBlocks.COPPER_BARS, ModRegistryKeys.COPPER_BARS_KEY, true);
+        register(ModBlocks.EXPOSED_COPPER_BARS, ModRegistryKeys.EXPOSED_COPPER_BARS_KEY, true);
+        register(ModBlocks.WEATHERED_COPPER_BARS, ModRegistryKeys.WEATHERED_COPPER_BARS_KEY, true);
+        register(ModBlocks.OXIDIZED_COPPER_BARS, ModRegistryKeys.OXIDIZED_COPPER_BARS_KEY, true);
 
-        register(   ABContent.CROSSED_COPPER_BARS, "crossed_copper_bars",          true                                                               );
-        register(   ABContent.CROSSED_EXPOSED_COPPER_BARS, "crossed_exposed_copper_bars",  true                                               );
-        register(     ABContent.CROSSED_WEATHERED_COPPER_BARS, "crossed_weathered_copper_bars",true                                           );
-        register(    ABContent.CROSSED_OXIDIZED_COPPER_BARS, "crossed_oxidized_copper_bars", true                                             );
+        register(ModBlocks.CROSSED_COPPER_BARS, ModRegistryKeys.CROSSED_COPPER_BARS_KEY, true);
+        register(ModBlocks.CROSSED_EXPOSED_COPPER_BARS, ModRegistryKeys.CROSSED_EXPOSED_COPPER_BARS_KEY, true);
+        register(ModBlocks.CROSSED_WEATHERED_COPPER_BARS, ModRegistryKeys.CROSSED_WEATHERED_COPPER_BARS_KEY, true);
+        register(ModBlocks.CROSSED_OXIDIZED_COPPER_BARS, ModRegistryKeys.CROSSED_OXIDIZED_COPPER_BARS_KEY, true);
 
-        register(    ABContent.HORIZONTAL_COPPER_BARS, "horizontal_copper_bars",          true                                                         );
-        register(   ABContent.HORIZONTAL_EXPOSED_COPPER_BARS, "horizontal_exposed_copper_bars",  true                                         );
-        register(     ABContent.HORIZONTAL_WEATHERED_COPPER_BARS, "horizontal_weathered_copper_bars",true                                     );
-        register(    ABContent.HORIZONTAL_OXIDIZED_COPPER_BARS, "horizontal_oxidized_copper_bars", true                                       );
+        register(ModBlocks.HORIZONTAL_COPPER_BARS, ModRegistryKeys.HORIZONTAL_COPPER_BARS_KEY, true);
+        register(ModBlocks.HORIZONTAL_EXPOSED_COPPER_BARS, ModRegistryKeys.HORIZONTAL_EXPOSED_COPPER_BARS_KEY, true);
+        register(ModBlocks.HORIZONTAL_WEATHERED_COPPER_BARS, ModRegistryKeys.HORIZONTAL_WEATHERED_COPPER_BARS_KEY, true);
+        register(ModBlocks.HORIZONTAL_OXIDIZED_COPPER_BARS, ModRegistryKeys.HORIZONTAL_OXIDIZED_COPPER_BARS_KEY, true);
 
-        register(ABContent.HORIZONTAL_CROSSED_COPPER_BARS, "horizontal_crossed_copper_bars",          true                                         );
-        register(   ABContent.HORIZONTAL_CROSSED_EXPOSED_COPPER_BARS, "horizontal_crossed_exposed_copper_bars",  true                         );
-        register(     ABContent.HORIZONTAL_CROSSED_WEATHERED_COPPER_BARS, "horizontal_crossed_weathered_copper_bars",true                     );
-        register(    ABContent.HORIZONTAL_CROSSED_OXIDIZED_COPPER_BARS, "horizontal_crossed_oxidized_copper_bars", true                       );
+        register(ModBlocks.HORIZONTAL_CROSSED_COPPER_BARS, ModRegistryKeys.HORIZONTAL_CROSSED_COPPER_BARS_KEY, true);
+        register(ModBlocks.HORIZONTAL_CROSSED_EXPOSED_COPPER_BARS, ModRegistryKeys.HORIZONTAL_CROSSED_EXPOSED_COPPER_BARS_KEY, true);
+        register(ModBlocks.HORIZONTAL_CROSSED_WEATHERED_COPPER_BARS, ModRegistryKeys.HORIZONTAL_CROSSED_WEATHERED_COPPER_BARS_KEY, true);
+        register(ModBlocks.HORIZONTAL_CROSSED_OXIDIZED_COPPER_BARS, ModRegistryKeys.HORIZONTAL_CROSSED_OXIDIZED_COPPER_BARS_KEY, true);
 
-        register( ABContent.WAXED_COPPER_BARS, "waxed_copper_bars",           true                                                                   );
-        register(   ABContent.WAXED_EXPOSED_COPPER_BARS, "waxed_exposed_copper_bars",   true                                                   );
-        register(     ABContent.WAXED_WEATHERED_COPPER_BARS, "waxed_weathered_copper_bars", true                                               );
-        register(    ABContent.WAXED_OXIDIZED_COPPER_BARS, "waxed_oxidized_copper_bars",  true                                                 );
+        register(ModBlocks.WAXED_COPPER_BARS, ModRegistryKeys.WAXED_COPPER_BARS_KEY, true);
+        register(ModBlocks.WAXED_EXPOSED_COPPER_BARS, ModRegistryKeys.WAXED_EXPOSED_COPPER_BARS_KEY, true);
+        register(ModBlocks.WAXED_WEATHERED_COPPER_BARS, ModRegistryKeys.WAXED_WEATHERED_COPPER_BARS_KEY, true);
+        register(ModBlocks.WAXED_OXIDIZED_COPPER_BARS, ModRegistryKeys.WAXED_OXIDIZED_COPPER_BARS_KEY, true);
 
-        register(ABContent.WAXED_CROSSED_COPPER_BARS, "waxed_crossed_copper_bars",           true                                                   );
-        register(  ABContent.WAXED_CROSSED_EXPOSED_COPPER_BARS, "waxed_crossed_exposed_copper_bars",   true                                   );
-        register(    ABContent.WAXED_CROSSED_WEATHERED_COPPER_BARS, "waxed_crossed_weathered_copper_bars", true                               );
-        register(   ABContent.WAXED_CROSSED_OXIDIZED_COPPER_BARS, "waxed_crossed_oxidized_copper_bars",  true                                 );
+        register(ModBlocks.WAXED_CROSSED_COPPER_BARS, ModRegistryKeys.WAXED_CROSSED_COPPER_BARS_KEY, true);
+        register(ModBlocks.WAXED_CROSSED_EXPOSED_COPPER_BARS, ModRegistryKeys.WAXED_CROSSED_EXPOSED_COPPER_BARS_KEY, true);
+        register(ModBlocks.WAXED_CROSSED_WEATHERED_COPPER_BARS, ModRegistryKeys.WAXED_CROSSED_WEATHERED_COPPER_BARS_KEY, true);
+        register(ModBlocks.WAXED_CROSSED_OXIDIZED_COPPER_BARS, ModRegistryKeys.WAXED_CROSSED_OXIDIZED_COPPER_BARS_KEY, true);
 
-        register(  ABContent.WAXED_HORIZONTAL_COPPER_BARS, "waxed_horizontal_copper_bars",          true                                             );
-        register(   ABContent.WAXED_HORIZONTAL_EXPOSED_COPPER_BARS, "waxed_horizontal_exposed_copper_bars",  true                             );
-        register(     ABContent.WAXED_HORIZONTAL_WEATHERED_COPPER_BARS, "waxed_horizontal_weathered_copper_bars",true                         );
-        register(    ABContent.WAXED_HORIZONTAL_OXIDIZED_COPPER_BARS, "waxed_horizontal_oxidized_copper_bars", true                           );
+        register(ModBlocks.WAXED_HORIZONTAL_COPPER_BARS, ModRegistryKeys.WAXED_HORIZONTAL_COPPER_BARS_KEY, true);
+        register(ModBlocks.WAXED_HORIZONTAL_EXPOSED_COPPER_BARS, ModRegistryKeys.WAXED_HORIZONTAL_EXPOSED_COPPER_BARS_KEY, true);
+        register(ModBlocks.WAXED_HORIZONTAL_WEATHERED_COPPER_BARS, ModRegistryKeys.WAXED_HORIZONTAL_WEATHERED_COPPER_BARS_KEY, true);
+        register(ModBlocks.WAXED_HORIZONTAL_OXIDIZED_COPPER_BARS, ModRegistryKeys.WAXED_HORIZONTAL_OXIDIZED_COPPER_BARS_KEY, true);
 
-        register(  ABContent.WAXED_HORIZONTAL_CROSSED_COPPER_BARS, "waxed_horizontal_crossed_copper_bars",          true                             );
-        register(   ABContent.WAXED_HORIZONTAL_CROSSED_EXPOSED_COPPER_BARS, "waxed_horizontal_crossed_exposed_copper_bars",  true             );
-        register(     ABContent.WAXED_HORIZONTAL_CROSSED_WEATHERED_COPPER_BARS, "waxed_horizontal_crossed_weathered_copper_bars",true         );
-        register(    ABContent.WAXED_HORIZONTAL_CROSSED_OXIDIZED_COPPER_BARS, "waxed_horizontal_crossed_oxidized_copper_bars", true           );
+        register(ModBlocks.WAXED_HORIZONTAL_CROSSED_COPPER_BARS, ModRegistryKeys.WAXED_HORIZONTAL_CROSSED_COPPER_BARS_KEY, true);
+        register(ModBlocks.WAXED_HORIZONTAL_CROSSED_EXPOSED_COPPER_BARS, ModRegistryKeys.WAXED_HORIZONTAL_CROSSED_EXPOSED_COPPER_BARS_KEY, true);
+        register(ModBlocks.WAXED_HORIZONTAL_CROSSED_WEATHERED_COPPER_BARS, ModRegistryKeys.WAXED_HORIZONTAL_CROSSED_WEATHERED_COPPER_BARS_KEY, true);
+        register(ModBlocks.WAXED_HORIZONTAL_CROSSED_OXIDIZED_COPPER_BARS, ModRegistryKeys.WAXED_HORIZONTAL_CROSSED_OXIDIZED_COPPER_BARS_KEY, true);
     }
-//    private static void registerItems()
-//    {
-//        //Registry.register(Registries.ITEM, new Identifier(AdditionalBars.MODID, "test_block"), new BlockItem(ABContent.TEST_BLOCK, new Item.Settings()));
-//        Registry.register(Registries.ITEM, new Identifier(MODID, "gold_bars"), new BlockItem(ABContent.GOLD_BARS, new Item.Settings()));
-//        Registry.register(Registries.ITEM, new Identifier(MODID, "acacia_bars"), new BlockItem(ABContent.ACACIA_BARS, new Item.Settings()));
-//        Registry.register(Registries.ITEM, new Identifier(MODID, "birch_bars"), new BlockItem(ABContent.BIRCH_BARS, new Item.Settings()));
-//        Registry.register(Registries.ITEM, new Identifier(MODID, "dark_oak_bars"), new BlockItem(ABContent.DARK_OAK_BARS, new Item.Settings()));
-//        Registry.register(Registries.ITEM, new Identifier(MODID, "jungle_bars"), new BlockItem(ABContent.JUNGLE_BARS, new Item.Settings()));
-//        Registry.register(Registries.ITEM, new Identifier(MODID, "spruce_bars"), new BlockItem(ABContent.SPRUCE_BARS, new Item.Settings()));
-//        Registry.register(Registries.ITEM, new Identifier(MODID, "oak_bars"), new BlockItem(ABContent.OAK_BARS, new Item.Settings()));
-//        Registry.register(Registries.ITEM, new Identifier(MODID, "mangrove_bars"), new BlockItem(ABContent.MANGROVE_BARS, new Item.Settings()));
-//        Registry.register(Registries.ITEM, new Identifier(MODID, "crimson_bars"), new BlockItem(ABContent.CRIMSON_BARS, new Item.Settings()));
-//        Registry.register(Registries.ITEM, new Identifier(MODID, "warped_bars"), new BlockItem(ABContent.WARPED_BARS, new Item.Settings()));
-//
-//        Registry.register(Registries.ITEM, new Identifier(MODID, "crossed_iron_bars"), new BlockItem(ABContent.CROSSED_IRON_BARS, new Item.Settings()));
-//        Registry.register(Registries.ITEM, new Identifier(MODID, "crossed_gold_bars"), new BlockItem(ABContent.CROSSED_GOLD_BARS, new Item.Settings()));
-//        Registry.register(Registries.ITEM, new Identifier(MODID, "crossed_acacia_bars"), new BlockItem(ABContent.CROSSED_ACACIA_BARS, new Item.Settings()));
-//        Registry.register(Registries.ITEM, new Identifier(MODID, "crossed_birch_bars"), new BlockItem(ABContent.CROSSED_BIRCH_BARS, new Item.Settings()));
-//        Registry.register(Registries.ITEM, new Identifier(MODID, "crossed_dark_oak_bars"), new BlockItem(ABContent.CROSSED_DARK_OAK_BARS, new Item.Settings()));
-//        Registry.register(Registries.ITEM, new Identifier(MODID, "crossed_jungle_bars"), new BlockItem(ABContent.CROSSED_JUNGLE_BARS, new Item.Settings()));
-//        Registry.register(Registries.ITEM, new Identifier(MODID, "crossed_spruce_bars"), new BlockItem(ABContent.CROSSED_SPRUCE_BARS, new Item.Settings()));
-//        Registry.register(Registries.ITEM, new Identifier(MODID, "crossed_oak_bars"), new BlockItem(ABContent.CROSSED_OAK_BARS, new Item.Settings()));
-//        Registry.register(Registries.ITEM, new Identifier(MODID, "crossed_mangrove_bars"), new BlockItem(ABContent.CROSSED_MANGROVE_BARS, new Item.Settings()));
-//        Registry.register(Registries.ITEM, new Identifier(MODID, "crossed_crimson_bars"), new BlockItem(ABContent.CROSSED_CRIMSON_BARS, new Item.Settings()));
-//        Registry.register(Registries.ITEM, new Identifier(MODID, "crossed_warped_bars"), new BlockItem(ABContent.CROSSED_WARPED_BARS, new Item.Settings()));
-//
-//        Registry.register(Registries.ITEM, new Identifier(MODID, "horizontal_iron_bars"), new BlockItem(ABContent.HORIZONTAL_IRON_BARS, new Item.Settings()));
-//        Registry.register(Registries.ITEM, new Identifier(MODID, "horizontal_gold_bars"), new BlockItem(ABContent.HORIZONTAL_GOLD_BARS, new Item.Settings()));
-//        Registry.register(Registries.ITEM, new Identifier(MODID, "horizontal_acacia_bars"), new BlockItem(ABContent.HORIZONTAL_ACACIA_BARS, new Item.Settings()));
-//        Registry.register(Registries.ITEM, new Identifier(MODID, "horizontal_birch_bars"), new BlockItem(ABContent.HORIZONTAL_BIRCH_BARS, new Item.Settings()));
-//        Registry.register(Registries.ITEM, new Identifier(MODID, "horizontal_dark_oak_bars"), new BlockItem(ABContent.HORIZONTAL_DARK_OAK_BARS, new Item.Settings()));
-//        Registry.register(Registries.ITEM, new Identifier(MODID, "horizontal_jungle_bars"), new BlockItem(ABContent.HORIZONTAL_JUNGLE_BARS, new Item.Settings()));
-//        Registry.register(Registries.ITEM, new Identifier(MODID, "horizontal_spruce_bars"), new BlockItem(ABContent.HORIZONTAL_SPRUCE_BARS, new Item.Settings()));
-//        Registry.register(Registries.ITEM, new Identifier(MODID, "horizontal_oak_bars"), new BlockItem(ABContent.HORIZONTAL_OAK_BARS, new Item.Settings()));
-//        Registry.register(Registries.ITEM, new Identifier(MODID, "horizontal_mangrove_bars"), new BlockItem(ABContent.HORIZONTAL_MANGROVE_BARS, new Item.Settings()));
-//        Registry.register(Registries.ITEM, new Identifier(MODID, "horizontal_crimson_bars"), new BlockItem(ABContent.HORIZONTAL_CRIMSON_BARS, new Item.Settings()));
-//        Registry.register(Registries.ITEM, new Identifier(MODID, "horizontal_warped_bars"), new BlockItem(ABContent.HORIZONTAL_WARPED_BARS, new Item.Settings()));
-//
-//        Registry.register(Registries.ITEM, new Identifier(MODID, "horizontal_crossed_iron_bars"), new BlockItem(ABContent.HORIZONTAL_CROSSED_IRON_BARS, new Item.Settings()));
-//        Registry.register(Registries.ITEM, new Identifier(MODID, "horizontal_crossed_gold_bars"), new BlockItem(ABContent.HORIZONTAL_CROSSED_GOLD_BARS, new Item.Settings()));
-//        Registry.register(Registries.ITEM, new Identifier(MODID, "horizontal_crossed_acacia_bars"), new BlockItem(ABContent.HORIZONTAL_CROSSED_ACACIA_BARS, new Item.Settings()));
-//        Registry.register(Registries.ITEM, new Identifier(MODID, "horizontal_crossed_birch_bars"), new BlockItem(ABContent.HORIZONTAL_CROSSED_BIRCH_BARS, new Item.Settings()));
-//        Registry.register(Registries.ITEM, new Identifier(MODID, "horizontal_crossed_dark_oak_bars"), new BlockItem(ABContent.HORIZONTAL_CROSSED_DARK_OAK_BARS, new Item.Settings()));
-//        Registry.register(Registries.ITEM, new Identifier(MODID, "horizontal_crossed_jungle_bars"), new BlockItem(ABContent.HORIZONTAL_CROSSED_JUNGLE_BARS, new Item.Settings()));
-//        Registry.register(Registries.ITEM, new Identifier(MODID, "horizontal_crossed_spruce_bars"), new BlockItem(ABContent.HORIZONTAL_CROSSED_SPRUCE_BARS, new Item.Settings()));
-//        Registry.register(Registries.ITEM, new Identifier(MODID, "horizontal_crossed_oak_bars"), new BlockItem(ABContent.HORIZONTAL_CROSSED_OAK_BARS, new Item.Settings()));
-//        Registry.register(Registries.ITEM, new Identifier(MODID, "horizontal_crossed_mangrove_bars"), new BlockItem(ABContent.HORIZONTAL_CROSSED_MANGROVE_BARS, new Item.Settings()));
-//        Registry.register(Registries.ITEM, new Identifier(MODID, "horizontal_crossed_crimson_bars"), new BlockItem(ABContent.HORIZONTAL_CROSSED_CRIMSON_BARS, new Item.Settings()));
-//        Registry.register(Registries.ITEM, new Identifier(MODID, "horizontal_crossed_warped_bars"), new BlockItem(ABContent.HORIZONTAL_CROSSED_WARPED_BARS, new Item.Settings()));
-//
-//        /*COPPER*/
-//
-//        Registry.register(Registries.ITEM, new Identifier(MODID, "copper_bars"), new BlockItem(ABContent.COPPER_BARS, new Item.Settings()));
-//        Registry.register(Registries.ITEM, new Identifier(MODID, "exposed_copper_bars"), new BlockItem(ABContent.EXPOSED_COPPER_BARS, new Item.Settings()));
-//        Registry.register(Registries.ITEM, new Identifier(MODID, "weathered_copper_bars"), new BlockItem(ABContent.WEATHERED_COPPER_BARS, new Item.Settings()));
-//        Registry.register(Registries.ITEM, new Identifier(MODID, "oxidized_copper_bars"), new BlockItem(ABContent.OXIDIZED_COPPER_BARS, new Item.Settings()));
-//
-//        Registry.register(Registries.ITEM, new Identifier(MODID, "crossed_copper_bars"), new BlockItem(ABContent.CROSSED_COPPER_BARS, new Item.Settings()));
-//        Registry.register(Registries.ITEM, new Identifier(MODID, "crossed_exposed_copper_bars"), new BlockItem(ABContent.CROSSED_EXPOSED_COPPER_BARS, new Item.Settings()));
-//        Registry.register(Registries.ITEM, new Identifier(MODID, "crossed_weathered_copper_bars"), new BlockItem(ABContent.CROSSED_WEATHERED_COPPER_BARS, new Item.Settings()));
-//        Registry.register(Registries.ITEM, new Identifier(MODID, "crossed_oxidized_copper_bars"), new BlockItem(ABContent.CROSSED_OXIDIZED_COPPER_BARS, new Item.Settings()));
-//
-//        Registry.register(Registries.ITEM, new Identifier(MODID, "horizontal_copper_bars"), new BlockItem(ABContent.HORIZONTAL_COPPER_BARS, new Item.Settings()));
-//        Registry.register(Registries.ITEM, new Identifier(MODID, "horizontal_exposed_copper_bars"), new BlockItem(ABContent.HORIZONTAL_EXPOSED_COPPER_BARS, new Item.Settings()));
-//        Registry.register(Registries.ITEM, new Identifier(MODID, "horizontal_weathered_copper_bars"), new BlockItem(ABContent.HORIZONTAL_WEATHERED_COPPER_BARS, new Item.Settings()));
-//        Registry.register(Registries.ITEM, new Identifier(MODID, "horizontal_oxidized_copper_bars"), new BlockItem(ABContent.HORIZONTAL_OXIDIZED_COPPER_BARS, new Item.Settings()));
-//
-//        Registry.register(Registries.ITEM, new Identifier(MODID, "horizontal_crossed_copper_bars"), new BlockItem(ABContent.HORIZONTAL_CROSSED_COPPER_BARS, new Item.Settings()));
-//        Registry.register(Registries.ITEM, new Identifier(MODID, "horizontal_crossed_exposed_copper_bars"), new BlockItem(ABContent.HORIZONTAL_CROSSED_EXPOSED_COPPER_BARS, new Item.Settings()));
-//        Registry.register(Registries.ITEM, new Identifier(MODID, "horizontal_crossed_weathered_copper_bars"), new BlockItem(ABContent.HORIZONTAL_CROSSED_WEATHERED_COPPER_BARS, new Item.Settings()));
-//        Registry.register(Registries.ITEM, new Identifier(MODID, "horizontal_crossed_oxidized_copper_bars"), new BlockItem(ABContent.HORIZONTAL_CROSSED_OXIDIZED_COPPER_BARS, new Item.Settings()));
-//
-//        Registry.register(Registries.ITEM, new Identifier(MODID, "waxed_copper_bars"), new BlockItem(ABContent.WAXED_COPPER_BARS, new Item.Settings()));
-//        Registry.register(Registries.ITEM, new Identifier(MODID, "waxed_exposed_copper_bars"), new BlockItem(ABContent.WAXED_EXPOSED_COPPER_BARS, new Item.Settings()));
-//        Registry.register(Registries.ITEM, new Identifier(MODID, "waxed_weathered_copper_bars"), new BlockItem(ABContent.WAXED_WEATHERED_COPPER_BARS, new Item.Settings()));
-//        Registry.register(Registries.ITEM, new Identifier(MODID, "waxed_oxidized_copper_bars"), new BlockItem(ABContent.WAXED_OXIDIZED_COPPER_BARS, new Item.Settings()));
-//
-//        Registry.register(Registries.ITEM, new Identifier(MODID, "waxed_crossed_copper_bars"), new BlockItem(ABContent.WAXED_CROSSED_COPPER_BARS, new Item.Settings()));
-//        Registry.register(Registries.ITEM, new Identifier(MODID, "waxed_crossed_exposed_copper_bars"), new BlockItem(ABContent.WAXED_CROSSED_EXPOSED_COPPER_BARS, new Item.Settings()));
-//        Registry.register(Registries.ITEM, new Identifier(MODID, "waxed_crossed_weathered_copper_bars"), new BlockItem(ABContent.WAXED_CROSSED_WEATHERED_COPPER_BARS, new Item.Settings()));
-//        Registry.register(Registries.ITEM, new Identifier(MODID, "waxed_crossed_oxidized_copper_bars"), new BlockItem(ABContent.WAXED_CROSSED_OXIDIZED_COPPER_BARS, new Item.Settings()));
-//
-//        Registry.register(Registries.ITEM, new Identifier(MODID, "waxed_horizontal_copper_bars"), new BlockItem(ABContent.WAXED_HORIZONTAL_COPPER_BARS, new Item.Settings()));
-//        Registry.register(Registries.ITEM, new Identifier(MODID, "waxed_horizontal_exposed_copper_bars"), new BlockItem(ABContent.WAXED_HORIZONTAL_EXPOSED_COPPER_BARS, new Item.Settings()));
-//        Registry.register(Registries.ITEM, new Identifier(MODID, "waxed_horizontal_weathered_copper_bars"), new BlockItem(ABContent.WAXED_HORIZONTAL_WEATHERED_COPPER_BARS, new Item.Settings()));
-//        Registry.register(Registries.ITEM, new Identifier(MODID, "waxed_horizontal_oxidized_copper_bars"), new BlockItem(ABContent.WAXED_HORIZONTAL_OXIDIZED_COPPER_BARS, new Item.Settings()));
-//
-//        Registry.register(Registries.ITEM, new Identifier(MODID, "waxed_horizontal_crossed_copper_bars"), new BlockItem(ABContent.WAXED_HORIZONTAL_CROSSED_COPPER_BARS, new Item.Settings()));
-//        Registry.register(Registries.ITEM, new Identifier(MODID, "waxed_horizontal_crossed_exposed_copper_bars"), new BlockItem(ABContent.WAXED_HORIZONTAL_CROSSED_EXPOSED_COPPER_BARS, new Item.Settings()));
-//        Registry.register(Registries.ITEM, new Identifier(MODID, "waxed_horizontal_crossed_weathered_copper_bars"), new BlockItem(ABContent.WAXED_HORIZONTAL_CROSSED_WEATHERED_COPPER_BARS, new Item.Settings()));
-//        Registry.register(Registries.ITEM, new Identifier(MODID, "waxed_horizontal_crossed_oxidized_copper_bars"), new BlockItem(ABContent.WAXED_HORIZONTAL_CROSSED_OXIDIZED_COPPER_BARS, new Item.Settings()));
-//
-//    }
 
     public static void registerItemGroups() {
         Registry.register(Registries.ITEM_GROUP, ADDITIONAL_BARS, FabricItemGroup.builder()
-                .icon(() -> new ItemStack(ABContent.GOLD_BARS))
+                .icon(() -> new ItemStack(ModBlocks.GOLD_BARS))
                 .displayName(Text.translatable("itemGroup.additionalbars.additionalbars"))
                 .build());
-//        Registry.register(Registries.ITEM_GROUP, HORIZONTAL_ADDITIONAL_BARS, FabricItemGroup.builder()
-//                .icon(() -> new ItemStack(ABContent.HORIZONTAL_GOLD_BARS))
-//                .displayName(Text.translatable("itemGroup.additionalbars.horizontaladditionalbars"))
-//                .build());
     }
 
     public static void registerOxidationStates() {
-        OxidizableBlocksRegistry.registerOxidizableBlockPair(ABContent.COPPER_BARS, ABContent.EXPOSED_COPPER_BARS);
-        OxidizableBlocksRegistry.registerOxidizableBlockPair(ABContent.EXPOSED_COPPER_BARS, ABContent.WEATHERED_COPPER_BARS);
-        OxidizableBlocksRegistry.registerOxidizableBlockPair(ABContent.WEATHERED_COPPER_BARS, ABContent.OXIDIZED_COPPER_BARS);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.COPPER_BARS, ModBlocks.EXPOSED_COPPER_BARS);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.EXPOSED_COPPER_BARS, ModBlocks.WEATHERED_COPPER_BARS);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.WEATHERED_COPPER_BARS, ModBlocks.OXIDIZED_COPPER_BARS);
 
-        OxidizableBlocksRegistry.registerOxidizableBlockPair(ABContent.CROSSED_COPPER_BARS, ABContent.CROSSED_EXPOSED_COPPER_BARS);
-        OxidizableBlocksRegistry.registerOxidizableBlockPair(ABContent.CROSSED_EXPOSED_COPPER_BARS, ABContent.CROSSED_WEATHERED_COPPER_BARS);
-        OxidizableBlocksRegistry.registerOxidizableBlockPair(ABContent.CROSSED_WEATHERED_COPPER_BARS, ABContent.CROSSED_OXIDIZED_COPPER_BARS);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.CROSSED_COPPER_BARS, ModBlocks.CROSSED_EXPOSED_COPPER_BARS);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.CROSSED_EXPOSED_COPPER_BARS, ModBlocks.CROSSED_WEATHERED_COPPER_BARS);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.CROSSED_WEATHERED_COPPER_BARS, ModBlocks.CROSSED_OXIDIZED_COPPER_BARS);
 
-        OxidizableBlocksRegistry.registerOxidizableBlockPair(ABContent.HORIZONTAL_COPPER_BARS, ABContent.HORIZONTAL_EXPOSED_COPPER_BARS);
-        OxidizableBlocksRegistry.registerOxidizableBlockPair(ABContent.HORIZONTAL_EXPOSED_COPPER_BARS, ABContent.HORIZONTAL_WEATHERED_COPPER_BARS);
-        OxidizableBlocksRegistry.registerOxidizableBlockPair(ABContent.HORIZONTAL_WEATHERED_COPPER_BARS, ABContent.HORIZONTAL_OXIDIZED_COPPER_BARS);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.HORIZONTAL_COPPER_BARS, ModBlocks.HORIZONTAL_EXPOSED_COPPER_BARS);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.HORIZONTAL_EXPOSED_COPPER_BARS, ModBlocks.HORIZONTAL_WEATHERED_COPPER_BARS);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.HORIZONTAL_WEATHERED_COPPER_BARS, ModBlocks.HORIZONTAL_OXIDIZED_COPPER_BARS);
 
-        OxidizableBlocksRegistry.registerOxidizableBlockPair(ABContent.HORIZONTAL_CROSSED_COPPER_BARS, ABContent.HORIZONTAL_CROSSED_EXPOSED_COPPER_BARS);
-        OxidizableBlocksRegistry.registerOxidizableBlockPair(ABContent.HORIZONTAL_CROSSED_EXPOSED_COPPER_BARS, ABContent.HORIZONTAL_CROSSED_WEATHERED_COPPER_BARS);
-        OxidizableBlocksRegistry.registerOxidizableBlockPair(ABContent.HORIZONTAL_CROSSED_WEATHERED_COPPER_BARS, ABContent.HORIZONTAL_CROSSED_OXIDIZED_COPPER_BARS);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.HORIZONTAL_CROSSED_COPPER_BARS, ModBlocks.HORIZONTAL_CROSSED_EXPOSED_COPPER_BARS);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.HORIZONTAL_CROSSED_EXPOSED_COPPER_BARS, ModBlocks.HORIZONTAL_CROSSED_WEATHERED_COPPER_BARS);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(ModBlocks.HORIZONTAL_CROSSED_WEATHERED_COPPER_BARS, ModBlocks.HORIZONTAL_CROSSED_OXIDIZED_COPPER_BARS);
     }
 
     public static void registerWaxableStates() {
-        OxidizableBlocksRegistry.registerWaxableBlockPair(ABContent.COPPER_BARS, ABContent.WAXED_COPPER_BARS);
-        OxidizableBlocksRegistry.registerWaxableBlockPair(ABContent.EXPOSED_COPPER_BARS, ABContent.WAXED_EXPOSED_COPPER_BARS);
-        OxidizableBlocksRegistry.registerWaxableBlockPair(ABContent.WEATHERED_COPPER_BARS, ABContent.WAXED_WEATHERED_COPPER_BARS);
-        OxidizableBlocksRegistry.registerWaxableBlockPair(ABContent.OXIDIZED_COPPER_BARS, ABContent.WAXED_OXIDIZED_COPPER_BARS);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.COPPER_BARS, ModBlocks.WAXED_COPPER_BARS);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.EXPOSED_COPPER_BARS, ModBlocks.WAXED_EXPOSED_COPPER_BARS);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.WEATHERED_COPPER_BARS, ModBlocks.WAXED_WEATHERED_COPPER_BARS);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.OXIDIZED_COPPER_BARS, ModBlocks.WAXED_OXIDIZED_COPPER_BARS);
 
-        OxidizableBlocksRegistry.registerWaxableBlockPair(ABContent.CROSSED_COPPER_BARS, ABContent.WAXED_CROSSED_COPPER_BARS);
-        OxidizableBlocksRegistry.registerWaxableBlockPair(ABContent.CROSSED_EXPOSED_COPPER_BARS, ABContent.WAXED_CROSSED_EXPOSED_COPPER_BARS);
-        OxidizableBlocksRegistry.registerWaxableBlockPair(ABContent.CROSSED_WEATHERED_COPPER_BARS, ABContent.WAXED_CROSSED_WEATHERED_COPPER_BARS);
-        OxidizableBlocksRegistry.registerWaxableBlockPair(ABContent.CROSSED_OXIDIZED_COPPER_BARS, ABContent.WAXED_CROSSED_OXIDIZED_COPPER_BARS);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.CROSSED_COPPER_BARS, ModBlocks.WAXED_CROSSED_COPPER_BARS);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.CROSSED_EXPOSED_COPPER_BARS, ModBlocks.WAXED_CROSSED_EXPOSED_COPPER_BARS);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.CROSSED_WEATHERED_COPPER_BARS, ModBlocks.WAXED_CROSSED_WEATHERED_COPPER_BARS);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.CROSSED_OXIDIZED_COPPER_BARS, ModBlocks.WAXED_CROSSED_OXIDIZED_COPPER_BARS);
 
-        OxidizableBlocksRegistry.registerWaxableBlockPair(ABContent.HORIZONTAL_COPPER_BARS, ABContent.WAXED_HORIZONTAL_COPPER_BARS);
-        OxidizableBlocksRegistry.registerWaxableBlockPair(ABContent.HORIZONTAL_EXPOSED_COPPER_BARS, ABContent.WAXED_HORIZONTAL_EXPOSED_COPPER_BARS);
-        OxidizableBlocksRegistry.registerWaxableBlockPair(ABContent.HORIZONTAL_WEATHERED_COPPER_BARS, ABContent.WAXED_HORIZONTAL_WEATHERED_COPPER_BARS);
-        OxidizableBlocksRegistry.registerWaxableBlockPair(ABContent.HORIZONTAL_OXIDIZED_COPPER_BARS, ABContent.WAXED_HORIZONTAL_OXIDIZED_COPPER_BARS);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.HORIZONTAL_COPPER_BARS, ModBlocks.WAXED_HORIZONTAL_COPPER_BARS);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.HORIZONTAL_EXPOSED_COPPER_BARS, ModBlocks.WAXED_HORIZONTAL_EXPOSED_COPPER_BARS);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.HORIZONTAL_WEATHERED_COPPER_BARS, ModBlocks.WAXED_HORIZONTAL_WEATHERED_COPPER_BARS);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.HORIZONTAL_OXIDIZED_COPPER_BARS, ModBlocks.WAXED_HORIZONTAL_OXIDIZED_COPPER_BARS);
 
-        OxidizableBlocksRegistry.registerWaxableBlockPair(ABContent.HORIZONTAL_CROSSED_COPPER_BARS, ABContent.WAXED_HORIZONTAL_CROSSED_COPPER_BARS);
-        OxidizableBlocksRegistry.registerWaxableBlockPair(ABContent.HORIZONTAL_CROSSED_EXPOSED_COPPER_BARS, ABContent.WAXED_HORIZONTAL_CROSSED_EXPOSED_COPPER_BARS);
-        OxidizableBlocksRegistry.registerWaxableBlockPair(ABContent.HORIZONTAL_CROSSED_WEATHERED_COPPER_BARS, ABContent.WAXED_HORIZONTAL_CROSSED_WEATHERED_COPPER_BARS);
-        OxidizableBlocksRegistry.registerWaxableBlockPair(ABContent.HORIZONTAL_CROSSED_OXIDIZED_COPPER_BARS, ABContent.WAXED_HORIZONTAL_CROSSED_OXIDIZED_COPPER_BARS);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.HORIZONTAL_CROSSED_COPPER_BARS, ModBlocks.WAXED_HORIZONTAL_CROSSED_COPPER_BARS);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.HORIZONTAL_CROSSED_EXPOSED_COPPER_BARS, ModBlocks.WAXED_HORIZONTAL_CROSSED_EXPOSED_COPPER_BARS);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.HORIZONTAL_CROSSED_WEATHERED_COPPER_BARS, ModBlocks.WAXED_HORIZONTAL_CROSSED_WEATHERED_COPPER_BARS);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(ModBlocks.HORIZONTAL_CROSSED_OXIDIZED_COPPER_BARS, ModBlocks.WAXED_HORIZONTAL_CROSSED_OXIDIZED_COPPER_BARS);
     }
 
     public static void addItemsToItemGroups() {
         ItemGroupEvents.modifyEntriesEvent(ADDITIONAL_BARS).register(content -> {
-            content.add(ABContent.GOLD_BARS.asItem());
-            content.add(ABContent.ACACIA_BARS.asItem());
-            content.add(ABContent.BIRCH_BARS.asItem());
-            content.add(ABContent.DARK_OAK_BARS.asItem());
-            content.add(ABContent.JUNGLE_BARS.asItem());
-            content.add(ABContent.SPRUCE_BARS.asItem());
-            content.add(ABContent.OAK_BARS.asItem());
-            content.add(ABContent.MANGROVE_BARS.asItem());
-            content.add(ABContent.CRIMSON_BARS.asItem());
-            content.add(ABContent.WARPED_BARS.asItem());
+            content.add(ModBlocks.GOLD_BARS.asItem());
+            content.add(ModBlocks.ACACIA_BARS.asItem());
+            content.add(ModBlocks.BIRCH_BARS.asItem());
+            content.add(ModBlocks.DARK_OAK_BARS.asItem());
+            content.add(ModBlocks.JUNGLE_BARS.asItem());
+            content.add(ModBlocks.SPRUCE_BARS.asItem());
+            content.add(ModBlocks.OAK_BARS.asItem());
+            content.add(ModBlocks.CHERRY_BARS.asItem());
+            content.add(ModBlocks.MANGROVE_BARS.asItem());
+            content.add(ModBlocks.CRIMSON_BARS.asItem());
+            content.add(ModBlocks.WARPED_BARS.asItem());
 
-            content.add(ABContent.CROSSED_GOLD_BARS.asItem());
-            content.add(ABContent.CROSSED_IRON_BARS.asItem());
-            content.add(ABContent.CROSSED_ACACIA_BARS.asItem());
-            content.add(ABContent.CROSSED_BIRCH_BARS.asItem());
-            content.add(ABContent.CROSSED_DARK_OAK_BARS.asItem());
-            content.add(ABContent.CROSSED_JUNGLE_BARS.asItem());
-            content.add(ABContent.CROSSED_SPRUCE_BARS.asItem());
-            content.add(ABContent.CROSSED_OAK_BARS.asItem());
-            content.add(ABContent.CROSSED_MANGROVE_BARS.asItem());
-            content.add(ABContent.CROSSED_CRIMSON_BARS.asItem());
-            content.add(ABContent.CROSSED_WARPED_BARS.asItem());
+            content.add(ModBlocks.CROSSED_GOLD_BARS.asItem());
+            content.add(ModBlocks.CROSSED_IRON_BARS.asItem());
+            content.add(ModBlocks.CROSSED_ACACIA_BARS.asItem());
+            content.add(ModBlocks.CROSSED_BIRCH_BARS.asItem());
+            content.add(ModBlocks.CROSSED_DARK_OAK_BARS.asItem());
+            content.add(ModBlocks.CROSSED_JUNGLE_BARS.asItem());
+            content.add(ModBlocks.CROSSED_SPRUCE_BARS.asItem());
+            content.add(ModBlocks.CROSSED_OAK_BARS.asItem());
+            content.add(ModBlocks.CROSSED_CHERRY_BARS.asItem());
+            content.add(ModBlocks.CROSSED_MANGROVE_BARS.asItem());
+            content.add(ModBlocks.CROSSED_CRIMSON_BARS.asItem());
+            content.add(ModBlocks.CROSSED_WARPED_BARS.asItem());
 
-            content.add(ABContent.COPPER_BARS.asItem());
-            content.add(ABContent.EXPOSED_COPPER_BARS.asItem());
-            content.add(ABContent.WEATHERED_COPPER_BARS.asItem());
-            content.add(ABContent.OXIDIZED_COPPER_BARS.asItem());
+            content.add(ModBlocks.COPPER_BARS.asItem());
+            content.add(ModBlocks.EXPOSED_COPPER_BARS.asItem());
+            content.add(ModBlocks.WEATHERED_COPPER_BARS.asItem());
+            content.add(ModBlocks.OXIDIZED_COPPER_BARS.asItem());
 
-            content.add(ABContent.CROSSED_COPPER_BARS.asItem());
-            content.add(ABContent.CROSSED_EXPOSED_COPPER_BARS.asItem());
-            content.add(ABContent.CROSSED_WEATHERED_COPPER_BARS.asItem());
-            content.add(ABContent.CROSSED_OXIDIZED_COPPER_BARS.asItem());
+            content.add(ModBlocks.CROSSED_COPPER_BARS.asItem());
+            content.add(ModBlocks.CROSSED_EXPOSED_COPPER_BARS.asItem());
+            content.add(ModBlocks.CROSSED_WEATHERED_COPPER_BARS.asItem());
+            content.add(ModBlocks.CROSSED_OXIDIZED_COPPER_BARS.asItem());
 
-            content.add(ABContent.WAXED_COPPER_BARS.asItem());
-            content.add(ABContent.WAXED_EXPOSED_COPPER_BARS.asItem());
-            content.add(ABContent.WAXED_WEATHERED_COPPER_BARS.asItem());
-            content.add(ABContent.WAXED_OXIDIZED_COPPER_BARS.asItem());
+            content.add(ModBlocks.WAXED_COPPER_BARS.asItem());
+            content.add(ModBlocks.WAXED_EXPOSED_COPPER_BARS.asItem());
+            content.add(ModBlocks.WAXED_WEATHERED_COPPER_BARS.asItem());
+            content.add(ModBlocks.WAXED_OXIDIZED_COPPER_BARS.asItem());
 
-            content.add(ABContent.WAXED_CROSSED_COPPER_BARS.asItem());
-            content.add(ABContent.WAXED_CROSSED_EXPOSED_COPPER_BARS.asItem());
-            content.add(ABContent.WAXED_CROSSED_WEATHERED_COPPER_BARS.asItem());
-            content.add(ABContent.WAXED_CROSSED_OXIDIZED_COPPER_BARS.asItem());
+            content.add(ModBlocks.WAXED_CROSSED_COPPER_BARS.asItem());
+            content.add(ModBlocks.WAXED_CROSSED_EXPOSED_COPPER_BARS.asItem());
+            content.add(ModBlocks.WAXED_CROSSED_WEATHERED_COPPER_BARS.asItem());
+            content.add(ModBlocks.WAXED_CROSSED_OXIDIZED_COPPER_BARS.asItem());
         });
 
         ItemGroupEvents.modifyEntriesEvent(ADDITIONAL_BARS).register(content -> {
-            content.add(ABContent.HORIZONTAL_GOLD_BARS.asItem());
-            content.add(ABContent.HORIZONTAL_IRON_BARS.asItem());
-            content.add(ABContent.HORIZONTAL_ACACIA_BARS.asItem());
-            content.add(ABContent.HORIZONTAL_BIRCH_BARS.asItem());
-            content.add(ABContent.HORIZONTAL_DARK_OAK_BARS.asItem());
-            content.add(ABContent.HORIZONTAL_JUNGLE_BARS.asItem());
-            content.add(ABContent.HORIZONTAL_SPRUCE_BARS.asItem());
-            content.add(ABContent.HORIZONTAL_OAK_BARS.asItem());
-            content.add(ABContent.HORIZONTAL_MANGROVE_BARS.asItem());
-            content.add(ABContent.HORIZONTAL_CRIMSON_BARS.asItem());
-            content.add(ABContent.HORIZONTAL_WARPED_BARS.asItem());
+            content.add(ModBlocks.HORIZONTAL_GOLD_BARS.asItem());
+            content.add(ModBlocks.HORIZONTAL_IRON_BARS.asItem());
+            content.add(ModBlocks.HORIZONTAL_ACACIA_BARS.asItem());
+            content.add(ModBlocks.HORIZONTAL_BIRCH_BARS.asItem());
+            content.add(ModBlocks.HORIZONTAL_DARK_OAK_BARS.asItem());
+            content.add(ModBlocks.HORIZONTAL_JUNGLE_BARS.asItem());
+            content.add(ModBlocks.HORIZONTAL_SPRUCE_BARS.asItem());
+            content.add(ModBlocks.HORIZONTAL_OAK_BARS.asItem());
+            content.add(ModBlocks.HORIZONTAL_CHERRY_BARS.asItem());
+            content.add(ModBlocks.HORIZONTAL_MANGROVE_BARS.asItem());
+            content.add(ModBlocks.HORIZONTAL_CRIMSON_BARS.asItem());
+            content.add(ModBlocks.HORIZONTAL_WARPED_BARS.asItem());
 
-            content.add(ABContent.HORIZONTAL_CROSSED_GOLD_BARS.asItem());
-            content.add(ABContent.HORIZONTAL_CROSSED_IRON_BARS.asItem());
-            content.add(ABContent.HORIZONTAL_CROSSED_ACACIA_BARS.asItem());
-            content.add(ABContent.HORIZONTAL_CROSSED_BIRCH_BARS.asItem());
-            content.add(ABContent.HORIZONTAL_CROSSED_DARK_OAK_BARS.asItem());
-            content.add(ABContent.HORIZONTAL_CROSSED_JUNGLE_BARS.asItem());
-            content.add(ABContent.HORIZONTAL_CROSSED_SPRUCE_BARS.asItem());
-            content.add(ABContent.HORIZONTAL_CROSSED_OAK_BARS.asItem());
-            content.add(ABContent.HORIZONTAL_CROSSED_MANGROVE_BARS.asItem());
-            content.add(ABContent.HORIZONTAL_CROSSED_CRIMSON_BARS.asItem());
-            content.add(ABContent.HORIZONTAL_CROSSED_WARPED_BARS.asItem());
+            content.add(ModBlocks.HORIZONTAL_CROSSED_GOLD_BARS.asItem());
+            content.add(ModBlocks.HORIZONTAL_CROSSED_IRON_BARS.asItem());
+            content.add(ModBlocks.HORIZONTAL_CROSSED_ACACIA_BARS.asItem());
+            content.add(ModBlocks.HORIZONTAL_CROSSED_BIRCH_BARS.asItem());
+            content.add(ModBlocks.HORIZONTAL_CROSSED_DARK_OAK_BARS.asItem());
+            content.add(ModBlocks.HORIZONTAL_CROSSED_JUNGLE_BARS.asItem());
+            content.add(ModBlocks.HORIZONTAL_CROSSED_SPRUCE_BARS.asItem());
+            content.add(ModBlocks.HORIZONTAL_CROSSED_OAK_BARS.asItem());
+            content.add(ModBlocks.HORIZONTAL_CROSSED_CHERRY_BARS.asItem());
+            content.add(ModBlocks.HORIZONTAL_CROSSED_MANGROVE_BARS.asItem());
+            content.add(ModBlocks.HORIZONTAL_CROSSED_CRIMSON_BARS.asItem());
+            content.add(ModBlocks.HORIZONTAL_CROSSED_WARPED_BARS.asItem());
 
-            content.add(ABContent.HORIZONTAL_COPPER_BARS.asItem());
-            content.add(ABContent.HORIZONTAL_EXPOSED_COPPER_BARS.asItem());
-            content.add(ABContent.HORIZONTAL_WEATHERED_COPPER_BARS.asItem());
-            content.add(ABContent.HORIZONTAL_OXIDIZED_COPPER_BARS.asItem());
+            content.add(ModBlocks.HORIZONTAL_COPPER_BARS.asItem());
+            content.add(ModBlocks.HORIZONTAL_EXPOSED_COPPER_BARS.asItem());
+            content.add(ModBlocks.HORIZONTAL_WEATHERED_COPPER_BARS.asItem());
+            content.add(ModBlocks.HORIZONTAL_OXIDIZED_COPPER_BARS.asItem());
 
-            content.add(ABContent.HORIZONTAL_CROSSED_COPPER_BARS.asItem());
-            content.add(ABContent.HORIZONTAL_CROSSED_EXPOSED_COPPER_BARS.asItem());
-            content.add(ABContent.HORIZONTAL_CROSSED_WEATHERED_COPPER_BARS.asItem());
-            content.add(ABContent.HORIZONTAL_CROSSED_OXIDIZED_COPPER_BARS.asItem());
+            content.add(ModBlocks.HORIZONTAL_CROSSED_COPPER_BARS.asItem());
+            content.add(ModBlocks.HORIZONTAL_CROSSED_EXPOSED_COPPER_BARS.asItem());
+            content.add(ModBlocks.HORIZONTAL_CROSSED_WEATHERED_COPPER_BARS.asItem());
+            content.add(ModBlocks.HORIZONTAL_CROSSED_OXIDIZED_COPPER_BARS.asItem());
 
-            content.add(ABContent.WAXED_HORIZONTAL_COPPER_BARS.asItem());
-            content.add(ABContent.WAXED_HORIZONTAL_EXPOSED_COPPER_BARS.asItem());
-            content.add(ABContent.WAXED_HORIZONTAL_WEATHERED_COPPER_BARS.asItem());
-            content.add(ABContent.WAXED_HORIZONTAL_OXIDIZED_COPPER_BARS.asItem());
+            content.add(ModBlocks.WAXED_HORIZONTAL_COPPER_BARS.asItem());
+            content.add(ModBlocks.WAXED_HORIZONTAL_EXPOSED_COPPER_BARS.asItem());
+            content.add(ModBlocks.WAXED_HORIZONTAL_WEATHERED_COPPER_BARS.asItem());
+            content.add(ModBlocks.WAXED_HORIZONTAL_OXIDIZED_COPPER_BARS.asItem());
 
-            content.add(ABContent.WAXED_HORIZONTAL_CROSSED_COPPER_BARS.asItem());
-            content.add(ABContent.WAXED_HORIZONTAL_CROSSED_EXPOSED_COPPER_BARS.asItem());
-            content.add(ABContent.WAXED_HORIZONTAL_CROSSED_WEATHERED_COPPER_BARS.asItem());
-            content.add(ABContent.WAXED_HORIZONTAL_CROSSED_OXIDIZED_COPPER_BARS.asItem());
+            content.add(ModBlocks.WAXED_HORIZONTAL_CROSSED_COPPER_BARS.asItem());
+            content.add(ModBlocks.WAXED_HORIZONTAL_CROSSED_EXPOSED_COPPER_BARS.asItem());
+            content.add(ModBlocks.WAXED_HORIZONTAL_CROSSED_WEATHERED_COPPER_BARS.asItem());
+            content.add(ModBlocks.WAXED_HORIZONTAL_CROSSED_OXIDIZED_COPPER_BARS.asItem());
         });
     }
 
-    public static void registerRenderLayer()
-    {
+    public static void registerRenderLayer() {
 //        //BlockRenderLayerMap.INSTANCE.putBlock(ABContent.TEST_BLOCK, RenderLayer.getCutout());
 //        BlockRenderLayerMap.INSTANCE.putBlock(ABContent.GOLD_BARS, RenderLayer.getCutout());
 //        BlockRenderLayerMap.INSTANCE.putBlock(ABContent.ACACIA_BARS, RenderLayer.getCutout());
@@ -451,20 +353,15 @@ public class ModRegistry
 //        BlockRenderLayerMap.INSTANCE.putBlock(ABContent.HORIZONTAL_CROSSED_WARPED_BARS, RenderLayer.getCutout());
     }
 
-//    private static void registerResourcePacks() {
-//        Optional<ModContainer> CONTAINER = FabricLoader.getInstance().getModContainer(MODID);
-//        assert CONTAINER.isPresent();
-//        ResourceManagerHelper.registerBuiltinResourcePack(Identifier.of(MODID, "classic"), CONTAINER.get(), ResourcePackActivationType.NORMAL);
-//    }
-
-    private static Block register(Block block, String name, boolean shouldRegisterItem) {
-        Identifier id = Identifier.of(MODID, name);
+    private static void register(Block block, RegistryKey<Block> blockRegistryKey, boolean shouldRegisterItem) {
 
         if (shouldRegisterItem) {
-            BlockItem blockItem = new BlockItem(block, new Item.Settings());
-            Registry.register(Registries.ITEM, id, blockItem);
+            RegistryKey<Item> itemRegistryKey = RegistryKey.of(RegistryKeys.ITEM, blockRegistryKey.getValue());
+            BlockItem blockItem = new BlockItem(block, new Item.Settings().registryKey(itemRegistryKey));
+            Registry.register(Registries.ITEM, itemRegistryKey, blockItem);
         }
 
-        return Registry.register(Registries.BLOCK, id, block);
+        Registry.register(Registries.BLOCK, blockRegistryKey, block);
+        ADDITIONALBARS_BLOCKS.put(block, blockRegistryKey);
     }
 }
