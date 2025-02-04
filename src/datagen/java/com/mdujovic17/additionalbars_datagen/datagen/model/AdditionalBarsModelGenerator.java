@@ -302,5 +302,4 @@ public class AdditionalBarsModelGenerator extends FabricModelProvider {
         textureMap.put("waxed_horizontal_oxidized_copper_bars", Identifier.of("additionalbars", "block/oxidized_copper_bars"));
         textureMap.put("waxed_horizontal_crossed_oxidized_copper_bars", Identifier.of("additionalbars", "block/crossed_oxidized_copper_bars"));
     }
-    //TODO: Add Model Generation
 }
