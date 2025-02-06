@@ -255,6 +255,10 @@ public class AdditionalBarsModelGenerator extends FabricModelProvider {
         textureMap.put("crossed_cherry_bars", Identifier.of("minecraft", "block/cherry_planks"));
         textureMap.put("horizontal_cherry_bars", Identifier.of("minecraft", "block/cherry_planks"));
         textureMap.put("horizontal_crossed_cherry_bars", Identifier.of("minecraft", "block/cherry_planks"));
+        textureMap.put("pale_oak_bars", Identifier.of("minecraft", "block/pale_oak_planks"));
+        textureMap.put("crossed_pale_oak_bars", Identifier.of("minecraft", "block/pale_oak_planks"));
+        textureMap.put("horizontal_pale_oak_bars", Identifier.of("minecraft", "block/pale_oak_planks"));
+        textureMap.put("horizontal_crossed_pale_oak_bars", Identifier.of("minecraft", "block/pale_oak_planks"));
         textureMap.put("mangrove_bars", Identifier.of("minecraft", "block/mangrove_planks"));
         textureMap.put("crossed_mangrove_bars", Identifier.of("minecraft", "block/mangrove_planks"));
         textureMap.put("horizontal_mangrove_bars", Identifier.of("minecraft", "block/mangrove_planks"));

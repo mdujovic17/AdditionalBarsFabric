@@ -23,7 +23,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:crossed_to_crimson_bars"
+        "recipe": "additionalbars:crossed_to_crimson_bars"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -37,7 +37,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:crossed_to_crimson_bars"
+      "additionalbars:crossed_to_crimson_bars"
     ]
   }
 }

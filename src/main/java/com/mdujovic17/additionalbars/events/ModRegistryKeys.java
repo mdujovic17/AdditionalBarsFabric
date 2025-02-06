@@ -52,6 +52,11 @@ public class ModRegistryKeys {
     public static final RegistryKey<Block> HORIZONTAL_CHERRY_BARS_KEY = RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(AdditionalBars.MODID, "horizontal_cherry_bars"));
     public static final RegistryKey<Block> HORIZONTAL_CROSSED_CHERRY_BARS_KEY = RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(AdditionalBars.MODID, "horizontal_crossed_cherry_bars"));
 
+    public static final RegistryKey<Block> PALE_OAK_BARS_KEY = RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(AdditionalBars.MODID, "pale_oak_bars"));
+    public static final RegistryKey<Block> CROSSED_PALE_OAK_BARS_KEY = RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(AdditionalBars.MODID, "crossed_pale_oak_bars"));
+    public static final RegistryKey<Block> HORIZONTAL_PALE_OAK_BARS_KEY = RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(AdditionalBars.MODID, "horizontal_pale_oak_bars"));
+    public static final RegistryKey<Block> HORIZONTAL_CROSSED_PALE_OAK_BARS_KEY = RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(AdditionalBars.MODID, "horizontal_crossed_pale_oak_bars"));
+
     public static final RegistryKey<Block> MANGROVE_BARS_KEY = RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(AdditionalBars.MODID, "mangrove_bars"));
     public static final RegistryKey<Block> CROSSED_MANGROVE_BARS_KEY = RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(AdditionalBars.MODID, "crossed_mangrove_bars"));
     public static final RegistryKey<Block> HORIZONTAL_MANGROVE_BARS_KEY = RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(AdditionalBars.MODID, "horizontal_mangrove_bars"));

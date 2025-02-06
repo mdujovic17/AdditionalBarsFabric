@@ -86,6 +86,7 @@ public class AdditionalBarsTagGenerator extends FabricTagProvider<Item> {
                 .add(ModBlocks.OAK_BARS.asItem())
                 .add(ModBlocks.MANGROVE_BARS.asItem())
                 .add(ModBlocks.CHERRY_BARS.asItem())
+                .add(ModBlocks.PALE_OAK_BARS.asItem())
                 .add(ModBlocks.CRIMSON_BARS.asItem())
                 .add(ModBlocks.WARPED_BARS.asItem())
                 .add(ModBlocks.CROSSED_ACACIA_BARS.asItem())
@@ -96,6 +97,7 @@ public class AdditionalBarsTagGenerator extends FabricTagProvider<Item> {
                 .add(ModBlocks.CROSSED_OAK_BARS.asItem())
                 .add(ModBlocks.CROSSED_MANGROVE_BARS.asItem())
                 .add(ModBlocks.CROSSED_CHERRY_BARS.asItem())
+                .add(ModBlocks.CROSSED_PALE_OAK_BARS.asItem())
                 .add(ModBlocks.CROSSED_CRIMSON_BARS.asItem())
                 .add(ModBlocks.CROSSED_WARPED_BARS.asItem())
                 .add(ModBlocks.HORIZONTAL_ACACIA_BARS.asItem())
@@ -106,6 +108,7 @@ public class AdditionalBarsTagGenerator extends FabricTagProvider<Item> {
                 .add(ModBlocks.HORIZONTAL_OAK_BARS.asItem())
                 .add(ModBlocks.HORIZONTAL_MANGROVE_BARS.asItem())
                 .add(ModBlocks.HORIZONTAL_CHERRY_BARS.asItem())
+                .add(ModBlocks.HORIZONTAL_PALE_OAK_BARS.asItem())
                 .add(ModBlocks.HORIZONTAL_CRIMSON_BARS.asItem())
                 .add(ModBlocks.HORIZONTAL_WARPED_BARS.asItem())
                 .add(ModBlocks.HORIZONTAL_CROSSED_ACACIA_BARS.asItem())
@@ -116,6 +119,7 @@ public class AdditionalBarsTagGenerator extends FabricTagProvider<Item> {
                 .add(ModBlocks.HORIZONTAL_CROSSED_OAK_BARS.asItem())
                 .add(ModBlocks.HORIZONTAL_CROSSED_MANGROVE_BARS.asItem())
                 .add(ModBlocks.HORIZONTAL_CROSSED_CHERRY_BARS.asItem())
+                .add(ModBlocks.HORIZONTAL_CROSSED_PALE_OAK_BARS.asItem())
                 .add(ModBlocks.HORIZONTAL_CROSSED_CRIMSON_BARS.asItem())
                 .add(ModBlocks.HORIZONTAL_CROSSED_WARPED_BARS.asItem());
 

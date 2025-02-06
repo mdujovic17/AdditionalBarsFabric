@@ -79,6 +79,7 @@ public class ModRegistry {
         register(ModBlocks.SPRUCE_BARS, ModRegistryKeys.SPRUCE_BARS_KEY, true);
         register(ModBlocks.OAK_BARS, ModRegistryKeys.OAK_BARS_KEY, true);
         register(ModBlocks.CHERRY_BARS, ModRegistryKeys.CHERRY_BARS_KEY, true);
+        register(ModBlocks.PALE_OAK_BARS, ModRegistryKeys.PALE_OAK_BARS_KEY, true);
         register(ModBlocks.MANGROVE_BARS, ModRegistryKeys.MANGROVE_BARS_KEY, true);
         register(ModBlocks.CRIMSON_BARS, ModRegistryKeys.CRIMSON_BARS_KEY, true);
         register(ModBlocks.WARPED_BARS, ModRegistryKeys.WARPED_BARS_KEY, true);
@@ -92,6 +93,7 @@ public class ModRegistry {
         register(ModBlocks.CROSSED_SPRUCE_BARS, ModRegistryKeys.CROSSED_SPRUCE_BARS_KEY, true);
         register(ModBlocks.CROSSED_OAK_BARS, ModRegistryKeys.CROSSED_OAK_BARS_KEY, true);
         register(ModBlocks.CROSSED_CHERRY_BARS, ModRegistryKeys.CROSSED_CHERRY_BARS_KEY, true);
+        register(ModBlocks.CROSSED_PALE_OAK_BARS, ModRegistryKeys.CROSSED_PALE_OAK_BARS_KEY, true);
         register(ModBlocks.CROSSED_MANGROVE_BARS, ModRegistryKeys.CROSSED_MANGROVE_BARS_KEY, true);
         register(ModBlocks.CROSSED_CRIMSON_BARS, ModRegistryKeys.CROSSED_CRIMSON_BARS_KEY, true);
         register(ModBlocks.CROSSED_WARPED_BARS, ModRegistryKeys.CROSSED_WARPED_BARS_KEY, true);
@@ -105,6 +107,7 @@ public class ModRegistry {
         register(ModBlocks.HORIZONTAL_SPRUCE_BARS, ModRegistryKeys.HORIZONTAL_SPRUCE_BARS_KEY, true);
         register(ModBlocks.HORIZONTAL_OAK_BARS, ModRegistryKeys.HORIZONTAL_OAK_BARS_KEY, true);
         register(ModBlocks.HORIZONTAL_CHERRY_BARS, ModRegistryKeys.HORIZONTAL_CHERRY_BARS_KEY, true);
+        register(ModBlocks.HORIZONTAL_PALE_OAK_BARS, ModRegistryKeys.HORIZONTAL_PALE_OAK_BARS_KEY, true);
         register(ModBlocks.HORIZONTAL_MANGROVE_BARS, ModRegistryKeys.HORIZONTAL_MANGROVE_BARS_KEY, true);
         register(ModBlocks.HORIZONTAL_CRIMSON_BARS, ModRegistryKeys.HORIZONTAL_CRIMSON_BARS_KEY, true);
         register(ModBlocks.HORIZONTAL_WARPED_BARS, ModRegistryKeys.HORIZONTAL_WARPED_BARS_KEY, true);
@@ -118,6 +121,7 @@ public class ModRegistry {
         register(ModBlocks.HORIZONTAL_CROSSED_SPRUCE_BARS, ModRegistryKeys.HORIZONTAL_CROSSED_SPRUCE_BARS_KEY, true);
         register(ModBlocks.HORIZONTAL_CROSSED_OAK_BARS, ModRegistryKeys.HORIZONTAL_CROSSED_OAK_BARS_KEY, true);
         register(ModBlocks.HORIZONTAL_CROSSED_CHERRY_BARS, ModRegistryKeys.HORIZONTAL_CROSSED_CHERRY_BARS_KEY, true);
+        register(ModBlocks.HORIZONTAL_CROSSED_PALE_OAK_BARS, ModRegistryKeys.HORIZONTAL_CROSSED_PALE_OAK_BARS_KEY, true);
         register(ModBlocks.HORIZONTAL_CROSSED_MANGROVE_BARS, ModRegistryKeys.HORIZONTAL_CROSSED_MANGROVE_BARS_KEY, true);
         register(ModBlocks.HORIZONTAL_CROSSED_CRIMSON_BARS, ModRegistryKeys.HORIZONTAL_CROSSED_CRIMSON_BARS_KEY, true);
         register(ModBlocks.HORIZONTAL_CROSSED_WARPED_BARS, ModRegistryKeys.HORIZONTAL_CROSSED_WARPED_BARS_KEY, true);
@@ -220,6 +224,7 @@ public class ModRegistry {
             content.add(ModBlocks.SPRUCE_BARS.asItem());
             content.add(ModBlocks.OAK_BARS.asItem());
             content.add(ModBlocks.CHERRY_BARS.asItem());
+            content.add(ModBlocks.PALE_OAK_BARS.asItem());
             content.add(ModBlocks.MANGROVE_BARS.asItem());
             content.add(ModBlocks.CRIMSON_BARS.asItem());
             content.add(ModBlocks.WARPED_BARS.asItem());
@@ -233,6 +238,7 @@ public class ModRegistry {
             content.add(ModBlocks.CROSSED_SPRUCE_BARS.asItem());
             content.add(ModBlocks.CROSSED_OAK_BARS.asItem());
             content.add(ModBlocks.CROSSED_CHERRY_BARS.asItem());
+            content.add(ModBlocks.CROSSED_PALE_OAK_BARS.asItem());
             content.add(ModBlocks.CROSSED_MANGROVE_BARS.asItem());
             content.add(ModBlocks.CROSSED_CRIMSON_BARS.asItem());
             content.add(ModBlocks.CROSSED_WARPED_BARS.asItem());
@@ -268,6 +274,7 @@ public class ModRegistry {
             content.add(ModBlocks.HORIZONTAL_SPRUCE_BARS.asItem());
             content.add(ModBlocks.HORIZONTAL_OAK_BARS.asItem());
             content.add(ModBlocks.HORIZONTAL_CHERRY_BARS.asItem());
+            content.add(ModBlocks.HORIZONTAL_PALE_OAK_BARS.asItem());
             content.add(ModBlocks.HORIZONTAL_MANGROVE_BARS.asItem());
             content.add(ModBlocks.HORIZONTAL_CRIMSON_BARS.asItem());
             content.add(ModBlocks.HORIZONTAL_WARPED_BARS.asItem());
@@ -281,6 +288,7 @@ public class ModRegistry {
             content.add(ModBlocks.HORIZONTAL_CROSSED_SPRUCE_BARS.asItem());
             content.add(ModBlocks.HORIZONTAL_CROSSED_OAK_BARS.asItem());
             content.add(ModBlocks.HORIZONTAL_CROSSED_CHERRY_BARS.asItem());
+            content.add(ModBlocks.HORIZONTAL_CROSSED_PALE_OAK_BARS.asItem());
             content.add(ModBlocks.HORIZONTAL_CROSSED_MANGROVE_BARS.asItem());
             content.add(ModBlocks.HORIZONTAL_CROSSED_CRIMSON_BARS.asItem());
             content.add(ModBlocks.HORIZONTAL_CROSSED_WARPED_BARS.asItem());

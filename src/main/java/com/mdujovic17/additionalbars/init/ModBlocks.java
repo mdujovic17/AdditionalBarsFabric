@@ -64,6 +64,7 @@ public class ModBlocks
     public static final Block OAK_BARS      = new BarsBlock(WOODEN_BARS_SETTINGS.registryKey(ModRegistryKeys.OAK_BARS_KEY), BarsType.REGULAR);
     public static final Block MANGROVE_BARS = new BarsBlock(WOODEN_BARS_SETTINGS.registryKey(ModRegistryKeys.MANGROVE_BARS_KEY), BarsType.REGULAR);
     public static final Block CHERRY_BARS   = new BarsBlock(WOODEN_BARS_SETTINGS.registryKey(ModRegistryKeys.CHERRY_BARS_KEY), BarsType.REGULAR);
+    public static final Block PALE_OAK_BARS   = new BarsBlock(WOODEN_BARS_SETTINGS.registryKey(ModRegistryKeys.PALE_OAK_BARS_KEY), BarsType.REGULAR);
     public static final Block CRIMSON_BARS  = new BarsBlock(NETHER_BARS_SETTINGS.registryKey(ModRegistryKeys.CRIMSON_BARS_KEY), BarsType.REGULAR, BarsType.NETHER);
     public static final Block WARPED_BARS   = new BarsBlock(NETHER_BARS_SETTINGS.registryKey(ModRegistryKeys.WARPED_BARS_KEY), BarsType.REGULAR, BarsType.NETHER);
 
@@ -75,7 +76,8 @@ public class ModBlocks
     public static final Block CROSSED_JUNGLE_BARS   = new BarsBlock(WOODEN_BARS_SETTINGS.registryKey(ModRegistryKeys.CROSSED_JUNGLE_BARS_KEY), BarsType.CROSSED);
     public static final Block CROSSED_SPRUCE_BARS   = new BarsBlock(WOODEN_BARS_SETTINGS.registryKey(ModRegistryKeys.CROSSED_SPRUCE_BARS_KEY), BarsType.CROSSED);
     public static final Block CROSSED_OAK_BARS      = new BarsBlock(WOODEN_BARS_SETTINGS.registryKey(ModRegistryKeys.CROSSED_OAK_BARS_KEY), BarsType.CROSSED);
-    public static final Block CROSSED_CHERRY_BARS   = new BarsBlock(WOODEN_BARS_SETTINGS.registryKey(ModRegistryKeys.CROSSED_CHERRY_BARS_KEY), BarsType.REGULAR);
+    public static final Block CROSSED_CHERRY_BARS   = new BarsBlock(WOODEN_BARS_SETTINGS.registryKey(ModRegistryKeys.CROSSED_CHERRY_BARS_KEY), BarsType.CROSSED);
+    public static final Block CROSSED_PALE_OAK_BARS   = new BarsBlock(WOODEN_BARS_SETTINGS.registryKey(ModRegistryKeys.CROSSED_PALE_OAK_BARS_KEY), BarsType.CROSSED);
     public static final Block CROSSED_MANGROVE_BARS = new BarsBlock(WOODEN_BARS_SETTINGS.registryKey(ModRegistryKeys.CROSSED_MANGROVE_BARS_KEY), BarsType.CROSSED);
     public static final Block CROSSED_CRIMSON_BARS  = new BarsBlock(NETHER_BARS_SETTINGS.registryKey(ModRegistryKeys.CROSSED_CRIMSON_BARS_KEY), BarsType.CROSSED, BarsType.NETHER);
     public static final Block CROSSED_WARPED_BARS   = new BarsBlock(NETHER_BARS_SETTINGS.registryKey(ModRegistryKeys.CROSSED_WARPED_BARS_KEY), BarsType.CROSSED, BarsType.NETHER);
@@ -91,6 +93,7 @@ public class ModBlocks
     public static final Block HORIZONTAL_SPRUCE_BARS    = new HorizontalPaneBlock(HORIZONTAL_WOODEN_BARS_SETTINGS.registryKey(ModRegistryKeys.HORIZONTAL_SPRUCE_BARS_KEY), BarsType.HORIZONTAL);
     public static final Block HORIZONTAL_MANGROVE_BARS  = new HorizontalPaneBlock(HORIZONTAL_WOODEN_BARS_SETTINGS.registryKey(ModRegistryKeys.HORIZONTAL_MANGROVE_BARS_KEY), BarsType.HORIZONTAL);
     public static final Block HORIZONTAL_CHERRY_BARS    = new HorizontalPaneBlock(HORIZONTAL_WOODEN_BARS_SETTINGS.registryKey(ModRegistryKeys.HORIZONTAL_CHERRY_BARS_KEY), BarsType.HORIZONTAL);
+    public static final Block HORIZONTAL_PALE_OAK_BARS  = new HorizontalPaneBlock(HORIZONTAL_WOODEN_BARS_SETTINGS.registryKey(ModRegistryKeys.HORIZONTAL_PALE_OAK_BARS_KEY), BarsType.HORIZONTAL);
     public static final Block HORIZONTAL_CRIMSON_BARS   = new HorizontalPaneBlock(HORIZONTAL_NETHER_BARS_SETTINGS.registryKey(ModRegistryKeys.HORIZONTAL_CRIMSON_BARS_KEY), BarsType.HORIZONTAL, BarsType.NETHER);
     public static final Block HORIZONTAL_WARPED_BARS    = new HorizontalPaneBlock(HORIZONTAL_NETHER_BARS_SETTINGS.registryKey(ModRegistryKeys.HORIZONTAL_WARPED_BARS_KEY), BarsType.HORIZONTAL, BarsType.NETHER);
 
@@ -103,8 +106,9 @@ public class ModBlocks
     public static final Block HORIZONTAL_CROSSED_JUNGLE_BARS    = new HorizontalPaneBlock(HORIZONTAL_WOODEN_BARS_SETTINGS.registryKey(ModRegistryKeys.HORIZONTAL_CROSSED_JUNGLE_BARS_KEY), BarsType.HORIZONTAL, BarsType.CROSSED);
     public static final Block HORIZONTAL_CROSSED_OAK_BARS       = new HorizontalPaneBlock(HORIZONTAL_WOODEN_BARS_SETTINGS.registryKey(ModRegistryKeys.HORIZONTAL_CROSSED_OAK_BARS_KEY), BarsType.HORIZONTAL, BarsType.CROSSED);
     public static final Block HORIZONTAL_CROSSED_SPRUCE_BARS    = new HorizontalPaneBlock(HORIZONTAL_WOODEN_BARS_SETTINGS.registryKey(ModRegistryKeys.HORIZONTAL_CROSSED_SPRUCE_BARS_KEY), BarsType.HORIZONTAL, BarsType.CROSSED);
-    public static final Block HORIZONTAL_CROSSED_CHERRY_BARS    = new HorizontalPaneBlock(HORIZONTAL_WOODEN_BARS_SETTINGS.registryKey(ModRegistryKeys.HORIZONTAL_CROSSED_MANGROVE_BARS_KEY), BarsType.HORIZONTAL);
+    public static final Block HORIZONTAL_CROSSED_CHERRY_BARS    = new HorizontalPaneBlock(HORIZONTAL_WOODEN_BARS_SETTINGS.registryKey(ModRegistryKeys.HORIZONTAL_CROSSED_MANGROVE_BARS_KEY), BarsType.HORIZONTAL, BarsType.CROSSED);
     public static final Block HORIZONTAL_CROSSED_MANGROVE_BARS  = new HorizontalPaneBlock(HORIZONTAL_WOODEN_BARS_SETTINGS.registryKey(ModRegistryKeys.HORIZONTAL_CROSSED_CHERRY_BARS_KEY), BarsType.HORIZONTAL, BarsType.CROSSED);
+    public static final Block HORIZONTAL_CROSSED_PALE_OAK_BARS  = new HorizontalPaneBlock(HORIZONTAL_WOODEN_BARS_SETTINGS.registryKey(ModRegistryKeys.HORIZONTAL_CROSSED_PALE_OAK_BARS_KEY), BarsType.HORIZONTAL, BarsType.CROSSED);
     public static final Block HORIZONTAL_CROSSED_CRIMSON_BARS   = new HorizontalPaneBlock(HORIZONTAL_NETHER_BARS_SETTINGS.registryKey(ModRegistryKeys.HORIZONTAL_CROSSED_CRIMSON_BARS_KEY), BarsType.HORIZONTAL, BarsType.CROSSED, BarsType.NETHER);
     public static final Block HORIZONTAL_CROSSED_WARPED_BARS    = new HorizontalPaneBlock(HORIZONTAL_NETHER_BARS_SETTINGS.registryKey(ModRegistryKeys.HORIZONTAL_CROSSED_WARPED_BARS_KEY), BarsType.HORIZONTAL, BarsType.CROSSED, BarsType.NETHER);
 
