@@ -1,6 +1,0 @@
-{
-	"parent": "additionalbars:block/parent/td/crossed/crossed_side_alt",
-	"textures": {
-		"texture": "additionalbars:block/crossed_copper_bars"
-	}
-}

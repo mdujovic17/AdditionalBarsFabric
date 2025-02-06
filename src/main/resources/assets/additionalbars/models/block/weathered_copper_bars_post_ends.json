@@ -1,6 +1,0 @@
-{
-	"parent": "additionalbars:block/parent/td/special/post_ends",
-	"textures": {
-		"texture": "additionalbars:block/weathered_copper_bars"
-	}
-}

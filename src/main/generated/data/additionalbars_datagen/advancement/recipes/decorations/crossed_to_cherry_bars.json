@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_cherry_bars": {
+      "conditions": {
+        "items": [
+          {
+            "items": "additionalbars:cherry_bars"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_crossed_cherry_bars": {
+      "conditions": {
+        "items": [
+          {
+            "items": "additionalbars:crossed_cherry_bars"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "additionalbars:crossed_to_cherry_bars"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_cherry_bars",
+      "has_crossed_cherry_bars"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "additionalbars:crossed_to_cherry_bars"
+    ]
+  }
+}

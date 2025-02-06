@@ -28,17 +28,11 @@ import com.mdujovic17.additionalbars.events.ModRegistry;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.ModInitializer;
 
-public class AdditionalBars implements ModInitializer, ClientModInitializer
-{
+public class AdditionalBars implements ModInitializer {
     public static final String MODID = "additionalbars";
     @Override
     public void onInitialize()
     {
         ModRegistry.setup();
-    }
-
-    @Override
-    public void onInitializeClient() {
-        ModRegistry.clientSetup();
     }
 }

@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_crossed_mangrove_bars": {
+      "conditions": {
+        "items": [
+          {
+            "items": "additionalbars:crossed_mangrove_bars"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_mangrove_bars": {
+      "conditions": {
+        "items": [
+          {
+            "items": "additionalbars:mangrove_bars"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "additionalbars:crossed_to_mangrove_bars"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_mangrove_bars",
+      "has_crossed_mangrove_bars"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "additionalbars:crossed_to_mangrove_bars"
+    ]
+  }
+}

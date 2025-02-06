@@ -1,6 +1,0 @@
-{
-    "parent": "additionalbars:block/parent/td/side",
-    "textures": {
-        "texture": "minecraft:block/warped_planks"
-    }
-}

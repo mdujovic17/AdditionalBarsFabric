@@ -1,0 +1,6 @@
+{
+  "parent": "additionalbars:block/parent/crossed/post",
+  "textures": {
+    "texture": "minecraft:block/birch_planks"
+  }
+}

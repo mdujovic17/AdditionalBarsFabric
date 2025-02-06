@@ -1,0 +1,6 @@
+{
+  "parent": "additionalbars:block/parent/horizontal/crossed/bot",
+  "textures": {
+    "texture": "minecraft:block/acacia_planks"
+  }
+}

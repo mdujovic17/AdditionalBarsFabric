@@ -1,0 +1,6 @@
+{
+  "parent": "additionalbars:block/parent/cap_alt",
+  "textures": {
+    "texture": "minecraft:block/crimson_planks"
+  }
+}

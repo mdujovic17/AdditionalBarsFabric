@@ -1,0 +1,6 @@
+{
+  "parent": "additionalbars:item/crossed_bars_inventory",
+  "textures": {
+    "texture": "minecraft:block/pale_oak_planks"
+  }
+}

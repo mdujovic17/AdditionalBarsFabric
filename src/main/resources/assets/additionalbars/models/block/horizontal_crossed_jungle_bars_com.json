@@ -1,6 +1,0 @@
-{
-	"parent": "additionalbars:block/parent/td/horizontal/crossed/com",
-	"textures": {
-		"texture": "minecraft:block/jungle_planks"
-	}
-}

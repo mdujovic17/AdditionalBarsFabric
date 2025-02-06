@@ -1,0 +1,6 @@
+{
+  "parent": "additionalbars:block/parent/post_ends",
+  "textures": {
+    "texture": "minecraft:block/spruce_planks"
+  }
+}

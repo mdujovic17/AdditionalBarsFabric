@@ -1,6 +1,0 @@
-{
-    "parent": "additionalbars:block/parent/td/side_alt",
-    "textures": {
-        "texture": "minecraft:block/acacia_planks"
-    }
-}

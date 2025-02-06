@@ -129,12 +129,6 @@ public class HorizontalPaneBlock extends SlabBlock implements Waterloggable
     }
 
     @Override
-    public boolean isTransparent(BlockState state, BlockView world, BlockPos pos)
-    {
-        return true;
-    }
-
-    @Override
     public void appendTooltip(ItemStack stack, Item.TooltipContext options, List<Text> tooltip, TooltipType type) {
         for ( BlockTypes types : barsTypes) {
             tooltip.add(Text.translatable(types.getText().getString()).formatted(types.getTextColor()));

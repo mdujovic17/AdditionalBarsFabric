@@ -1,6 +1,0 @@
-{
-    "parent": "additionalbars:block/parent/td/post_ends",
-    "textures": {
-        "texture": "minecraft:block/dark_oak_planks"
-    }
-}

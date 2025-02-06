@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "bars",
+  "ingredients": [
+    "additionalbars:copper_bars",
+    "additionalbars:copper_bars"
+  ],
+  "result": {
+    "count": 2,
+    "id": "additionalbars:crossed_copper_bars"
+  }
+}

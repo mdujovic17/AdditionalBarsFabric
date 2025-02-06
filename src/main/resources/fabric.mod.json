@@ -2,7 +2,6 @@
   "schemaVersion": 1,
   "id": "additionalbars",
   "version": "${version}",
-
   "name": "Additional Bars",
   "description": "Adds additional bars blocks to Minecraft",
   "authors": [
@@ -18,20 +17,20 @@
 
   "environment": "*",
   "entrypoints": {
-    "fabric-datagen": [
-      "com.mdujovic17.additionalbars.data.AdditionalBarsDataGenerator"
+    "client": [
+      "com.mdujovic17.additionalbars.AdditionalBarsClient"
     ],
     "main": [
       "com.mdujovic17.additionalbars.AdditionalBars"
     ],
-    "client": [
-      "com.mdujovic17.additionalbars.AdditionalBars"
+    "fabric-datagen": [
+      "com.mdujovic17.additionalbars_datagen.datagen.AdditionalBarsDataGenerator"
     ]
   },
 
   "depends": {
     "fabricloader": ">=0.16.0",
     "fabric": "*",
-    "minecraft": "1.21.1"
+    "minecraft": "1.21.4"
   }
 }

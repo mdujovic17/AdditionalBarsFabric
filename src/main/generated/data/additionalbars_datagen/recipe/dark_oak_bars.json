@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "bars",
+  "key": {
+    "L": "minecraft:dark_oak_log",
+    "S": "minecraft:stick"
+  },
+  "pattern": [
+    "LLL",
+    "SSS",
+    "LLL"
+  ],
+  "result": {
+    "count": 16,
+    "id": "additionalbars:dark_oak_bars"
+  }
+}

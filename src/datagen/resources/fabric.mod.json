@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "additionalbars_datagen",
+  "version": "${version}",
+
+  "name": "Additional Bars (DataGen)",
+  "description": "Data Generator for Additional Bars",
+  "authors": [
+    "Marko Dujović"
+  ],
+  "contact": {
+    "homepage": "mdujovic17.github.io",
+    "sources": "https://github.com/mdujovic17/AdditionalBarsFabric"
+  },
+
+  "license": "MIT",
+  "icon": "assets/additionalbars/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "fabric-datagen": [
+      "com.mdujovic17.additionalbars_datagen.datagen.AdditionalBarsDataGenerator"
+    ]
+  },
+
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "fabric": "*",
+    "minecraft": "1.21.4"
+  }
+}

@@ -15,7 +15,7 @@ public enum BarsType implements BlockTypes {
     private final Text text;
     BarsType(String type, Formatting color) {
         this.type = type;
-        this.text = Text.translatable("tooltip.gamma1772." + type);
+        this.text = Text.translatable("tooltip.mdujovic17." + type);
         this.color = color;
     }
 

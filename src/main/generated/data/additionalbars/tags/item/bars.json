@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "#additionalbars:bars/metallic",
+      "required": false
+    },
+    {
+      "id": "#additionalbars:bars/wooden",
+      "required": false
+    }
+  ]
+}

@@ -1,6 +1,0 @@
-{
-	"parent": "additionalbars:block/parent/td/horizontal/crossed/bot",
-	"textures": {
-		"texture": "additionalbars:block/crossed_weathered_copper_bars"
-	}
-}
